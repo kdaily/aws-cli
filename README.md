@@ -8,6 +8,21 @@ title: 'aws-cli'
 
 This package provides a unified command line interface to Amazon Web Services.
 
+Jump to:
+
+- [Getting Started](#getting-started)
+- [Accessing Services With Global Endpoints](#accessing-services-with-global-endpoints)
+- [JSON Parameter Input](#json-parameter-input)
+- [File-based Parameter Input](#file-based-parameter-input)
+- [URI-based Parameter Input](#uri-based-parameter-input)
+- [Command Output](#command-output)
+- [Getting Help](#getting-help)
+- [More Resources](#more-resources)
+
+## Getting Started
+
+### Requirements
+
 The aws-cli package works on Python versions:
 
 - 2.7.x and greater
@@ -22,13 +37,6 @@ On 10/09/2019 support for Python 2.6 and Python 3.3 was deprecated and support w
 *Attention!*
 
 *We recommend that all customers regularly monitor the [Amazon Web Services Security Bulletins website](https://aws.amazon.com/security/security-bulletins) for any important security bulletins related to aws-cli.*
-
-
-## CLI Releases
-
-The release notes for the AWS CLI can be found [here](https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst).
-
-## Getting Started
 
 ### Installation
 
@@ -64,8 +72,7 @@ can just run:
     $ cd <path_to_awscli>
     $ python setup.py install
 
-If you want to run the `develop` branch of the CLI, see the \"CLI Dev
-Version\" section below.
+If you want to run the `develop` branch of the CLI, see the [Development Version](CONTRIBUTING.md#development-version) section of the contributing guide.
 
 ### Configuration
 
@@ -126,7 +133,7 @@ In the config file, except for the default profile, you **must** prefix each con
 
 The final option for credentials is highly recommended if you are using aws-cli on an EC2 instance. IAM Roles are a great way to have credentials installed automatically on your instance. If you are using IAM Roles, aws-cli will find them and use them automatically.
 
-## Other Configurable Variables
+#### Other Configurable Variables
 
 In addition to credentials, a number of other variables can be configured either with environment variables, configuration file entries or both. The following table documents these.
 
@@ -146,7 +153,7 @@ In addition to credentials, a number of other variables can be configured either
 | metadata\_service_num_attempts | | metadata_service_num_attempts | `AWS_METADATA_SERVICE_NUM_ATTEMPTS` | EC2 metadata retry count |
 | parameter_validation | | parameter_validation | | Toggles local parameter validation |
 
-#### Examples
+##### Examples
 
 If you get tired of specifying a `--region` option on the command line all of the time, you can specify a default region to use whenever no explicit `--region` option is included using the `region` variable. To specify this using an environment variable:
 
@@ -165,7 +172,7 @@ Similarly, the `profile` variable can be used to specify which profile to use if
 
 The `profile` variable can not be specified in the configuration file since it would have to be associated with a profile and would defeat the purpose.
 
-#### Further Information
+##### Further Information
 
 For more information about configuration options, please refer the [AWS
 CLI Configuration Variables topic](http://docs.aws.amazon.com/cli/latest/topic/config-vars.html#cli-aws-help-config-vars). You can access this topic from the CLI as well by running `aws help config-vars`.
@@ -267,3 +274,7 @@ We use GitHub issues for tracking bugs and feature requests and have limited ban
 - Come join the AWS CLI community chat on [gitter](https://gitter.im/aws/aws-cli)
 - Open a support ticket with [AWS Support](https://console.aws.amazon.com/support/home#/)
 - If it turns out that you may have found a bug, please [open an issue](https://github.com/aws/aws-cli/issues/new)
+
+## More Resources
+
+- [Changelog](https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst)
