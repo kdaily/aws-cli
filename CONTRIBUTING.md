@@ -4,7 +4,17 @@ title: Contributing
 
 We work hard to provide a high-quality and useful command line interface, and we greatly value feedback and contributions from our community. Whether it's a new feature, correction, or additional documentation, we welcome your pull requests. Please submit any [issues](https://github.com/aws/aws-cli/issues) or [pull requests](https://github.com/aws/aws-cli/pulls) through GitHub.
 
-This document contains guidelines for contributing code and filing issues.
+This document contains guidelines for reporting issues or pull requests and contributing code.
+
+## Reporting Issues
+
+- Check to see if there\'s an existing issue/pull request for the bug/feature. All issues are at <https://github.com/aws/aws-cli/issues> and pull reqs are at <https://github.com/aws/aws-cli/pulls>.
+- If there isn\'t an existing issue there, please file an issue. The ideal report includes:
+  - A description of the problem/suggestion.
+  - The specific AWS CLI commands you are running. Please include debug logs for these commands by appending the `--debug` option to each command. Be sure to remove any sensitive information from the debug logs.
+  - The AWS CLI version you are using `aws --version`.
+
+The first thing an AWS CLI developer will do is try to reproduce the issue you are seeing, so try to reduce your issue to the smallest possible set of steps that demonstrate the issue. This will lead to quicker resolution of your issue.
 
 ## Contributing Code
 
@@ -74,13 +84,3 @@ Below is an example of how you can use git to create a feature branch. First, ma
     $ git push origin my-branch-name
 
 When you push to your remote, the output will contain a URL you can use to open a pull request.
-
-## Reporting Issues
-
-- Check to see if there\'s an existing issue/pull request for the bug/feature. All issues are at <https://github.com/aws/aws-cli/issues> and pull reqs are at <https://github.com/aws/aws-cli/pulls>.
-- If there isn\'t an existing issue there, please file an issue. The ideal report includes:
-  - A description of the problem/suggestion.
-  - The specific AWS CLI commands you are running. Please include debug logs for these commands by appending the `--debug` option to each command. Be sure to remove any sensitive information from the debug logs.
-  - The AWS CLI version you are using `aws --version`.
-
-The first thing an AWS CLI developer will do is try to reproduce the issue you are seeing, so try to reduce your issue to the smallest possible set of steps that demonstrate the issue. This will lead to quicker resolution of your issue.
