@@ -149,18 +149,18 @@ In addition to credentials, a number of other variables can be configured either
 
 | Variable | Option | Config Entry | Environment Variable | Description |
 | :--- | ---: | :--- | :--- | :--- |
-| profile | `--profile` | profile | AWS_PROFILE | Default profile name     |
-| region | `--region` | region | AWS\_DEFAULT\_REGION | Default AWS region |
-| --config\_file | | | AWS\_CONFIG\_FILE | Alternate location of config |
-| credentials\_file | | | AWS\_SHARED_CREDENTIAL_FILE | Alternate location of credentials |
-| output | `--output` | output | AWS\_DEFAULT_OUTPUT | Default output style |
-| ca\_bundle  | `--ca-bundle` | ca_bundle  | AWS\_CA\_BUNDLE | CA Certificate Bundle   |
-| access\_key | | aws_access_key_id | `AWS_ACCESS_KEY_ID` | AWS Access Key |
-| secret\_key | | aws_secret_access_key | `AWS_SECRET_ACCESS_KEY` | AWS Secret Key |
+| profile | `--profile` | profile | `AWS_PROFILE` | Default profile name     |
+| region | `--region` | region | `AWS_DEFAULT_REGION` | Default AWS region |
+| config_file | | | `AWS_CONFIG_FILE` | Alternate location of config |
+| credentials_file | | | `AWS_SHARED_CREDENTIAL_FILE` | Alternate location of credentials |
+| output | `--output` | output | `AWS_DEFAULT_OUTPUT` | Default output style |
+| ca_bundle | `--ca-bundle` | ca_bundle  | `AWS_CA_BUNDLE` | CA Certificate Bundle   |
+| access_key | | aws_access_key_id | `AWS_ACCESS_KEY_ID` | AWS Access Key |
+| secret_key | | aws_secret_access_key | `AWS_SECRET_ACCESS_KEY` | AWS Secret Key |
 | token | | aws_session_token | `AWS_SESSION_TOKEN` | AWS Token (temp credentials) |
 | cli_timestamp_format | | cli_timestamp_format | | Output format of timestamps |
-| metadata_service_timeout |             | metadata_service_timeout | AWS_METADATA_SERVICE_TIMEOUT | EC2 metadata timeout|
-| metadata\_service_num_attempts | | metadata\_service_num_attempts | AWS\_METADATA_SERVICE_NUM_ATTEMPTS | EC2 metadata retry count |
+| metadata_service_timeout | | metadata_service_timeout | `AWS_METADATA_SERVICE_TIMEOUT` | EC2 metadata timeout |
+| metadata\_service_num_attempts | | metadata_service_num_attempts | `AWS_METADATA_SERVICE_NUM_ATTEMPTS` | EC2 metadata retry count |
 | parameter_validation | | parameter_validation | | Toggles local parameter validation |
 
 ### Examples
