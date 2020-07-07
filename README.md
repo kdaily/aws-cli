@@ -52,22 +52,17 @@ or for your user:
 
     $ python -m pip install --user awscli
 
-If you have the aws-cli installed and want to upgrade to the latest
-version you can run:
+If you have the aws-cli installed and want to upgrade to the latest version you can run:
 
     $ python -m pip install --upgrade awscli
 
 Note
 
-On macOS, if you see an error regarding the version of six that came
-with distutils in El Capitan, use the `--ignore-installed` option:
+On macOS, if you see an error regarding the version of six that came with distutils in El Capitan, use the `--ignore-installed` option:
 
     $ sudo python -m pip install awscli --ignore-installed six
 
-This will install the aws-cli package as well as all dependencies. You
-can also just [download the tarball](https://pypi.org/project/awscli/).
-Once you have the awscli directory structure on your workstation, you
-can just run:
+This will install the aws-cli package as well as all dependencies. You can also just [download the tarball](https://pypi.org/project/awscli/). Once you have the awscli directory structure on your workstation, you can just run:
 
     $ cd <path_to_awscli>
     $ python setup.py install
