@@ -84,3 +84,34 @@ Below is an example of how you can use git to create a feature branch. First, ma
     $ git push origin my-branch-name
 
 When you push to your remote, the output will contain a URL you can use to open a pull request.
+
+## CLI Development Version
+
+If you are interested in using the latest released version of the AWS CLI, please see the [Installation](README.md#installation) section in the README. This section is for anyone who wants to install the development version of the CLI. You might need to do this if:
+
+- You are developing a feature for the CLI and plan on submitting a Pull Request.
+- You want to test the latest changes of the CLI before they make it into an official release.
+
+The latest changes to the CLI are in the `develop` branch on github. This is the default branch when you clone the git repository.
+
+Additionally, there are several other packages that are developed in lockstep with the CLI. This includes:
+
+- [botocore](https://github.com/boto/botocore)
+- [jmespath](https://github.com/boto/jmespath)
+
+If you just want to install a snapshot of the latest development version of the CLI, you can use the `requirements.txt` file included in this repo. This file points to the development version of the above packages:
+
+    $ cd <path_to_awscli>
+    $ python -m pip install -r requirements.txt
+    $ python -m pip install -e .
+
+However, to keep up to date, you will continually have to run the `python -m pip install -r requirements.txt` file to pull in the latest changes from the develop branches of botocore, jmespath, etc.
+
+You can optionally clone each of those repositories and run \"python -m pip install -e .\" for each repository:
+
+    $ git clone <jmespath> && cd jmespath/
+    $ python -m pip install -e . && cd ..
+    $ git clone <botocore> && cd botocore/
+    $ python -m pip install -e . && cd ..
+    $ git clone <awscli> && cd aws-cli/
+    $ python -m pip install -e .
