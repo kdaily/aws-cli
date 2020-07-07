@@ -148,7 +148,7 @@ The final option for credentials is highly recommended if you are using aws-cli 
 In addition to credentials, a number of other variables can be configured either with environment variables, configuration file entries or both. The following table documents these.
 
 | Variable | Option | Config Entry | Environment Variable | Description |
-| --- | ---: | --- | --- | --- |
+| :--- | ---: | :--- | :--- | :--- |
 | profile | `--profile` | profile | AWS_PROFILE | Default profile name     |
 | region | `--region` | region | AWS\_DEFAULT\_REGION | Default AWS region |
 | --config\_file | | | AWS\_CONFIG\_FILE | Alternate location of config |
