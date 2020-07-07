@@ -167,8 +167,6 @@ Similarly, the `profile` variable can be used to specify which profile to use if
 
 The `profile` variable can not be specified in the configuration file since it would have to be associated with a profile and would defeat the purpose.
 
-##### Further Information
-
 For more information about configuration options, please refer the [AWS
 CLI Configuration Variables topic](http://docs.aws.amazon.com/cli/latest/topic/config-vars.html#cli-aws-help-config-vars). You can access this topic from the CLI as well by running `aws help config-vars`.
 
