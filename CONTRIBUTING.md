@@ -9,7 +9,7 @@ This document contains guidelines for reporting issues or pull requests and cont
 ## Reporting Issues
 
 - Check to see if there\'s an existing issue/pull request for the bug/feature. All issues are at <https://github.com/aws/aws-cli/issues> and pull reqs are at <https://github.com/aws/aws-cli/pulls>.
-- If there isn\'t an existing issue there, please file an issue. The ideal report includes:
+- If there isn\'t an existing issue there, please file an issue. If possible, used one of the suggested issue types when creating a new issue (like a bug report of feature request). These issue types have their own template and required information. In general, the ideal report includes:
   - A description of the problem/suggestion.
   - The specific AWS CLI commands you are running. Please include debug logs for these commands by appending the `--debug` option to each command. Be sure to remove any sensitive information from the debug logs.
   - The AWS CLI version you are using `aws --version`.
