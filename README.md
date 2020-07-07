@@ -11,11 +11,6 @@ This package provides a unified command line interface to Amazon Web Services.
 Jump to:
 
 - [Getting Started](#getting-started)
-- [Accessing Services With Global Endpoints](#accessing-services-with-global-endpoints)
-- [JSON Parameter Input](#json-parameter-input)
-- [File-based Parameter Input](#file-based-parameter-input)
-- [URI-based Parameter Input](#uri-based-parameter-input)
-- [Command Output](#command-output)
 - [Getting Help](#getting-help)
 - [More Resources](#more-resources)
 
