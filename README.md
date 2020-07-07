@@ -23,7 +23,14 @@ On 10/09/2019 support for Python 2.6 and Python 3.3 was deprecated and support w
 
 *We recommend that all customers regularly monitor the [Amazon Web Services Security Bulletins website](https://aws.amazon.com/security/security-bulletins) for any important security bulletins related to aws-cli.*
 
-## Installation
+
+## CLI Releases
+
+The release notes for the AWS CLI can be found [here](https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst).
+
+## Getting Started
+
+### Installation
 
 The easiest way to install aws-cli is to use [pip](https://pip.pypa.io/en/stable/) in a `virtualenv`:
 
@@ -60,31 +67,7 @@ can just run:
 If you want to run the `develop` branch of the CLI, see the \"CLI Dev
 Version\" section below.
 
-## CLI Releases
-
-The release notes for the AWS CLI can be found [here](https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst).
-
-## Command Completion
-
-The aws-cli package includes a very useful command completion feature. This feature is not automatically installed so you need to configure it manually. To enable tab completion for bash either use the built-in command `complete`:
-
-    $ complete -C aws_completer aws
-
-Or add `bin/aws_bash_completer` file under `/etc/bash_completion.d`, `/usr/local/etc/bash_completion.d` or any other `bash_completion.d` location.
-
-For tcsh:
-
-    $ complete aws 'p/*/`aws_completer`/'
-
-You should add this to your startup scripts to enable it for future sessions.
-
-For zsh please refer to `bin/aws_zsh_completer.sh`. Source that file, e.g. from your `~/.zshrc`, and make sure you run `compinit` before:
-
-    $ source bin/aws_zsh_completer.sh
-
-For now the bash compatibility auto completion (`bashcompinit`) is used. For further details please refer to the top of `bin/aws_zsh_completer.sh`.
-
-## Getting Started
+### Configuration
 
 Before using aws-cli, you need to tell it about your AWS credentials. You can do this in several ways:
 
@@ -149,7 +132,7 @@ In addition to credentials, a number of other variables can be configured either
 
 | Variable | Option | Config Entry | Environment Variable | Description |
 | :--- | ---: | :--- | :--- | :--- |
-| profile | `--profile` | profile | `AWS_PROFILE` | Default profile name     |
+| profile | `--profile` | profile | `AWS_PROFILE` | Default profile name |
 | region | `--region` | region | `AWS_DEFAULT_REGION` | Default AWS region |
 | config_file | | | `AWS_CONFIG_FILE` | Alternate location of config |
 | credentials_file | | | `AWS_SHARED_CREDENTIAL_FILE` | Alternate location of credentials |
@@ -163,7 +146,7 @@ In addition to credentials, a number of other variables can be configured either
 | metadata\_service_num_attempts | | metadata_service_num_attempts | `AWS_METADATA_SERVICE_NUM_ATTEMPTS` | EC2 metadata retry count |
 | parameter_validation | | parameter_validation | | Toggles local parameter validation |
 
-### Examples
+#### Examples
 
 If you get tired of specifying a `--region` option on the command line all of the time, you can specify a default region to use whenever no explicit `--region` option is included using the `region` variable. To specify this using an environment variable:
 
@@ -182,10 +165,30 @@ Similarly, the `profile` variable can be used to specify which profile to use if
 
 The `profile` variable can not be specified in the configuration file since it would have to be associated with a profile and would defeat the purpose.
 
-### Further Information
+#### Further Information
 
 For more information about configuration options, please refer the [AWS
 CLI Configuration Variables topic](http://docs.aws.amazon.com/cli/latest/topic/config-vars.html#cli-aws-help-config-vars). You can access this topic from the CLI as well by running `aws help config-vars`.
+
+### Command Completion
+
+The aws-cli package includes a very useful command completion feature. This feature is not automatically installed so you need to configure it manually. To enable tab completion for bash either use the built-in command `complete`:
+
+    $ complete -C aws_completer aws
+
+Or add `bin/aws_bash_completer` file under `/etc/bash_completion.d`, `/usr/local/etc/bash_completion.d` or any other `bash_completion.d` location.
+
+For tcsh:
+
+    $ complete aws 'p/*/`aws_completer`/'
+
+You should add this to your startup scripts to enable it for future sessions.
+
+For zsh please refer to `bin/aws_zsh_completer.sh`. Source that file, e.g. from your `~/.zshrc`, and make sure you run `compinit` before:
+
+    $ source bin/aws_zsh_completer.sh
+
+For now the bash compatibility auto completion (`bashcompinit`) is used. For further details please refer to the top of `bin/aws_zsh_completer.sh`.
 
 ## Accessing Services With Global Endpoints
 
