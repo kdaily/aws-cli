@@ -1,6 +1,4 @@
----
-title: 'aws-cli'
----
+# aws-cli
 
 [![Build Status](https://travis-ci.org/aws/aws-cli.svg?branch=develop)](https://travis-ci.org/aws/aws-cli)
 
