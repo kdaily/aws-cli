@@ -92,6 +92,7 @@ def do_provider(driver):
         do_topic(driver, TOPIC_PATH, topic_help_command)
 
     services = sorted(help_command.command_table)
+    services = ['s3']
     print('\nWriting service references')
     for service_name in services:
         if service_name == 'help':
@@ -106,7 +107,11 @@ def build_service_list(tut_path, ref_path, driver):
     fp.write('\n')
     l = []
     help_command = driver.create_help_command()
+    services = ['s3']
+
     for service_name in help_command.command_table:
+        if service_name not in services:
+            continue
         if service_name == 'help':
             continue
         service_command = help_command.command_table[service_name]
@@ -116,6 +121,8 @@ def build_service_list(tut_path, ref_path, driver):
         l.append((service.service_full_name, service_name))
     l = sorted(l, key=lambda x: x[1])
     for full_name, service_name in l:
+        if service_name not in services:
+            continue
         service_ref_path = os.path.join(ref_path, service_name)
         service_ref_path = os.path.join(service_ref_path, 'index')
         fp.write('* :doc:`%s <..%s%s>`\n' % (full_name,

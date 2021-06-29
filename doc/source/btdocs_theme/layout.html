@@ -1,0 +1,110 @@
+{#
+    Basic (AKA "fallback") BTDocs theme -- used if a full-featured theme (such as
+    BuilderHubDocTheme) is not used.
+
+    Its main purpose is to provide a theme that has no dependencies except for
+    BTDocsBuilder and which uses the theme variables in theme.conf.
+
+    It also provides an example of how to create a Sphinx theme!
+
+    I find these pages useful when working w/ themes:
+
+    * http://www.sphinx-doc.org/en/master/theming.html
+    * http://www.sphinx-doc.org/en/master/templating.html
+    * http://jinja.pocoo.org/docs/templates/
+
+    Contact btdocs-dev@amazon.com for more information.
+#}
+{% extends "basic/layout.html" %}
+
+{# extra stuff in the header #}
+{%- block extrahead %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{%- endblock %}
+
+{%- block relbar1 %}{%- endblock %}
+
+{# custom document #}
+{%- block document %}
+<div class="header row"> {# The header row... get it? :) #}
+    {%- if logo %}
+        <div id="header-title"><h1><img id="pagelogo" src="_static/{{pathto(logo,1)}}"></img><a href="{{ pathto(master_doc) }}">{{ docstitle }}</a></h1></div>
+    {%- else %}
+        <div id="header-title"><h1><a href="{{ pathto(master_doc) }}">{{ docstitle }}</a></h1></div>
+    {%- endif %}
+    <div class="search-form-wrapper">
+        <form class="search" action="{{ pathto('search') }}" method="get">
+          <input type="text" name="q" placeholder="Search..."/>
+          <input class="link-button" type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <div id="header-link-bar">
+        <p id="breadcrumbs">
+            <a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a> &gt;
+            {%- for parent in parents %}
+                <a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a> &gt;
+            {%- endfor %}
+            <em>{{ title }}</em>
+        </p>
+        <p id="rellinks">
+            {%- if prev %}
+                <a href="{{ prev.link|e }}" title="{{ prev.title }}">prev</a>
+            {%- endif %}
+            {%- if prev and next %} | {%- endif %}
+            {%- if next %}
+                <a href="{{ next.link|e }}" title="{{ next.title }}">next</a></p>
+            {%- endif %}
+        </p>
+    </div>
+</div>
+<div class="row">
+    {%- if toc %}
+        <div class="col-3">
+            <div class="card" id="btdocs-toc">
+            {{ toc }}
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card" id="btdocs-doc">
+            {{ super() }} {# the regular doc content #}
+            </div>
+        </div>
+    {%- else %}
+        {# if there's no ToC, then display the document full-width #}
+        <div class="col-9">
+            <div class="card" id="btdocs-doc">
+            {{ super() }} {# the regular doc content #}
+            </div>
+        </div>
+    {%- endif %}
+</div>
+{%- endblock %}
+
+{# the normal sphinx sidebars are empty... #}
+{%- block sidebar1 %}{%- endblock %}
+{%- block sidebar2 %}{%- endblock %}
+{# don't show the second relbar (at the end of the doc) #}
+{%- block relbar2 %} {%- endblock %}
+
+{# custom footer #}
+{%- block footer %}
+{# add some links at the bottom #}
+<div class="footer">
+    <p>
+    {%- if theme_feedback_url %}
+        <a class="link-button" href="{{theme_feedback_url}}">Leave feedback</a>
+    {%- elif theme_feedback_sim_folder %}
+        <a class="link-button" href="https://issues.amazon.com/issues/create?assignedFolder={{theme_feedback_sim_folder}}&title={{("Feedback for "+shorttitle+":")|e}}+{{("/"+theme_relative_url+pathto(master_doc))|e}}&description={{theme_feedback_description|e}}&descriptionContentType=text%2Famz-markdown-sim&assigneeIdentity=kerberos%3A{{theme_feedback_sim_assign}}%40ANT.AMAZON.COM">Leave feedback</a>
+    {%- else %}
+        <em>No feedback URL or SIM folder provided</em>
+    {%- endif %}
+        <a class="link-button" href="{{theme_source_url|e}}{{pagename}}{{page_source_suffix}}">View source</a>
+        <a class="link-button" href="http://btdocs.corp.amazon.com/writing/">How to contribute</a>
+    </p>
+    {{ super() }}
+</div>
+<script type="text/javascript" src="_static/btdocs-basic.js"></script>
+{%- endblock %}
+

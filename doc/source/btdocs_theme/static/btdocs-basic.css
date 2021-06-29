@@ -1,0 +1,639 @@
+@import 'basic.css';
+
+/*
+ * Make sure that all elements have box-sizing set to "border-box" to ensure
+ * that padding and border are included in total width/height of elements.
+ */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Amazon Ember rules */
+@font-face {
+    font-family: "Amazon Ember";
+    src: url("Amazon_Ember_Rg.ttf");
+}
+@font-face {
+    font-family: "Amazon Ember";
+    src: url("Amazon_Ember_RgIt.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Amazon Ember";
+    src: url("Amazon_Ember_Bd.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Amazon Ember";
+    src: url("Amazon_Ember_BdIt.ttf");
+    font-style: italic;
+    font-weight: bold;
+}
+/* Source Code Pro rules */
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("SourceCodePro-Regular");
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("SourceCodePro-Bold");
+    font-style: bold;
+}
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("SourceCodePro-Semibold");
+    font-style: italic;
+    font-style: bold;
+}
+
+/* responsive 12-column design */
+
+/* Mobile-first! (makes pages load faster on mobile) */
+[class*='col-'] {
+    width: 100%;
+    float: left;
+    padding: 0px 8px;
+}
+
+div.search-form-wrapper {
+    width: 100%;
+    padding: 8px 16px;
+}
+
+div.header h1 {
+    display: inline-block;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 0px;
+}
+
+div#header-link-bar {
+    width: 100%;
+    padding: 8px 16px;
+}
+
+#breadcrumbs, #rellinks {
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+    padding: 6px 6px;
+}
+
+#breadcrumbs {
+    border-top: 1px solid #545b64;
+}
+
+#rellinks{
+    border-top: 1px solid #545b64;
+    border-bottom: 1px solid #545b64;
+    text-align: center;
+}
+
+div.contents.local::before {
+    content: "On this page";
+    font-weight: bold;
+    color: #007dbc;
+}
+
+div.contents.local {
+    float: right;
+    display: inline-block;
+    background-color: #fafafa;
+    padding: 8px;
+    margin: 8px 0px;
+    width: 100%; /* remember, this is mobile view */
+    border-radius: 6px;
+    border: 1px solid black;
+    overflow-wrap: break-word; /* if a title contains an unbroken word that's too long, break it. */
+}
+
+div.contents ul {
+    padding-left: 16px;
+}
+
+div.card {
+    background-color: #FFFFFF; /* Hydrogen, AKA white AKA awsui-white */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 16px;
+}
+
+div.row {
+    margin-top: 16px;
+}
+
+div.row.header {
+    margin-top: 0px;
+    padding: 8px 0px;
+}
+
+/* Clear around each row */
+div.row::before, div.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.document {
+    margin: 0px 8px;
+}
+
+body {
+    margin: 0px;
+    background-color: #f2f3f3;
+    font-family: "Amazon Ember", Helvetica, Arial, sans-serif;
+}
+
+/* This is to override basic.css provided by Sphinx. */
+div.body {
+    min-width: inherit;
+    max-width: inherit;
+}
+
+div.card h1 {
+    color: #ec7211 /* Copper, AKA awsui-orange-500; */
+}
+
+div.header, div.footer {
+    background-color: #232f3e; /* "awsui-aws-squid-ink" */
+    color: #ffffff;
+}
+
+div#header-logo, div#header-title {
+    display: inline;
+    padding: 8px 0px 0px 0px;
+}
+
+div.header a, div.footer a {
+    color: #eeeeee;
+}
+
+div.header img {
+    margin: 0px;
+    padding: 0px 16px 0px 0px;
+    vertical-align: middle;
+}
+
+div.footer {
+    text-align: center;
+    padding: 8px;
+    margin-top: 16px;
+}
+
+div.footer p {
+    margin: 8px 0px;
+}
+
+/* This overrides a Sphinx style that removes the margins on paragraphs inside a
+ * definition list */
+dd p {
+    margin-top: 16px;
+}
+
+/* Don't decorate links in general */
+a {
+    color: #007dbc; /* awsui-blue-600 */
+    text-decoration: none;
+}
+
+/* underline links in the footer... */
+div.footer a {
+    text-decoration: underline;
+}
+/* unless they're within a button! */
+div.footer a.link-button {
+    text-decoration: none;
+}
+
+/* Make header links less obtrusive */
+a.headerlink {
+    color: inherit;
+    opacity: 0.3;
+    font-size: smaller;
+    vertical-align: top;
+}
+
+h1 a.headerlink {
+    display: none;
+}
+
+a.link-button {
+    padding: 6px 8px;
+    background-color: #879596;
+    color: white;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+a.link-button:hover {
+    background-color: #007dbc;
+}
+
+
+
+/*
+ * Admonition (note, important, etc.) styling
+ */
+div.admonition, blockquote {
+    border-style: solid;
+    border-color: #007dbc; /* awsui-blue-600 */
+    border-width: 1px 1px 1px 6px;
+    padding: 8px;
+    margin-top: 8px;
+    display: grid;
+}
+
+div.admonition ul, div.admonition ol {
+    margin: 0px;
+}
+
+div.admonition.admonition-best-practice,
+div.admonition.hint,
+div.admonition.tip {
+    border-color: #1e8900; /* awsui-green-600 */
+}
+
+div.admonition p.admonition-title:before {
+    content: "";
+    background: url("status-info.svg");
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0px 8px 0px 0px;
+}
+
+div.admonition.admonition-best-practice p.admonition-title:before,
+div.admonition.hint p.admonition-title:before,
+div.admonition.tip p.admonition-title:before {
+    background: url("status-positive.svg");
+}
+
+div.admonition.attention,
+div.admonition.caution,
+div.admonition.warning,
+div.admonition.important {
+    border-color: #eb5f07; /* awsui-orange-600 */
+}
+
+div.admonition.attention p.admonition-title:before,
+div.admonition.caution p.admonition-title:before,
+div.admonition.warning p.admonition-title:before,
+div.admonition.important p.admonition-title:before {
+    background: url("status-warning.svg");
+}
+
+div.admonition.danger,
+div.admonition.error {
+    border-color: #df3312; /* awsui-red-600 */
+}
+
+div.admonition.danger p.admonition-title:before,
+div.admonition.error p.admonition-title:before {
+    background: url("status-error.svg");
+}
+
+div.admonition.admonition-todo {
+    /* this is meant to be glaringly obvious */
+    background: #ffeeff;
+    border-color: #d000d0;
+}
+
+div.admonition.admonition-todo p.admonition-title:before {
+    background: url("status-pending.svg");
+}
+
+/* Format paragraphs directly in an admonition or blockquote to give them extra
+ * padding */
+div.admonition > p, blockquote > p {
+    padding: 8px 16px;
+    margin: 0px;
+}
+
+/* If there's a div directly inside an admonition, make sure it lines up with
+ * the text */
+div.admonition > div {
+    margin: 8px 16px;
+}
+
+/*
+ * Block-quote style
+ */
+blockquote {
+    margin-top: 16px;
+    border-color: darkgray;
+}
+
+
+div.topic {
+    border: none;
+}
+
+li {
+    margin: 8px 0px;
+}
+
+li p {
+    margin: 8px 0px;
+}
+
+/* Normal line block formatting */
+div.line-block {
+    padding: 0px 16px;
+}
+
+/* Remove padding for line blocks inside a table cell */
+td div.line-block {
+    padding: 0px;
+}
+
+/*
+ *  Make sure that backrefs (section headings) are rendered in the same color as
+ *  the surrounding (H2, H3, etc.) elements.
+ */
+a.toc-backref {
+    color: inherit;
+}
+
+/*
+ *  images fill the area they're in, unless they're smaller (in width) than it.
+ */
+img {
+    padding: 8px;
+    max-width:100%;
+    height:auto;
+}
+
+p img, li img {
+    padding: 0px 8px;
+}
+
+/*
+ * Code block styling
+ */
+
+code, pre, span.pre {
+    font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier Prime", Courier, "Courier New", monospace;
+    font-size: inherit;
+    background: #f2f3f3; /* awsui-grey-150 */
+}
+
+div.highlight {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 0px;
+    position: relative;
+    overflow: auto;
+}
+
+div.highlight pre {
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+}
+
+
+/*
+ * Table styling
+ */
+
+table.docutils {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.5);
+    border-top: 1px solid #eaeded;
+    border-collapse: collapse;
+}
+
+table.docutils.align-default {
+    margin-left: unset;
+}
+
+table.docutils caption {
+    padding: 12px 20px;
+    border: 1px solid #eaeded;
+    font-weight: bold;
+    background: #fafafa;
+}
+
+table.docutils th {
+    padding: 12px 20px;
+    border: 1px solid #eaeded;
+    font-weight: bold;
+    background: #fafafa;
+}
+
+table.docutils th.stub, table.docutils th.field-name {
+    padding: 10px 20px; /* same as a td */
+}
+
+table.docutils td {
+    padding: 10px 20px;
+    border: 1px solid #eaeded;
+}
+
+/* A normal image caption */
+div.body p.caption {
+  font-style: italic;
+  margin: 0px;
+  text-align: center;
+}
+
+/*
+ * Special inline styles
+ */
+
+/* replaceable elements (AKA :samp:`{some text to be replaced} in a larger example`) */
+.samp em {
+    color: red;
+}
+
+.guilabel, .menuselection {
+    font-family: "Amazon Ember", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.command {
+    font-weight: bold;
+}
+
+/* roles defined in BTDocsSharedContent */
+.bold {
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+/*
+ * Phonetool styles
+ */
+div.phonetool {
+  background-color: #b8e1eb;
+  border-radius: 6px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 16px 8px;
+  padding-bottom: 6px;
+}
+
+/*
+ * Broadcast styles
+ */
+div.broadcast {
+  display: inline-block;
+  margin: 16px 8px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+/*
+ * Copy code button
+ */
+div.copy-button {
+   display: inline-block;
+   position: absolute;
+   right: 3px;
+   top: 3px;
+   cursor: pointer;
+   transition: 0.2s;
+   color: #000000;
+   border: none;
+   background-color: #f7f7f7;
+   padding: 2px;
+}
+
+div.copy-button:hover {
+   transition: 0.2s;
+}
+
+/*
+ * Tool tips
+ */
+
+.tooltip {
+    position: absolute;
+    right: 24px;
+    background-color: #3f3f3f;
+    color: white;
+    font-size: smaller;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+    width: 120px;
+    z-index: 1;
+    /* make it hidden until it's hovered over */
+    visibility: hidden;
+}
+
+/* if there is any element that contains a .tooltip, then make it visible when
+ * its parent is hovered over. */
+:hover > .tooltip {
+    visibility: visible;
+}
+
+/*
+ * Support for tabbed "option" containers
+ */
+
+div.container.option dt {
+   display: none;
+}
+
+div.container.option > div.optionselector {
+   margin: 0px;
+}
+
+div.container.option > div.optionselector > span.option {
+   padding-left: 8px;
+   padding-right: 8px;
+   padding-top: 2px;
+   border: 1px solid lightgray;
+   border-radius: 3px;
+   color: grey;
+   font-size: smaller;
+   background-color: #f7f7f7;
+   cursor: pointer;
+}
+
+div.container.option > div.optionselector > span.option.selected {
+   color: black;
+   font-weight: bold;
+   background-color: white;
+   border-bottom: 2px solid white;
+}
+
+div.container.option > div.optionselector > span.option:hover {
+   font-weight: bold;
+   background-color: white;
+}
+
+div.container.option dl {
+   margin: 0px;
+}
+
+div.container.option dd {
+   display: none;
+   margin-left: 0px;
+   border: 1px solid lightgrey;
+   border-radius: 3px;
+   padding: 8px;
+}
+
+div.container.option dd.selected {
+   display: block;
+}
+
+div#btdocs-toc {
+    overflow: auto;
+}
+
+div#btdocs-toc p.caption {
+    font-weight: bold;
+}
+
+div.toctree-wrapper p.caption {
+    text-align: left;
+    font-weight: bold;
+    font-style: inherit;
+}
+
+/*
+ *  Desktop view
+ *
+ *  AKA "what happens when the screen is wider than 860 px".
+ */
+@media only screen and (min-width: 860px) {
+    .col-1 { width: 8.33%; max-width: 133px; }
+    .col-2 { width: 16.66%; max-width: 266px; }
+    .col-3 { width: 25%; max-width: 399px; }
+    .col-4 { width: 33.33%; max-width: 532px; }
+    .col-5 { width: 41.66%; max-width: 665px; }
+    .col-6 { width: 50%; max-width: 798px; }
+    .col-7 { width: 58.33%; max-width: 931px; }
+    .col-8 { width: 66.66%; max-width: 1064px; }
+    .col-9 { width: 75%; max-width: 1197px; }
+    .col-10 { width: 83.33%; max-width: 1330; }
+    .col-11 { width: 91.66%; max-width: 1463px; }
+    .col-12 { width: 100%; max-width: 1600px; }
+    /* Elements that don't fit in the column flow... */
+    div.contents.local { width: 300px; margin: 0px 0px 16px 16px; }
+    div.search-form-wrapper { width: auto; float: right; padding: 16px; }
+    div.header h1 { padding: 16px; }
+    #breadcrumbs { width: auto; float: left; padding: 0px; border: none; }
+    #rellinks { width: auto; float: right; padding: 0px; border: none; text-align: none;}
+}
+

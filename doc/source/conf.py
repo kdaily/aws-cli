@@ -83,7 +83,7 @@ exclude_patterns = ['examples']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'guzzle_sphinx_theme.GuzzleStyle'
+# pygments_style = 'friendly' # 'guzzle_sphinx_theme.GuzzleStyle'
 #pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
@@ -115,7 +115,7 @@ html_title = "AWS CLI %s Command Reference" % release
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "_static/AWS_logo_RGB.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -137,8 +137,7 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-  '**': ['sidebarlogo.html',
-         'localtoc.html',
+  '**': ['localtoc.html',
          'searchbox.html',
          'feedback.html',
          'userguide.html']
@@ -152,7 +151,7 @@ html_sidebars = {
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -178,22 +177,15 @@ html_sidebars = {
 htmlhelp_basename = 'aws-clidoc'
 
 # Adds an HTML table visitor to apply Bootstrap table classes
-html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
-p = os.path.abspath('.')
-p = os.path.join(p, 'guzzle_sphinx_theme')
-html_theme_path = [p]
-html_theme = 'guzzle_sphinx_theme'
+# html_translator_class = 'guzzle_sphinx_theme.HTMLTranslator'
+html_theme_path = ["."]
+html_theme = 'btdocs_theme'
 # Register the theme as an extension to generate a sitemap.xml
-extensions.append("guzzle_sphinx_theme")
+extensions.append("btdocs_theme")
 
 html_theme_options = {
     # Set the name of the project to appear in the nav menu
     "project_nav_name": "AWS CLI Command Reference",
-    # Set your GitHub user and repo to enable GitHub stars links
-    "github_user": "aws",
-    "github_repo": "aws-cli",
-    # Set to true to bind left and right key events to turn the page
-    "bind_key_events": False,
     # Specify a base_url used to generate sitemap.xml links. If not
     # specified, then no sitemap will be built.
     "base_url": "http://docs.aws.amazon.com/cli/latest/",
