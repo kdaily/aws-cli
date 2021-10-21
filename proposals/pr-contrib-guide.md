@@ -19,23 +19,15 @@ the community to successfully contribute to the AWS CLI.
 
 The approach for customer contributions should satisfy the following goals:
 
-1. Users should know how they can help. Contributions come in different shapes
-   and sizes and are not limited to code. 
-2. It should be clear where there are opportunities to provide feedback. This
-   includes well structured comments, use cases, and voting.
-3. We should be fixing and improving the things that people want based on
-   feedback they provide via comments and votes on issues.
-4. It should be easy for non-maintainers to make high quality contributions.
-   Contributors come with different levels of experience and from different
-   backgrounds, so we should lower the barrier for participation and the process
-   towards acceptance.
-5. Users should know exactly what to expect when interacting with the
+1. Users should know how they can help. It should be easy for non-maintainers to
+   make high quality contributions.
+1. We should be prioritizing the things that people want based on feedback they
+   provide via comments and votes on issues.
+1. Users should know exactly what to expect when interacting with the
    maintainers. The next steps should be clearly defined.
-6. Communication from maintainers should happen in a timely manner, even
+1. Communication from maintainers should happen in a timely manner, even
    (especially!) if that’s saying no. An initial response to open PRs should
    occur within [TBD] business days.
-7. Questions and friction should be reduced with automation wherever possible
-   and documented when not.
 
 ### Non-goals
 
@@ -202,12 +194,12 @@ implement. These include (but are not limited to):
 1. Changes to build processes. Some of our build processes are available through
    GitHub, but some are not. We need to carefully test any potential changes to
    be sure that they are compatible with all of our systems.
-2. GitHub Actions. Changes to our actions need to be made and reviewed with
+1. GitHub Actions. Changes to our actions need to be made and reviewed with
    extra scrutiny for security purposes.
-3. Changes to models, including waiters, paginators, and resources. These
+1. Changes to models, including waiters, paginators, and resources. These
    requests are cross-SDK and managed by service teams so that all SDKs can use
    them with uniform behavior.
-4. Changes to configuration or credential files or processes. These changes can
+1. Changes to configuration or credential files or processes. These changes can
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
 
