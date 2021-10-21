@@ -36,17 +36,24 @@ The approach for customer contributions should satisfy the following goals:
 
 ### Motivating Examples
 
-#### Limited information on where to contribute
+#### Limited information on where and what to contribute
 
 The AWS CLI currently has code, documentation, and examples published publicly
 on a number of GitHub repositories. We have hundreds of open issues and pull
 requests across these areas. However, we do not have a guide for users to know
 what things are available for them to contribute on or what the process or
 guidelines are. We get frequent requests to contribute on specific issues, but
-it's a significant effort to respond to these requests individually.
+it's a significant effort to respond to these requests individually. We also do
+not have guidance for which kinds of issues we do not accept contributions,
+leading to users to spend effort that ultimately will not be used. For example,
+users often request waiters and paginators, which are now standardized across
+AWS SDKs and implemented by the service teams, who know how their APIs work to
+provide the best performance and experience.
 
 We need a well-documented guide and process for the community to know what is
-available to work on so that their efforts are used effectively.
+available to work (and what is not) on so that their efforts are used
+effectively. This would help users and maintainers focus on relevant issues and
+work more effectively.
 
 #### No active triage or first response
 
