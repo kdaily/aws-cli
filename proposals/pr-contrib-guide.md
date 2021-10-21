@@ -50,26 +50,42 @@ what things are available for them to contribute on or what the process or
 guidelines are. We get frequent requests to contribute on specific issues, but
 it's a significant effort to respond to these requests individually.
 
-We need a well-documented guide and process for the community to know what is available to work on so that their efforts are used effectively.
+We need a well-documented guide and process for the community to know what is
+available to work on so that their efforts are used effectively.
+
+#### No active triage or first response
+
+`aws-cli` [pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
+functionality to support cache usage. It is the pull request with the most 👍🏻
+reactions (55) since being opened in March 2018. It was proposed as an
+[issue](https://github.com/aws/aws-cli/issues/3172), which was subsequently
+closed to not have both a PR and an issue open. No comments from AWS have been
+made since the issue was closed. It is still getting comments noting the need as
+of April 2021. It currently would need rebasing since it has conflicts with the
+base branch. It would also need cross-SDK review since it involves credential
+behavior. This issue demonstrates the lack of response to high user request
+issues that impact cross-SDK features and a lack of process to make changes.
+
+We need to prioritize triage and review of community contributions in a timely
+manner. The steps that community members should use to make their contribution
+should be communicated clearly and be straightforward to follow.
 
 #### Unprioritized contributions
 
 Some pull requests have had initial contact from maintainers as desirable
 changes, but then fall off the radar and remain unprioritized. This leaves the
-impression that user requests are not a priority. For example, [`botocore` pull
-request 1231](https://github.com/boto/botocore/pull/1231) addresses releasing
-HTTP connections back to a pool after making a request. It proposes to fix an
-issue the `boto3` issue [#454](https://github.com/boto/boto3/issues/454) that
-has significant user request (60 👍🏻, 38 comments). There have been comments by
-various Python SDK team members but no resolutions proposed. The last comment
-from AWS was in 2016. Changes from previous Python SDK team members were
-requested in 2017, and then noted that offline discussion indicated bigger
-issues. The code change itself is small (< 20 lines) but is in a critical piece
-of the SDK and would have a large blast radius if changed inappropriately.
+impression that user requests are not a priority. For example, [pull request
+2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync command excludes
+files more efficiently. It proposes to fix issue
+[#1138](https://github.com/aws/aws-cli/issues/1138) that had tacit approval from
+the maintainers. It was subsequently left uncompleted by the original author,
+but picked up by another community member and improved in a related [pull
+request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
+the maintainers has occurred.
 
-We need to collect and review user feedback to decide on what to work on. We
-need to tell users how they can provide feedback in the best way for us to take
-action.
+A community contribution should not be left in an incomplete state or waiting on
+a maintainer; it should be resolved by merging it or closing it. When an issue
+is raised and reviewed, we need to prioritize it and see it through.
 
 #### Unsolicited pull request
 
@@ -89,22 +105,18 @@ A idea that has not been vetted by the community and the maintainers is
 difficult to approve. We need a structured process for the life cycle of an idea
 that can culminate in a community contribution.
 
-#### No active triage or first response
+#### Competing priorities and limited bandwidth
 
-`aws-cli` [pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
-functionality to support cache usage. It is the pull request with the most 👍🏻
-reactions (55) since being opened in March 2018. It was proposed as an
-[issue](https://github.com/aws/aws-cli/issues/3172), which was subsequently
-closed to not have both a PR and an issue open. No comments from AWS have been
-made since the issue was closed. It is still getting comments noting the need as
-of April 2021. It currently would need rebasing since it has conflicts with the
-base branch. It would also need cross-SDK review since it involves credential
-behavior. This issue demonstrates the lack of response to high user request
-issues that impact cross-SDK features and a lack of process to make changes.
+There are [TBD] open issues that have upvotes or reactions from multiple users,
+indicating broader interest. That volume is not tractable for the maintainers to
+implement themselves. Community members need to be able to contribute more
+easily while balancing the efforts of maintainers to conduct thorough reviews of
+code before merging.
 
-We need to prioritize triage and review of community contributions in a timely
-manner. The steps that community members should use to make their contribution
-should be communicated clearly and be straightforward to follow.
+We need to collect and review user feedback to decide on what to work on to
+determine what contributions are of interest. We need to tell users how they can
+provide feedback in the best way for us to take action.
+
 
 ## Specification
 
