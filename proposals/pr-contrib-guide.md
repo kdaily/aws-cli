@@ -19,15 +19,18 @@ the community to successfully contribute to the AWS CLI.
 
 The approach for customer contributions should satisfy the following goals:
 
-1. Users should know how they can help. It should be easy for non-maintainers to
-   make high quality contributions.
-1. We should be prioritizing the things that people want based on feedback they
-   provide via comments and votes on issues.
+1. Users should know how they can help. It should be straightforward for
+   community members to make high quality contributions.
+1. We should prioritize the things that people want based on feedback they
+   provide on issues. Users should know how to provide that feedback.
 1. Users should know exactly what to expect when interacting with the
    maintainers. The next steps should be clearly defined.
-1. Communication from maintainers should happen in a timely manner, even
-   (especially!) if that’s saying no. An initial response to open PRs should
-   occur within [TBD] business days.
+1. A contribution should be completed through the efforts of the contributor and
+   maintainers and not be left abandoned. The maintainers are responsible see it
+   through to a conclusion.
+1. No requests should exist without a response. Communication from maintainers
+   should happen in a timely manner, even (especially!) if that’s saying no. An
+   initial response to open PRs should occur within [TBD] business days.
 
 ### Non-goals
 
