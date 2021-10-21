@@ -85,11 +85,15 @@ but picked up by another community member and improved in a related [pull
 request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
 the maintainers has occurred.
 
-A community contribution should not be left in an incomplete state or waiting on
-a maintainer; it should be resolved by merging it or closing it. When an issue
-is raised and reviewed, we need to prioritize it and see it through.
+The current review process is very *ad hoc*. The AWS CLI team has limited
+bandwidth and competing priorities; without well-defined next steps for the
+maintainers, these types of requests are then the first to be neglected for
+prioritization. A community contribution should not be left in an incomplete
+state or waiting on a maintainer; it should be resolved by merging it or closing
+it. When an issue is raised and reviewed, we need to prioritize it and see it
+through.
 
-#### Unsolicited pull request
+#### Pull requests with limited background and context
 
 Many pull requests come as unsolicited changes that often do not correspond to
 an open issue that has been discussed by the maintainers or the community. They
@@ -104,8 +108,13 @@ continued for a year on the PR by interested users with no other interaction or
 guidance from AWS.
 
 A idea that has not been vetted by the community and the maintainers is
-difficult to approve. We need a structured process for the life cycle of an idea
-that can culminate in a community contribution.
+difficult to approve; it's hard to have a conversation when it involves an idea
+proposal as well as code changes. It usually ends in an unmerged pull request or
+significant code revision, which is effort that was unnecessarily expended by
+the user and potentially the maintainer. We need a structured process for the
+life cycle of an idea that can culminate in a community contribution. We also
+need to prioritize issues against other requests from the community given the
+effort to contribute for users and review for maintainers.
 
 #### Competing priorities and limited bandwidth
 
@@ -117,7 +126,9 @@ code before merging.
 
 We need to collect and review user feedback to decide on what to work on to
 determine what contributions are of interest. We need to tell users how they can
-provide feedback in the best way for us to take action.
+provide feedback in the best way for us to take action. We also need to
+strategically and fairly manage the amount of in flight work so that open
+requests do not pile up.
 
 
 ## Specification
