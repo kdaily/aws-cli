@@ -9,22 +9,22 @@ body:
     attributes:
       label: Acknowledge
       options:
-        - label: I've searched for previous similar issues and didn't find any solution
+        - label: I've searched the [open issues](https://github.com/aws/aws-cli/issues) and didn't find a solution or previous request.
           required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: Is your Feature Request related to a problem?
+      label: Problem
       description: |
-        A description of the issue, e.g. "I'm always frustrated when..."
+        A description of the problem you have, e.g. "I'm always frustrated when..."
     validations:
       required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Describe the feature
+      label: Description
       description: A clear and concise description of the feature you are proposing.
     validations:
       required: true
@@ -32,18 +32,18 @@ body:
   - type: textarea
     id: solution
     attributes:
-      label: Proposed Solution
+      label: Proposed solution
       description: |
-        Suggest how to implement the addition or change.
+        What would you suggest to change to solve the problem?
     validations:
       required: false
 
   - type: textarea
     id: alternatives
     attributes:
-      label: Describe alternatives you've considered
+      label: Alternatives
       description: |
-        Any alternative solutions or features you've considered.
+        What alternative solutions or features have you've considered?
     validations:
       required: false
 
