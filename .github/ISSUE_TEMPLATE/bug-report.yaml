@@ -83,7 +83,7 @@ body:
       description: >
         Please include full errors, uncaught exceptions, stack traces, and relevant logs.
         To turn on [AWS CLI logging](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html#general-debug), append the `--debug` flag to your command.
-        If service responses are relevant, the output of `aws history` is also helpful ([more information](https://docs.aws.amazon.com/cli/latest/reference/history/index.html)).
+        If service responses are relevant, the output of `aws history` is also helpful ([more information](https://docs.aws.amazon.com/cli/latest/reference/history/index.html)).\n
         
         Please be sure to remove any sensitive information (account numbers, user names, etc.) from your logs before posting.
     validations:
