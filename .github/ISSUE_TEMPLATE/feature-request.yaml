@@ -1,7 +1,7 @@
 name: "\U0001F680 Feature Request"
 description: Suggest an idea for this project
 title: "(short issue description)"
-labels: [feature-request, needs-triage]
+labels: ["feature-request", "needs-triage"]
 body:
 
   - type: checkboxes
