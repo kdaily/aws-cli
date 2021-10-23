@@ -13,7 +13,7 @@ body:
     attributes:
       label: Acknowledge
       options:
-        - label: I've gone though the [User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) and the API reference ([v1](https://docs.aws.amazon.com/cli/latest/reference/) and [v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)).
+        - label: I've gone though the [User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) and the API reference ([v1](https://docs.aws.amazon.com/cli/latest/reference/) or [v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)).
           required: true
         - label: I've installed the AWS CLI using one of the [supported installation methods](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
           required: true
@@ -69,7 +69,7 @@ body:
     id: reproduction
     attributes:
       label: Steps to Reproduce
-      description: |
+      description: >
         Provide a complete, step-by-step description of the inputs and setup needed to reproduce this issue.
         Avoid including business logic or unrelated code, it makes diagnosis more difficult.
     validations:
@@ -80,7 +80,7 @@ body:
     id: output-and-logs
     attributes:
       label: Output and logs
-      description: |
+      description: >
         Please include full errors, uncaught exceptions, stack traces, and relevant logs.
         To turn on [AWS CLI logging](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html#general-debug), append the `--debug` flag to your command.
         If service responses are relevant, the output of `aws history` is also helpful ([more information](https://docs.aws.amazon.com/cli/latest/reference/history/index.html)).
