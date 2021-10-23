@@ -5,7 +5,6 @@ labels: [bug, needs-triage]
 body:
   - type: markdown
     attributes:
-      label: intro
       value: |
         Thanks for taking the time to fill out this bug report! Providing all of this information makes it easier for us to help you.
 
@@ -78,9 +77,9 @@ body:
 
 
   - type: textarea
-    id: logs-and-output
+    id: output-and-logs
     attributes:
-      label: 
+      label: Output and logs
       description: |
         Please include full errors, uncaught exceptions, stack traces, and relevant logs.
         To turn on [AWS CLI logging](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html#general-debug), append the `--debug` flag to your command.
