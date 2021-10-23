@@ -3,9 +3,9 @@ description: File a bug report
 title: "(short bug description)"
 labels: [bug, needs-triage]
 body:
-
   - type: markdown
     attributes:
+      label: intro
       value: |
         Thanks for taking the time to fill out this bug report! Providing all of this information makes it easier for us to help you.
 
