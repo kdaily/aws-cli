@@ -1,0 +1,101 @@
+name: "\U0001F41B Bug Report"
+description: File a bug report
+title: "(short bug description)"
+labels: [bug, needs-triage]
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Providing all of this information makes it easier for us to help you.
+
+  - type: checkboxes
+    id: acknowledgment
+    attributes:
+      label: Acknowledge
+      options:
+        - label: I've gone though the [User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) and the API reference ([v1](https://docs.aws.amazon.com/cli/latest/reference/) and [v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)).
+          required: true
+        - label: I've installed the AWS CLI using one of the [supported installation methods](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
+          required: true
+        - label: I've searched the [open issues](https://github.com/aws/aws-cli/issues) and didn't find a solution or previous request.
+          required: true
+        - label: I've read and agree to the [Code of Conduct](https://github.com/aws/aws-cli/blob/develop/CODE_OF_CONDUCT.md).
+          required: true
+
+  - type: input
+    id: aws-cli-version
+    attributes:
+      label: AWS CLI version
+    validations:
+      required: true
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system and version
+    validations:
+      required: true
+
+  - type: input
+    id: installation-method
+    attributes:
+      label: How did you install the AWS CLI?
+      placeholder: ex. via `pip`, the bundle installer, using the Docker container image, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: |
+        A clear and concise description of what the bug is.
+      placeholder: |
+        Tell us what happens instead of the expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+      placeholder: | 
+        Include things like the number things in the response, the format of the response, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide a complete, step-by-step description of the inputs and setup needed to reproduce this issue.
+        Avoid including business logic or unrelated code, it makes diagnosis more difficult.
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: logs-and-output
+    attributes:
+      label: 
+      description: |
+        Please include full errors, uncaught exceptions, stack traces, and relevant logs.
+        To turn on [AWS CLI logging](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-troubleshooting.html#general-debug), append the `--debug` flag to your command.
+        If service responses are relevant, the output of `aws history` is also helpful ([more information](https://docs.aws.amazon.com/cli/latest/reference/history/index.html)).
+        
+        Please be sure to remove any sensitive information (account numbers, user names, etc.) from your logs before posting.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: |
+        How has this issue affected you? What are you trying to accomplish?
+    validations:
+      required: false
+
