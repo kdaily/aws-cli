@@ -181,7 +181,7 @@ At a high level, the process would be:
    issues that arise during the contribution.
 1. Merge in and acknowledge a contribution from the community.
 
-See Appendix A for a flow chart of the major steps in the process.
+See [Appendix A](#a-appendix-a) for a flow chart of the major steps in the process.
 
 ## Rationale/FAQ
 
