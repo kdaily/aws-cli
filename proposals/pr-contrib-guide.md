@@ -15,6 +15,15 @@ the community to successfully contribute to the AWS CLI.
 
 ## Motivation
 
+As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
+GitHub repository. 52 pull requests and 81 issues have not been updated in more
+than a year. This volume indicates that there are motivated users who want to
+contribute to the AWS CLI but are unable to do so. Further, it demonstrates that
+there are users who have ideas for features but do not see them incorporated.
+From the community perspective, the volume of open issues and pull requests
+indicates a lack of awareness or communication with the community to respond to
+their needs.
+
 ### Goals
 
 The approach for customer contributions should satisfy the following goals:
@@ -31,8 +40,6 @@ The approach for customer contributions should satisfy the following goals:
 1. No requests should exist without a response. Communication from maintainers
    should happen in a timely manner, even (especially!) if that’s saying no. An
    initial response to open PRs should occur within [TBD] business days.
-
-### Non-goals
 
 ### Motivating Examples
 
@@ -140,11 +147,41 @@ This section defines:
 
 ### Current Process
 
-Describe what our current process is here.
+Customer feature requests are reviewed for general suitability and uniqueness,
+but are not actively commented on by maintainers to move the feature forward to
+an implementation. Pull requests are reviewed in an *ad hoc* fashion by various
+members of the maintainer team, but similarly are not actively processed to
+continue towards acceptance.
 
 ### Proposed Improvements
 
-Describe at a high level what changes are being made through the draft guide.
+We propose the maintainers will actively engage with the community contributors
+to identify suitable implementations for requested features and provide gudiance
+during the process. In addition, we will publish a contributing guide that
+describes the life cycle of a feature request that can culminate in a code
+contribution from the community through a GitHub pull request. The guide
+describes the triage and review of open feature requests with the goal of
+identifying issues where community contributions would be welcome. It defines
+what is required to move a feature request to be available for community
+contribution. It documents the review process and sets community expectations
+around communications to move a contribution forward.
+
+At a high level, the process would be:
+
+1. Review GitHub issues to determine that enough background, description, use
+   cases, and impact exists to implement a feature.
+1. Once enough information is available and a general implementation idea is
+   agreed on, identify which issues are available for the community to
+   contribute.
+1. When an issue is being worked on by the community, provide guidance and
+   support during the contribution process.
+1. When requested, review a pull request and make a decision if it can be
+   included or more work is needed.
+1. Engage with the community during discussion of implementation details or
+   issues that arise during the contribution.
+1. Merge in and acknowledge a contribution from the community.
+
+See Appendix A for a flow chart of the major steps in the process.
 
 ## Rationale/FAQ
 
@@ -231,14 +268,10 @@ Automation will be implemented for issue labeling, state transitions, and
 template checks. We currently perform these types of processes for issues, and
 the proposed process is agnostic to how it's implemented.
 
-
-## Future considerations
-
-### Sub-sub-section
-
 ## Appendix
 
 ### A. Appendix A
 
-This is Appendix A.
+Flow chart of the contribution review process.
 
+![Flowchart of contribution guide review process.](contrib-guide-high-level.png)
