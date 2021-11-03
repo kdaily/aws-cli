@@ -125,7 +125,7 @@ effort to contribute for users and review for maintainers.
 
 #### Competing priorities and limited bandwidth
 
-There are [TBD] open issues that have upvotes or reactions from multiple users,
+There are 151 open issues that have upvotes or reactions from five or more users,
 indicating broader interest. That volume is not tractable for the maintainers to
 implement themselves. Community members need to be able to contribute more
 easily while balancing the efforts of maintainers to conduct thorough reviews of
@@ -136,7 +136,6 @@ determine what contributions are of interest. We need to tell users how they can
 provide feedback in the best way for us to take action. We also need to
 strategically and fairly manage the amount of in flight work so that open
 requests do not pile up.
-
 
 ## Specification
 
