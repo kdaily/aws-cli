@@ -29,9 +29,9 @@ body:
       multiple: false
       options:
         - Installation (including the official AWS CLI Docker container image)
-        - Configuration(configuration file, CLI parameter, environment variable, retries, etc.)
+        - Configuration (configuration file, CLI parameter, environment variable, retries, etc.)
         - Credentials (credential file, Single Sign-on (SSO), assuming roles, etc.)
-        - Running an operation (passing arguments, understanding error messages, etc.)
+        - Running a command (passing arguments, understanding error messages, etc.)
         - Other/Not sure.
     validations:
       required: true
