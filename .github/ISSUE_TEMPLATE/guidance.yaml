@@ -16,7 +16,7 @@ body:
           required: true
         - label: I've gone though the [User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) and the API reference ([v1](https://docs.aws.amazon.com/cli/latest/reference/) or [v2](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)).
           required: true
-        - label: I've searched the [open issues](https://github.com/aws/aws-cli/issues) and didn't find a solution or previous request.
+        - label: I've searched the [open issues](https://github.com/aws/aws-cli/issues) and didn't find an answer or previous request.
           required: true
         - label: I've installed the AWS CLI using one of the [supported installation methods](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
           required: false
