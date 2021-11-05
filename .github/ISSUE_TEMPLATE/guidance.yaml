@@ -22,19 +22,19 @@ body:
           required: true
         - label: I've read and agree to the [Code of Conduct](https://github.com/aws/aws-cli/blob/develop/CODE_OF_CONDUCT.md).
           required: true
-- type: dropdown
-  attributes:
-    label: question-type
-    description: My question is about:
-    multiple: false
-    options:
-      - label: Installation (including the official AWS CLI Docker container image)
-      - label: Configuration(configuration file, CLI parameter, environment variable, retries, etc.)
-      - label: Credentials (credential file, Single Sign-on (SSO), assuming roles, etc.)
-      - label: Running an operation (passing arguments, understanding error messages, etc.)
-      - label: Other/Not sure.
-  validations:
-    required: true
+  - type: dropdown
+    attributes:
+      label: question-type
+      description: My question is about:
+      multiple: false
+      options:
+        - label: Installation (including the official AWS CLI Docker container image)
+        - label: Configuration(configuration file, CLI parameter, environment variable, retries, etc.)
+        - label: Credentials (credential file, Single Sign-on (SSO), assuming roles, etc.)
+        - label: Running an operation (passing arguments, understanding error messages, etc.)
+        - label: Other/Not sure.
+    validations:
+      required: true
 
   - type: input
     id: aws-cli-version
