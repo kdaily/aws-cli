@@ -28,11 +28,11 @@ body:
       description: What is your question about?
       multiple: false
       options:
-        - label: Installation (including the official AWS CLI Docker container image)
-        - label: Configuration(configuration file, CLI parameter, environment variable, retries, etc.)
-        - label: Credentials (credential file, Single Sign-on (SSO), assuming roles, etc.)
-        - label: Running an operation (passing arguments, understanding error messages, etc.)
-        - label: Other/Not sure.
+        - Installation (including the official AWS CLI Docker container image)
+        - Configuration(configuration file, CLI parameter, environment variable, retries, etc.)
+        - Credentials (credential file, Single Sign-on (SSO), assuming roles, etc.)
+        - Running an operation (passing arguments, understanding error messages, etc.)
+        - Other/Not sure.
     validations:
       required: true
 
