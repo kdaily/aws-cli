@@ -24,7 +24,7 @@ body:
           required: false
   - type: dropdown
     attributes:
-      label: question-type
+      label: Category
       description: What is your question about?
       multiple: false
       options:
