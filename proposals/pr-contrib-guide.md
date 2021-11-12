@@ -30,16 +30,16 @@ The approach for customer contributions should satisfy the following goals:
 
 1. Users should know how they can help. It should be straightforward for
    community members to make high quality contributions.
+1. No requests should exist without a response. Communication from maintainers
+   should happen in a timely manner, even (especially!) if that’s saying no. An
+   initial response to open PRs should occur within [TBD] business days.
+1. A contribution should be completed through the efforts of the contributor and
+   maintainers and not be left abandoned. The maintainers are responsible see it
+   through to a conclusion.
 1. We should prioritize the things that people want based on feedback they
    provide on issues. Users should know how to provide that feedback.
 1. Users should know exactly what to expect when interacting with the
    maintainers. The next steps should be clearly defined.
-1. A contribution should be completed through the efforts of the contributor and
-   maintainers and not be left abandoned. The maintainers are responsible see it
-   through to a conclusion.
-1. No requests should exist without a response. Communication from maintainers
-   should happen in a timely manner, even (especially!) if that’s saying no. An
-   initial response to open PRs should occur within [TBD] business days.
 
 ### Motivating Examples
 
@@ -100,6 +100,20 @@ state or waiting on a maintainer; it should be resolved by merging it or closing
 it. When an issue is raised and reviewed, we need to prioritize it and see it
 through.
 
+#### Competing priorities and limited bandwidth
+
+There are 151 open issues that have upvotes or reactions from five or more users,
+indicating broader interest. That volume is not tractable for the maintainers to
+implement themselves. Community members need to be able to contribute more
+easily while balancing the efforts of maintainers to conduct thorough reviews of
+code before merging.
+
+We need to collect and review user feedback to decide on what to work on to
+determine what contributions are of interest. We need to tell users how they can
+provide feedback in the best way for us to take action. We also need to
+strategically and fairly manage the amount of in flight work so that open
+requests do not pile up.
+
 #### Pull requests with limited background and context
 
 Many pull requests come as unsolicited changes that often do not correspond to
@@ -122,20 +136,6 @@ the user and potentially the maintainer. We need a structured process for the
 life cycle of an idea that can culminate in a community contribution. We also
 need to prioritize issues against other requests from the community given the
 effort to contribute for users and review for maintainers.
-
-#### Competing priorities and limited bandwidth
-
-There are 151 open issues that have upvotes or reactions from five or more users,
-indicating broader interest. That volume is not tractable for the maintainers to
-implement themselves. Community members need to be able to contribute more
-easily while balancing the efforts of maintainers to conduct thorough reviews of
-code before merging.
-
-We need to collect and review user feedback to decide on what to work on to
-determine what contributions are of interest. We need to tell users how they can
-provide feedback in the best way for us to take action. We also need to
-strategically and fairly manage the amount of in flight work so that open
-requests do not pile up.
 
 ## Specification
 
