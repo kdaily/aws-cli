@@ -173,8 +173,7 @@ Figure A demonstrates a high level view of the proposed process.
 process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
 guide review process.")
 
-**Figure A: Flowchart of contribution guide review
-process.**
+**Figure A: Flowchart of contribution guide review process.**
 
 Maintainers will actively review GitHub issues for feature requests to determine
 that enough background, description, use cases, and impact exist to implement.
@@ -185,6 +184,12 @@ be added, the issue should be left for community discussion and upvotes. A
 comment should be added by the maintainers to describe how users can advocate
 for the feature with more use cases, or vote for the issue using reactions. The
 issue is subject to existing stale and ancient issue closure mechanisms.
+
+While we do not want to discourage users to contribute or make proposed changes,
+we need to acknowledge that the maintainers still have limited bandwidth to give
+feedback on implementation or design and review pull requests. If an issue has
+not been explicitly marked as being available for contribution, it should not be
+expected that a pull request will get a review. 
 
 When an issue is being worked on by the community, maintainers will provide
 guidance and support during the contribution process. They will engage with the
@@ -201,7 +206,7 @@ acknowledged as contribution from the community.
 If a pull request becomes stale because the contributor is no longer actively
 engaged or working on it for more than 30 days, it should be reviewed to see if
 it is suitable for the maintainers to finish the work or marked as stale and
-documented for another user to continue working on it. 
+documented for another user to continue working on it.
 
 ## Rationale/FAQ
 
@@ -250,17 +255,21 @@ incorporated into the codebase as an accepted proposal as a matter of record.
 #### Why should there be a minimum number of upvotes or reactions to open something for the community to work on?
 
 We propose that in order for the maintainers to engage in the code review
-process, an issue should have at least five upvotes as evidence of having
-significant customer impact. This is intended to prevent narrowly scoped changes
-that only affect a single user. It also helps to limit the number of in flight
-reviews that the maintainers need to be engaged on, as there is not an unlimited
-amount of bandwidth to devote to this task.
+process, an issue should demonstrate user impact beyond the individual who
+proposed it. This is difficult to measure objectively, but one proxy for impact
+can be the number of upvote reactions on the issue. This is intended to prevent
+narrowly scoped changes that only affect a single user. It also helps to limit
+the number of in flight reviews that the maintainers need to be engaged on, as
+there is not an unlimited amount of bandwidth to devote to this task.
 
 At present, there are more than 140 open feature requests and 5 bugs in the AWS
-CLI GitHub repository that meet this criteria. We can use the current reactions
-to review the backlog and identify issues that we feel would be suited for
-community contributions. This process can then inform us how to handle new
+CLI GitHub repository that have five or more upvotes. We can use the current
+reactions to review the backlog and identify issues that we feel would be suited
+for community contributions. This process can then inform us how to handle new
 issues that might be candidates for community contribution.
+
+As part of the contribution guide, we will provide more specific guidance on how
+to upvote a feature so we can more accurately estimate user impact.
 
 #### Q. What is out of scope for changes that we would accept implementations from the community?
 
