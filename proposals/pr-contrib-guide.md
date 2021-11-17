@@ -172,6 +172,7 @@ Figure A demonstrates a high level view of the proposed process.
 ![Figure A: Flowchart of contribution guide review
 process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
 guide review process.")
+
 **Figure A: Flowchart of contribution guide review
 process.**
 
