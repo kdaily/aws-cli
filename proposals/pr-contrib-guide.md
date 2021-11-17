@@ -41,7 +41,7 @@ The approach for customer contributions should satisfy the following goals:
 1. Users should know exactly what to expect when interacting with the
    maintainers. The next steps should be clearly defined.
 
-### Motivating Examples
+### Examples
 
 #### Limited information on where and what to contribute
 
