@@ -67,10 +67,9 @@ work more effectively.
 `aws-cli` [pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
 functionality to support cache usage. It is the pull request with the most 👍🏻
 reactions (55) since being opened in March 2018. It was proposed as an
-[issue](https://github.com/aws/aws-cli/issues/3172), which was subsequently
-closed to not have both a PR and an issue open. No comments from AWS have been
-made since the issue was closed. It is still getting comments noting the need as
-of April 2021. It currently would need rebasing since it has conflicts with the
+[issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
+have been made since then. It is still getting comments noting the need as of
+April 2021. It currently would need rebasing since it has conflicts with the
 base branch. It would also need cross-SDK review since it involves credential
 behavior. This issue demonstrates the lack of response to high user request
 issues that impact cross-SDK features and a lack of process to make changes.
