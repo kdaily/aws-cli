@@ -167,11 +167,12 @@ feature request to be available for community contribution. It documents the
 review process and sets community expectations around communications to move a
 contribution forward.
 
-Figure A demonstrates what the process would be at a high level.
+Figure A demonstrates a high level view of the proposed process.
 
 ![Figure A: Flowchart of contribution guide review
 process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
-guide review process.") **Figure A: Flowchart of contribution guide review
+guide review process.")
+**Figure A: Flowchart of contribution guide review
 process.**
 
 Maintainers will actively review GitHub issues for feature requests to determine
