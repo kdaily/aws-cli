@@ -102,11 +102,11 @@ through.
 
 #### Competing priorities and limited bandwidth
 
-There are 151 open issues that have upvotes or reactions from five or more users,
-indicating broader interest. That volume is not tractable for the maintainers to
-implement themselves. Community members need to be able to contribute more
-easily while balancing the efforts of maintainers to conduct thorough reviews of
-code before merging.
+There are 151 open issues that have upvotes or reactions from five or more
+users, indicating broader interest. That volume is not tractable for the
+maintainers to implement themselves. Community members need to be able to
+contribute more easily while balancing the efforts of maintainers to conduct
+thorough reviews of code before merging.
 
 We need to collect and review user feedback to decide on what to work on to
 determine what contributions are of interest. We need to tell users how they can
@@ -150,37 +150,56 @@ Customer feature requests are reviewed for general suitability and uniqueness,
 but are not actively commented on by maintainers to move the feature forward to
 an implementation. Pull requests are reviewed in an *ad hoc* fashion by various
 members of the maintainer team, but similarly are not actively processed to
-continue towards acceptance.
+continue towards acceptance. This has contributed to the current status of 189
+pull requests open in the AWS CLI GitHub repository.
 
 ### Proposed Improvements
+ 
+Maintainers that actively engage with the community contributors to identify
+suitable implementations for requested features and provide gudiance during the
+process will result in a higher percentage of successful community
+contributions. In addition, we will publish a contributing guide that describes
+the life cycle of a feature request that can culminate in a code contribution
+from the community through a GitHub pull request. The guide describes the triage
+and review of open feature requests with the goal of identifying issues where
+community contributions would be welcome. It defines what is required to move a
+feature request to be available for community contribution. It documents the
+review process and sets community expectations around communications to move a
+contribution forward.
 
-We propose the maintainers will actively engage with the community contributors
-to identify suitable implementations for requested features and provide gudiance
-during the process. In addition, we will publish a contributing guide that
-describes the life cycle of a feature request that can culminate in a code
-contribution from the community through a GitHub pull request. The guide
-describes the triage and review of open feature requests with the goal of
-identifying issues where community contributions would be welcome. It defines
-what is required to move a feature request to be available for community
-contribution. It documents the review process and sets community expectations
-around communications to move a contribution forward.
+Figure A demonstrates what the process would be at a high level.
 
-At a high level, the process would be:
+![Figure A: Flowchart of contribution guide review
+process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
+guide review process.") **Figure A: Flowchart of contribution guide review
+process.**
 
-1. Review GitHub issues to determine that enough background, description, use
-   cases, and impact exists to implement a feature.
-1. Once enough information is available and a general implementation idea is
-   agreed on, identify which issues are available for the community to
-   contribute.
-1. When an issue is being worked on by the community, provide guidance and
-   support during the contribution process.
-1. When requested, review a pull request and make a decision if it can be
-   included or more work is needed.
-1. Engage with the community during discussion of implementation details or
-   issues that arise during the contribution.
-1. Merge in and acknowledge a contribution from the community.
+Maintainers will actively review GitHub issues for feature requests to determine
+that enough background, description, use cases, and impact exist to implement.
+Once enough information is available and a there is consensus on an
+implementation, the issue should be indicated that it is available for the
+community to contribute. If it's not something that the maintainers feel should
+be added, the issue should be left for community discussion and upvotes. A
+comment should be added by the maintainers to describe how users can advocate
+for the feature with more use cases, or vote for the issue using reactions. The
+issue is subject to existing stale and ancient issue closure mechanisms.
 
-See [Appendix A](#a-appendix-a) for a flow chart of the major steps in the process.
+When an issue is being worked on by the community, maintainers will provide
+guidance and support during the contribution process. They will engage with the
+community during discussion of implementation details or issues that arise
+during the contribution. Notably, we will initially respond within [TBD]
+business days on a PR review request. This does not guarantee how long it will
+be until the PR is merged.
+
+When a pull request review is made, the maintainers will review it and make a
+decision if it can be included or more work is needed. Once a pull request is
+complete with to the satisfaction of the maintainers, it can be merged and
+acknowledged as contribution from the community.
+
+If a pull request becomes stale because the contributor is no longer actively
+engaged or working on it for more than 30 days, it should be reviewed to see if
+it is suitable for the maintainers to finish the work or marked as stale and
+documented for another user to continue working on it. 
 
 ## Rationale/FAQ
 
@@ -266,11 +285,3 @@ Initially, most of the  will be human review besides code linting and testing.
 Automation will be implemented for issue labeling, state transitions, and
 template checks. We currently perform these types of processes for issues, and
 the proposed process is agnostic to how it's implemented.
-
-## Appendix
-
-### A. Appendix A
-
-Flow chart of the contribution review process.
-
-![Flowchart of contribution guide review process.](contrib-guide-high-level.png)
