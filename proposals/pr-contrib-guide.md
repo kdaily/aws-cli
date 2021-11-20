@@ -164,31 +164,28 @@ and review of open feature requests with the goal of identifying issues where
 community contributions would be welcome. It defines what is required to move a
 feature request to be available for community contribution. It documents the
 review process and sets community expectations around communications to move a
-contribution forward.
+contribution forward. Figure A demonstrates a high level view of the proposed
+process.
 
-Figure A demonstrates a high level view of the proposed process.
+The maintainers will actively review GitHub issues for feature requests to
+determine if they are available for contribution. The criteria used to make that
+determination include:
 
-![Figure A: Flowchart of contribution guide review
-process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
-guide review process.")
+1. The change will be made on part of the code base that the maintainers have
+   determined to be available. See the FAQ for more details.
+1. There is evidence that the change will be impactful for a significant number
+   of users beyond the individual that proposed it.
+1. The background, description, and use cases for the feature are clearly
+   defined.
+1. There are test cases and edge cases defined.
+1. There is consensus with the maintainers on an implementation plan.
 
-**Figure A: Flowchart of contribution guide review process.**
-
-Maintainers will actively review GitHub issues for feature requests to determine
-that enough background, description, use cases, and impact exist to implement.
-Once enough information is available and a there is consensus on an
-implementation, the issue should be indicated that it is available for the
-community to contribute. If it's not something that the maintainers feel should
-be added, the issue should be left for community discussion and upvotes. A
-comment should be added by the maintainers to describe how users can advocate
-for the feature with more use cases, or vote for the issue using reactions. The
-issue is subject to existing stale and ancient issue closure mechanisms.
-
-While we do not want to discourage users to contribute or make proposed changes,
-we need to acknowledge that the maintainers still have limited bandwidth to give
-feedback on implementation or design and review pull requests. If an issue has
-not been explicitly marked as being available for contribution, it should not be
-expected that a pull request will get a review. 
+Once these criteria have been met, an issue is available for the community to
+contribute. If it's not something that the maintainers feel should be added, the
+issue should be left for community discussion and upvotes. A comment should be
+added by the maintainers to describe how users can advocate for the feature with
+more use cases, or vote for the issue using reactions. The issue is subject to
+existing stale and ancient issue closure mechanisms.
 
 When an issue is being worked on by the community, maintainers will provide
 guidance and support during the contribution process. They will engage with the
@@ -198,14 +195,35 @@ business days on a PR review request. This does not guarantee how long it will
 be until the PR is merged.
 
 When a pull request review is made, the maintainers will review it and make a
-decision if it can be included or more work is needed. Once a pull request is
-complete with to the satisfaction of the maintainers, it can be merged and
-acknowledged as contribution from the community.
+decision if it can be included or more work is needed. For a pull request to be
+complete, it needs:
+
+1. Have an open issue detailing an implementation agreed upon by the
+   maintainers.
+1. Implement the change in the way described in the issue.
+1. Pass all validation checks, including tests and linting.
+1. Have an approved review from a maintainer.
+
+Once a pull request is complete with to the satisfaction of the maintainers, it
+can be merged and acknowledged as contribution from the community.
+
+We do not want to discourage users to contribute or make proposed changes, but
+we need to acknowledge that the maintainers still have limited bandwidth to give
+feedback on implementation or design and review pull requests. If an issue has
+not been explicitly marked as being available for contribution, it should not be
+expected that a pull request will get a review. We should clearly indicate which
+user contributions the maintainers are actively engaged on.
 
 If a pull request becomes stale because the contributor is no longer actively
 engaged or working on it for more than 30 days, it should be reviewed to see if
 it is suitable for the maintainers to finish the work or marked as stale and
 documented for another user to continue working on it.
+
+![Figure A: Flowchart of contribution guide review
+process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
+guide review process.")
+
+**Figure A: Flowchart of contribution guide review process.**
 
 ## Rationale/FAQ
 
