@@ -215,7 +215,7 @@ expected that a pull request will get a review. We should clearly indicate which
 user contributions the maintainers are actively engaged on.
 
 If a pull request becomes stale because the contributor is no longer actively
-engaged or working on it for more than 30 days, it should be reviewed to see if
+engaged or working on it for more than [TBD] days, it should be reviewed to see if
 it is suitable for the maintainers to finish the work or marked as stale and
 documented for another user to continue working on it.
 
