@@ -180,6 +180,12 @@ The approach for customer contributions should satisfy the following goals:
 
 ## Specification
  
+ ![Figure A: Flowchart of contribution guide review
+process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
+guide review process.")
+
+**Figure A: Flowchart of contribution guide review process.**
+
 Maintainers that actively engage with the community contributors to identify
 suitable implementations for requested features and provide gudiance during the
 process will result in a higher percentage of successful community
@@ -244,12 +250,6 @@ If a pull request becomes stale because the contributor is no longer actively
 engaged or working on it for more than [TBD] days, it should be reviewed to see
 if it is suitable for the maintainers to finish the work or marked as stale and
 documented for another user to continue working on it.
-
-![Figure A: Flowchart of contribution guide review
-process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
-guide review process.")
-
-**Figure A: Flowchart of contribution guide review process.**
 
 ## Rationale/FAQ
 
