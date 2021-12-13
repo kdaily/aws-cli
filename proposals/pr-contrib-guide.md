@@ -13,7 +13,46 @@ expectations for contributions. It defines the process for proposing,
 submitting, and reviewing a contribution. This proposal will make it easier for
 the community to successfully contribute to the AWS CLI.
 
-## Motivation
+## Background and Motivation
+
+The AWS CLI GitHub repository is where users can open issues for bug reports,
+feature requests, and guidance questions. GitHub issues are triaged on a regular
+basis to determine that they are correctly categorized and express a real and
+relevant problem or request. An answer is provided to the requesting user as
+soon as possible to acknowledge or resolve the issue. If a pull request
+accompanies the issue, it is triaged and marked for review. Feature requests are
+reviewed for general suitability and uniqueness, but are not actively commented
+on by maintainers to move the feature forward to an implementation.
+
+Users can also open pull requests to propose changes to the code base. Pull
+requests are triaged to determine the code owner and the change proposes
+something sensible. On occasion, a cursory review is performed to determine that
+enough detail has been provided to understand the request. The repository
+automatically runs the functional and unit test suites, and automated feedback
+is given to the contributor on the testing status (pass or fail). However, after
+the cursory and automated review, minimal interaction with the contributor
+occurs. Changes to code or functionality are not generally reviewed in depth,
+and an acceptance decision or detailed comments on next steps are not provided.
+The exception to this are for documentation changes or typographical errors.
+These changes are frequently reviewed, accepted, and merged in conjunction with
+the AWS documentation writers and the maintainers.
+
+Pull requests are used as data in conjunction with issues to identify feature
+requests that should be prioritized by the maintainers, but the proposed code
+changes are infrequently used. When a feature is prioritized for work it is
+added to an internal queue for tracking. Once the maintainers have written the
+code for the change, it is opened as a new pull request in the GitHub repository
+to be merged in. Maintainer feedback is used to determine when the pull request
+is ready to be merged.
+
+The GitHub repository hosts a CONTRIBUTING guide, standard to many open source
+projects, to provide guidance on contributing code to the project. The current
+guide describes at a high level how to report an issue or request and states the
+minimum requirements and suggestions for a code contribution. It suggests how to
+perform the basic tasks using Git, including retrieving and building the
+development version. It does not describe what the review or acceptance criteria
+are for a contribution, nor does it state what is expected of the contributor or
+maintainer in the process.
 
 As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
 GitHub repository. 52 pull requests and 81 issues have not been updated in more
@@ -24,26 +63,12 @@ From the community perspective, the volume of open issues and pull requests
 indicates a lack of awareness or communication with the community to respond to
 their needs.
 
-### Goals
+## Examples
 
-The approach for customer contributions should satisfy the following goals:
+This section provides detailed use cases that demonstrate deficiencies in the
+current feature request and pull request review process.
 
-1. Users should know how they can help. It should be straightforward for
-   community members to make high quality contributions.
-1. No requests should exist without a response. Communication from maintainers
-   should happen in a timely manner, even (especially!) if that’s saying no. An
-   initial response to open PRs should occur within [TBD] business days.
-1. A contribution should be completed through the efforts of the contributor and
-   maintainers and not be left abandoned. The maintainers are responsible see it
-   through to a conclusion.
-1. We should prioritize the things that people want based on feedback they
-   provide on issues. Users should know how to provide that feedback.
-1. Users should know exactly what to expect when interacting with the
-   maintainers. The next steps should be clearly defined.
-
-### Examples
-
-#### Limited information on where and what to contribute
+### Limited information on where and what to contribute
 
 The AWS CLI currently has code, documentation, and examples published publicly
 on a number of GitHub repositories. We have hundreds of open issues and pull
@@ -62,7 +87,7 @@ available to work (and what is not) on so that their efforts are used
 effectively. This would help users and maintainers focus on relevant issues and
 work more effectively.
 
-#### No active triage or first response
+### No active triage or first response
 
 `aws-cli` [pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
 functionality to support cache usage. It is the pull request with the most 👍🏻
@@ -78,7 +103,7 @@ We need to prioritize triage and review of community contributions in a timely
 manner. The steps that community members should use to make their contribution
 should be communicated clearly and be straightforward to follow.
 
-#### Unprioritized contributions
+### Unprioritized contributions
 
 Some pull requests have had initial contact from maintainers as desirable
 changes, but then fall off the radar and remain unprioritized. This leaves the
@@ -99,7 +124,7 @@ state or waiting on a maintainer; it should be resolved by merging it or closing
 it. When an issue is raised and reviewed, we need to prioritize it and see it
 through.
 
-#### Competing priorities and limited bandwidth
+### Competing priorities and limited bandwidth
 
 There are 151 open issues that have upvotes or reactions from five or more
 users, indicating broader interest. That volume is not tractable for the
@@ -113,7 +138,7 @@ provide feedback in the best way for us to take action. We also need to
 strategically and fairly manage the amount of in flight work so that open
 requests do not pile up.
 
-#### Pull requests with limited background and context
+### Pull requests with limited background and context
 
 Many pull requests come as unsolicited changes that often do not correspond to
 an open issue that has been discussed by the maintainers or the community. They
@@ -136,23 +161,24 @@ life cycle of an idea that can culminate in a community contribution. We also
 need to prioritize issues against other requests from the community given the
 effort to contribute for users and review for maintainers.
 
+## Goals
+
+The approach for customer contributions should satisfy the following goals:
+
+1. Users should know how they can help. It should be straightforward for
+   community members to make high quality contributions.
+1. No requests should exist without a response. Communication from maintainers
+   should happen in a timely manner, even (especially!) if that’s saying no. An
+   initial response to open PRs should occur within [TBD] business days.
+1. A contribution should be completed through the efforts of the contributor and
+   maintainers and not be left abandoned. The maintainers are responsible see it
+   through to a conclusion.
+1. We should prioritize the things that people want based on feedback they
+   provide on issues. Users should know how to provide that feedback.
+1. Users should know exactly what to expect when interacting with the
+   maintainers. The next steps should be clearly defined.
+
 ## Specification
-
-This section defines:
-
-* [Current process](#current-process)
-* [Proposed improvements](#proposed-improvements)
-
-### Current Process
-
-Customer feature requests are reviewed for general suitability and uniqueness,
-but are not actively commented on by maintainers to move the feature forward to
-an implementation. Pull requests are reviewed in an *ad hoc* fashion by various
-members of the maintainer team, but similarly are not actively processed to
-continue towards acceptance. This has contributed to the current status of 189
-pull requests open in the AWS CLI GitHub repository.
-
-### Proposed Improvements
  
 Maintainers that actively engage with the community contributors to identify
 suitable implementations for requested features and provide gudiance during the
@@ -215,8 +241,8 @@ expected that a pull request will get a review. We should clearly indicate which
 user contributions the maintainers are actively engaged on.
 
 If a pull request becomes stale because the contributor is no longer actively
-engaged or working on it for more than [TBD] days, it should be reviewed to see if
-it is suitable for the maintainers to finish the work or marked as stale and
+engaged or working on it for more than [TBD] days, it should be reviewed to see
+if it is suitable for the maintainers to finish the work or marked as stale and
 documented for another user to continue working on it.
 
 ![Figure A: Flowchart of contribution guide review
