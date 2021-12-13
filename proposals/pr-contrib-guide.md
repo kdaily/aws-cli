@@ -73,14 +73,13 @@ current feature request and pull request review process.
 The AWS CLI currently has code, documentation, and examples published publicly
 on a number of GitHub repositories. We have hundreds of open issues and pull
 requests across these areas. However, we do not have a guide for users to know
-what things are available for them to contribute on or what the process or
-guidelines are. We get frequent requests to contribute on specific issues, but
-it's a significant effort to respond to these requests individually. We also do
-not have guidance for which kinds of issues we do not accept contributions,
-leading to users to spend effort that ultimately will not be used. For example,
-users often request waiters and paginators, which are now standardized across
-AWS SDKs and implemented by the service teams, who know how their APIs work to
-provide the best performance and experience.
+how to contribute or what they should work on. We get frequent requests to
+contribute on specific issues, but it's a significant effort to respond to these
+requests individually. We also do not have guidance for which kinds of issues we
+do not accept contributions, leading to users to spend effort that ultimately
+will not be used. For example, users often request waiters and paginators, which
+are now standardized across AWS SDKs and implemented by the service teams, who
+know how their APIs work to provide the best performance and experience.
 
 We need a well-documented guide and process for the community to know what is
 available to work (and what is not) on so that their efforts are used
@@ -239,7 +238,7 @@ complete, it needs:
 Once a pull request is complete with to the satisfaction of the maintainers, it
 can be merged and acknowledged as contribution from the community.
 
-We do not want to discourage users to contribute or make proposed changes, but
+We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
 feedback on implementation or design and review pull requests. If an issue has
 not been explicitly marked as being available for contribution, it should not be
@@ -292,7 +291,7 @@ deviation from how the AWS CLI works currently, and it was felt that having a
 formalized process for this change would result in better decisions.
 
 In this case, we would use the same format as this document for a proposal that
-would be opened opened for public comment and review. The document would be
+would be opened for public comment and review. The document would be
 incorporated into the codebase as an accepted proposal as a matter of record.
 
 #### Why should there be a minimum number of upvotes or reactions to open something for the community to work on?
