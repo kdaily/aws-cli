@@ -185,22 +185,22 @@ guide review process.")
 
 **Figure A: Flowchart of contribution guide review process.**
 
-Maintainers that actively engage with the community contributors to identify
-suitable implementations for requested features and provide gudiance during the
-process will result in a higher percentage of successful community
-contributions. In addition, we will publish a contributing guide that describes
-the life cycle of a feature request that can culminate in a code contribution
-from the community through a GitHub pull request. The guide describes the triage
-and review of open feature requests with the goal of identifying issues where
-community contributions would be welcome. It defines what is required to move a
-feature request to be available for community contribution. It documents the
-review process and sets community expectations around communications to move a
-contribution forward. Figure A demonstrates a high level view of the proposed
-process.
+We propose to make changes to the maintainer engagement and review process for
+feature requests and pull requests. Figure A demonstrates a high level view of
+the proposed process. It has three phases: intake, implementation, and review.
 
-The maintainers will actively review GitHub issues for feature requests to
-determine if they are available for contribution. The criteria used to make that
-determination include:
+REMOVE!!!!!!! The guide must describe the triage and review of open feature
+requests with the goal of identifying issues where community contributions would
+be welcome. It defines what is required to move a feature request to be
+available for community contribution. It documents the review process and sets
+community expectations around communications to move a contribution forward. 
+### Intake
+
+The intake process identifies feature requests, through GitHub issues, where
+community contributions are welcome.
+
+The maintainers will actively review GitHub issues for feature requests to make
+this determination. The criteria used to make that decision include:
 
 1. The change will be made on part of the code base that the maintainers have
    determined to be available. See the FAQ for more details.
@@ -217,6 +217,11 @@ issue should be left for community discussion and upvotes. A comment should be
 added by the maintainers to describe how users can advocate for the feature with
 more use cases, or vote for the issue using reactions. The issue is subject to
 existing stale and ancient issue closure mechanisms.
+
+### Implementation
+
+Any issue that has been marked as available is open for a community contribution
+through a GitHub pull request.
 
 When an issue is being worked on by the community, maintainers will provide
 guidance and support during the contribution process. They will engage with the
