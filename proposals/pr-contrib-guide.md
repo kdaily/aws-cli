@@ -15,27 +15,28 @@ the community to successfully contribute to the AWS CLI.
 
 ## Background and Motivation
 
-The AWS CLI GitHub repository is where users can open issues for bug reports,
+The AWS CLI GitHub repository is where any user can open issues for bug reports,
 feature requests, and guidance questions. GitHub issues are triaged on a regular
 basis to determine that they are correctly categorized and express a real and
 relevant problem or request. An answer is provided to the requesting user as
-soon as possible to acknowledge or resolve the issue. If a pull request
-accompanies the issue, it is triaged and marked for review. Feature requests are
+soon as possible to acknowledge or resolve the issue. Feature requests are
 reviewed for general suitability and uniqueness, but are not actively commented
-on by maintainers to move the feature forward to an implementation.
+on by maintainers to move the feature forward to an implementation unless they
+are specifically singled out for further review or backlog grooming.
 
 Users can also open pull requests to propose changes to the code base. Pull
 requests are triaged to determine the code owner and the change proposes
-something sensible. On occasion, a cursory review is performed to determine that
-enough detail has been provided to understand the request. The repository
-automatically runs the functional and unit test suites, and automated feedback
-is given to the contributor on the testing status (pass or fail). However, after
-the cursory and automated review, minimal interaction with the contributor
-occurs. Changes to code or functionality are not generally reviewed in depth,
-and an acceptance decision or detailed comments on next steps are not provided.
-The exception to this are for documentation changes or typographical errors.
-These changes are frequently reviewed, accepted, and merged in conjunction with
-the AWS documentation writers and the maintainers.
+something sensible. If a pull request accompanies an issue, it is generally
+triaged as well and marked for review. On occasion, a cursory review is
+performed to determine that enough detail has been provided to understand the
+request. The repository automatically runs the functional and unit test suites,
+and automated feedback is given to the contributor on the testing status (pass
+or fail). However, after the cursory and automated review, minimal interaction
+with the contributor occurs. Changes to code or functionality are not generally
+reviewed in depth, and an acceptance decision or detailed comments on next steps
+are not provided. The exception to this are for documentation changes or
+typographical errors. These changes are frequently reviewed, accepted, and
+merged in conjunction with the AWS documentation writers and the maintainers.
 
 Pull requests are used as data in conjunction with issues to identify feature
 requests that should be prioritized by the maintainers, but the proposed code
@@ -65,7 +66,7 @@ their needs.
 
 ## Examples
 
-This section provides detailed use cases that demonstrate deficiencies in the
+This section provides detailed use cases that demonstrate limitations of the
 current feature request and pull request review process.
 
 ### Limited information on where and what to contribute
@@ -277,6 +278,16 @@ it should not be expected that a pull request will get a review.
 
 ## Rationale/FAQ
 
+### Q. Why do we limit the number of in flight reviews?
+
+The maintainers have work that comes from outside of the GitHub repository that
+needs to be prioritized along with user contributions. Controlling the volume of
+pull request reviews and prioritizing completing the in flight reviews over new
+reviews should result in a shorter time to merge and release a contributor's
+change for a feature requested by the community. It will also reduce the amount
+of context switching for the maintainers, allowing them to focus on giving high
+quality feedback to users. As we use this framework to process existing feature
+requests, we can revisit what the in flight limit should be. 
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
 Having a defined process for intake reduces the burden on deciding which way is
