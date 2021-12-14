@@ -187,14 +187,14 @@ guide review process.")
 **Figure A: Flowchart of contribution guide review process.**
 
 We propose to make changes to the maintainer engagement and review process for
-feature requests and pull requests. Figure A demonstrates a high level view of
-the proposed process. It has three phases: intake, implementation, and review.
+feature requests and pull requests. The accompanying contributing guide must
+define what is required to move a feature request to be available for community
+contribution. It documents the review process and sets community expectations
+around communications to move a contribution forward. 
 
-REMOVE!!!!!!! The guide must describe the triage and review of open feature
-requests with the goal of identifying issues where community contributions would
-be welcome. It defines what is required to move a feature request to be
-available for community contribution. It documents the review process and sets
-community expectations around communications to move a contribution forward. 
+Figure A demonstrates a high level view of the proposed process. It has three
+phases: intake, implementation, and review.
+
 ### Intake
 
 The intake process identifies feature requests, through GitHub issues, where
