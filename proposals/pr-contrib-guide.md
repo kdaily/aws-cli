@@ -319,7 +319,7 @@ In this case, we would use the same format as this document for a proposal that
 would be opened for public comment and review. The document would be
 incorporated into the codebase as an accepted proposal as a matter of record.
 
-#### Why should there be a minimum number of upvotes or reactions to open something for the community to work on?
+### Why should there be a minimum number of upvotes or reactions to open something for the community to work on?
 
 We propose that in order for the maintainers to engage in the code review
 process, an issue should demonstrate user impact beyond the individual who
@@ -338,7 +338,7 @@ issues that might be candidates for community contribution.
 As part of the contribution guide, we will provide more specific guidance on how
 to upvote a feature so we can more accurately estimate user impact.
 
-#### Q. What is out of scope for changes that we would accept implementations from the community?
+### Q. What is out of scope for changes that we would accept implementations from the community?
 
 There are parts of the codebase that are not suitable for community
 contributions. They may pose a security risk, be part of the code that is
@@ -357,7 +357,7 @@ implement. These include (but are not limited to):
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
 
-#### Q. What is automated review, and what is human review?
+### Q. What is automated review, and what is human review?
 
 Initially, most of the  will be human review besides code linting and testing.
 Automation will be implemented for issue labeling, state transitions, and
