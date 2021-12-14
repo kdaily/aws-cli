@@ -221,39 +221,59 @@ existing stale and ancient issue closure mechanisms.
 ### Implementation
 
 Any issue that has been marked as available is open for a community contribution
-through a GitHub pull request.
+through a GitHub pull request. A user can start implementing an open issue using
+the CONTRIBUTING guide to assist them get started. 
 
 When an issue is being worked on by the community, maintainers will provide
 guidance and support during the contribution process. They will engage with the
-community during discussion of implementation details or issues that arise
-during the contribution. Notably, we will initially respond within [TBD]
-business days on a PR review request. This does not guarantee how long it will
-be until the PR is merged.
+contributor for discussion of implementation details or issues that arise during
+the contribution. 
 
-When a pull request review is made, the maintainers will review it and make a
-decision if it can be included or more work is needed. For a pull request to be
-complete, it needs:
+The contribution can have a review when the maintainers confirm:
 
-1. Have an open issue detailing an implementation agreed upon by the
-   maintainers.
-1. Implement the change in the way described in the issue.
-1. Pass all validation checks, including tests and linting.
-1. Have an approved review from a maintainer.
+1. It is implemented in the manner described in the issue.
+1. It passes all validation checks, including tests (both new and existing),
+   code linting, and style checks.
 
-Once a pull request is complete with to the satisfaction of the maintainers, it
-can be merged and acknowledged as contribution from the community.
+Validation checks are automated. Determining if the implementation matches the
+proposal requires a manual check that should be performed at a cursory level.
 
-We do not want to discourage users from contributing or proposing changes, but
-we need to acknowledge that the maintainers still have limited bandwidth to give
-feedback on implementation or design and review pull requests. If an issue has
-not been explicitly marked as being available for contribution, it should not be
-expected that a pull request will get a review. We should clearly indicate which
-user contributions the maintainers are actively engaged on.
+Once these requirements have been satisfied, the pull request can be added to a
+queue for maintainer review.
+### Review
 
+We will maintain a queue of issues that are ready for review once they are
+through the implementation phase. We will initially respond within [TBD]
+business days on a PR review request to acknowledge the request and provide an
+update on when a review can be expected. This does not guarantee how long it
+will be until the PR is merged.
+
+We will publish the queue of pull requests to review and indicate their status:
+acknowledged, under review, and completed. The maintainers will review the pull
+request and provide any comments, feedback, or requested changes. If changes are
+requested, the contributor should make the changes within [TBD] business days.
 If a pull request becomes stale because the contributor is no longer actively
 engaged or working on it for more than [TBD] days, it should be reviewed to see
 if it is suitable for the maintainers to finish the work or marked as stale and
 documented for another user to continue working on it.
+
+Once a pull request is complete with to the satisfaction of the maintainers, it
+is approved and can be merged and acknowledged as contribution from the
+community.
+
+We do not want to discourage users from contributing or proposing changes, but
+we need to acknowledge that the maintainers still have limited bandwidth to give
+feedback on implementation or design and review pull requests. We will limit the
+number of in flight pull request reviews to [TBD]. The maintainers priority will
+be on completing these in a timely manner. If a pull request becomes stale but
+there is sufficient work to complete it, the maintainers will complete the pull
+request. If after review and the maintainers agree that the implementation is
+not as discussed there is not significant demand or bandwidth to complete it,
+the issue may go back to the intake phase and be available for another user to
+contribute a change.
+
+If an issue has not been explicitly marked as being available for contribution,
+it should not be expected that a pull request will get a review.
 
 ## Rationale/FAQ
 
