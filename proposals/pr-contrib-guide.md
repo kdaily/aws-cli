@@ -264,13 +264,13 @@ community.
 We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
 feedback on implementation or design and review pull requests. We will limit the
-number of in flight pull request reviews to [TBD]. The maintainers priority will
-be on completing these in a timely manner. If a pull request becomes stale but
-there is sufficient work to complete it, the maintainers will complete the pull
-request. If after review and the maintainers agree that the implementation is
-not as discussed there is not significant demand or bandwidth to complete it,
-the issue may go back to the intake phase and be available for another user to
-contribute a change.
+number of in flight pull request reviews to [TBD]. The maintainers will
+prioritize completing PRs that have had a review over new review requests. If a
+pull request becomes stale but there is sufficient work to complete it, the
+maintainers will complete the pull request. If after review and the maintainers
+agree that the implementation is not as discussed or there is not significant
+demand or bandwidth to complete it, the issue may go back to the intake phase
+and be available for another user to contribute a change.
 
 If an issue has not been explicitly marked as being available for contribution,
 it should not be expected that a pull request will get a review.
