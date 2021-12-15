@@ -87,9 +87,9 @@ thorough reviews of code before merging.
 
 We need to collect and review user feedback to decide which requests are of
 interest for community contribution. We need to tell users how they can provide
-feedback in the best way for us to take action. We also need to strategically
-and fairly manage the amount of in flight work so that open requests do not pile
-up.
+feedback in the best way for us to take action. The maintainers have limited
+bandwidth and competing priorities. We need to strategically and fairly manage
+the amount of in flight work so that open requests do not pile up. 
 
 ### Limited information on how contribute
 
@@ -115,7 +115,7 @@ need cross-SDK review since it involves credential behavior. This issue
 demonstrates the lack of response to high user request issues that impact
 cross-SDK features and a lack of process to make changes.
 
-We need to prioritize triage and review of community contributions in a timely
+We need to triage and review community contributions in a timely
 manner. The steps that community members should use to make their contribution
 should be communicated clearly.
 
@@ -131,8 +131,7 @@ but picked up by another community member and improved in a related [pull
 request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
 the maintainers has occurred.
 
-The AWS CLI team has limited bandwidth and competing priorities. Without
-well-defined next steps for the maintainers, these requests are deprioritized
+Without well-defined next steps for the maintainers, these requests are deprioritized
 first. A community contribution should not be left in an incomplete state or
 waiting on a maintainer; it should be resolved by merging it or closing it. When
 an issue is raised and reviewed, we need to prioritize it and see it through.
@@ -164,16 +163,18 @@ The approach for customer contributions should satisfy the following goals:
 
 1. Users should know what is available for contribution. It should be clear
    where they can spend their efforts that will be accepted. 
-1. We should prioritize the things that people want based on feedback they
-   provide on issues. Users should know how to provide that feedback.
+1. We should prioritize issues based on feedback provided by the community to
+   focus the efforts of the maintainers and the community. Users should know how
+   to provide that feedback.
 1. Users should know how to contribute. The should be able to reference
    documentation to make high quality contributions.
-1. No requests should exist without a response. Communication from maintainers
-   should happen in a timely manner, even (especially!) if that’s saying no. An
-   initial response to open PRs should occur within [TBD] business days.
+1. All requests should get a response from the maintainers. Communication from
+   maintainers should happen in a timely manner, even (especially!) if that’s
+   saying no. An initial response to open PRs should occur within [TBD] business
+   days.
 1. A contribution should not be left abandoned. The maintainers are responsible
    see it through to a conclusion.
-1. Users should know exactly what to expect when interacting with the
+1. Contributors should know exactly what to expect when interacting with the
    maintainers. The current status should be clearly indicated and the next
    steps well defined.
 
@@ -289,12 +290,11 @@ it should not be expected that a pull request will get a review.
 
 ## Managing the existing backlog
 
-As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
-GitHub repository. 52 pull requests and 81 issues have not been updated in more
+As of 2021-12-15, there are 188 pull requests and 436 issues in the AWS CLI
+GitHub repository. 43 pull requests and 87 issues have not been updated in more
 than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
-of the open pull requests are extremely outdated and would require rebasing,
-which complicates the process of accepting them. [TBD] of the open pull requests
-are directly related to an existing feature request.
+of the open pull requests are directly related to an existing feature request.
+[TBD] of open pull requests have extensive merge conflicts.
 
 Based on these numbers, we propose to close all issues that:
 
