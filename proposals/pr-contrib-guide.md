@@ -15,35 +15,32 @@ the community to successfully contribute to the AWS CLI.
 
 ## Background and Motivation
 
-The AWS CLI GitHub repository is where any user can open issues for bug reports,
-feature requests, and guidance questions. GitHub issues are triaged on a regular
-basis to determine that they are correctly categorized and express a real and
-relevant problem or request. An answer is provided as soon as possible to
-acknowledge or resolve the issue. Feature requests are reviewed for general
-suitability and uniqueness, but are not actively commented on by maintainers to
-move the feature forward to an implementation unless they are specifically
-singled out for further review or backlog grooming.
+The AWS CLI GitHub repository is available for any user to report bugs, make
+feature requests, and ask guidance questions through a GitHub issue. GitHub
+issues are triaged regularly to determine that they are correctly categorized
+and express a real and relevant problem or request. An answer is provided as
+soon as possible to acknowledge or resolve the issue. Feature requests are
+reviewed for general suitability and uniqueness, but are not actively commented
+on by maintainers to move the feature forward to an implementation unless they
+are specifically singled out for further review or backlog grooming. Users can
+vote for features via "reactions" on the issue. The popularity of an issue is
+used to determine which features the maintainers will work on.
 
 Users can also open pull requests to propose changes to the code base. Pull
-requests are triaged to determine the code owner and the change proposes
-something sensible. If a pull request accompanies an issue, it is generally
-triaged as well and marked for review. On occasion, a cursory review is
-performed to determine that enough detail has been provided to understand the
-request. The repository automatically runs the functional and unit test suites,
-and automated feedback is given to the contributor on the testing status (pass
-or fail). If the maintainers decide a feature should be included, a pull request
-review is scheduled internally. Comments are left on GitHub for the contributor.
-If the pull request comments are not responded to, the maintainers will either
-continue working from the existing pull request or provide their own
-implementation in a new one.
+requests are triaged via best effort to determine the code owner and the change
+proposes something sensible. Occassionally, a cursory review is performed to
+determine if enough detail has been provided to understand the proposed change.
+The repository automatically runs functional and unit tests and the status (pass
+or fail) is reported on the pull request. If the maintainers decide a feature
+should be included, a review is scheduled internally. Comments and change
+requests are made on the GitHub pull request for the contributor.
 
 Pull requests are used as data in conjunction with issues to identify feature
 requests that should be prioritized by the maintainers, but the proposed code
 changes are infrequently used. When a feature is prioritized for work it is
-added to an internal queue for tracking. Once the maintainers have written the
-code for the change, it is opened as a new pull request in the GitHub repository
-to be merged in. Maintainer feedback is used to determine when the pull request
-is ready to be merged.
+added to an internal queue for tracking. The maintainers write the code for the
+change and open a new pull request in the GitHub repository. It is then reviewed
+by the maintainers before merging.
 
 The GitHub repository hosts a CONTRIBUTING guide, standard to many open source
 projects, to provide guidance on contributing code to the project. The current
@@ -57,11 +54,11 @@ maintainer in the process.
 As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
 GitHub repository. 52 pull requests and 81 issues have not been updated in more
 than a year. This volume indicates that there are motivated users who want to
-contribute to the AWS CLI but are unable to do so. Further, it demonstrates that
-there are users who have ideas for features but do not see them incorporated.
-From the community perspective, the volume of open issues and pull requests
-indicates a lack of awareness or communication with the community to respond to
-their needs.
+contribute to the AWS CLI and are not successful. There is no indication of the
+status of a pull request, so a contributor has no way to know when, or if, their
+contribution will be accepted. The large backlog of open and stale pull requests
+indicates that the current 'best effort' process for reviewing contributed code
+is not keeping pace with the demands of the community.
 
 ## Examples
 
