@@ -218,7 +218,7 @@ The maintainers will actively review GitHub issues for feature requests to make
 this determination. The criteria used to make that decision include:
 
 1. The change will be made on part of the code base that the maintainers have
-   determined to be available. See the FAQ for more details.
+   determined to be available. See the appendix for more details.
 1. There is evidence that the change will be impactful for a significant number
    of users beyond the individual that proposed it.
 1. The background, description, and use cases for the feature are clearly
@@ -400,7 +400,15 @@ issues that might be candidates for community contribution.
 As part of the contribution guide, we will provide more specific guidance on how
 to upvote a feature so we can more accurately estimate user impact.
 
-### Q. What is out of scope for changes that we would accept implementations from the community?
+### Q. What is automated review, and what is human review?
+
+Initially, most of the  will be human review besides code linting and testing.
+Automation will be implemented for issue labeling, state transitions, and
+template checks. We currently perform these types of processes for issues, and
+the proposed process is agnostic to how it's implemented.
+
+## Appendix
+### Changes that will not be made available for contribution
 
 There are parts of the codebase that are not suitable for community
 contributions. They may pose a security risk, be part of the code that is
@@ -418,10 +426,3 @@ implement. These include (but are not limited to):
 1. Changes to configuration or credential files or processes. These changes can
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
-
-### Q. What is automated review, and what is human review?
-
-Initially, most of the  will be human review besides code linting and testing.
-Automation will be implemented for issue labeling, state transitions, and
-template checks. We currently perform these types of processes for issues, and
-the proposed process is agnostic to how it's implemented.
