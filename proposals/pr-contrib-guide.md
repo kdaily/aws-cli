@@ -15,21 +15,32 @@ the community to successfully contribute to the AWS CLI.
 
 ## Background and Motivation
 
+### Current contribution process
+
 The AWS CLI GitHub repository is available for any user to report bugs, make
-feature requests, and ask guidance questions through a GitHub issue. GitHub
-issues are triaged regularly to determine that they are correctly categorized
+feature requests, and ask guidance questions through a GitHub issue. There are
+currently three phases to manage issues: intake, implementation, and review.
+
+#### Intake
+
+GitHub issues are triaged regularly to determine that they are correctly categorized
 and express a real and relevant problem or request. An answer is provided as
 soon as possible to acknowledge or resolve the issue. Feature requests are
 reviewed for general suitability and uniqueness, but are not actively commented
 on by maintainers to move the feature forward to an implementation unless they
 are specifically singled out for further review or backlog grooming. Users can
 vote for features via "reactions" on the issue. The popularity of an issue is
-used to determine which features the maintainers will work on.
+ occasionally used to determine which features the maintainers will work on.
 
-Users can also open pull requests to propose changes to the code base. Pull
+#### Implementation
+
+Users can open pull requests to propose changes to the code base. Pull
 requests are triaged via best effort to determine the code owner and the change
-proposes something sensible. Occassionally, a cursory review is performed to
-determine if enough detail has been provided to understand the proposed change.
+proposes something sensible. There is no requirement to discuss a contribution prior to opening a pull request.
+Occassionally, a cursory review is performed to determine if enough detail has been provided to understand the proposed change.
+
+#### Review
+
 The repository automatically runs functional and unit tests and the status (pass
 or fail) is reported on the pull request. If the maintainers decide a feature
 should be included, a review is scheduled internally. Comments and change
@@ -41,6 +52,8 @@ changes are infrequently used. When a feature is prioritized for work it is
 added to an internal queue for tracking. The maintainers write the code for the
 change and open a new pull request in the GitHub repository. It is then reviewed
 by the maintainers before merging.
+
+#### Documentation and tracking
 
 The GitHub repository hosts a CONTRIBUTING guide, standard to many open source
 projects, to provide guidance on contributing code to the project. The current
@@ -59,12 +72,12 @@ contribution will be accepted. This demonstrates that the current 'best effort'
 process for reviewing contributed code is not keeping pace with the demands of
 the community.
 
-## Examples
+### Issues with current contribution process
 
 This section provides detailed use cases that demonstrate limitations of the
 current feature request and pull request review process.
 
-### No indication of what to contribute
+#### No indication of what to contribute
 
 The AWS CLI has a list of open issues which are curated into bugs, feature
 requests, and guidance questions. We do not state which issues are available for
@@ -77,7 +90,7 @@ We need a curated list of issues to know what is available for contribution and
 what is not so that their efforts are used effectively. This would help users
 and maintainers focus on relevant issues and work more effectively.
 
-### Competing priorities and limited bandwidth to work on popular requests
+#### Competing priorities and limited bandwidth to work on popular requests
 
 There are 151 open issues that have upvotes or reactions from five or more
 users, indicating broad interest. That volume is not tractable for the
@@ -91,7 +104,7 @@ feedback in the best way for us to take action. The maintainers have limited
 bandwidth and competing priorities. We need to strategically and fairly manage
 the amount of in flight work so that open requests do not pile up. 
 
-### Limited information on how contribute
+#### Limited information on how contribute
 
 The AWS CLI has a contributing guide focused on the technical aspects of writing
 code for a contribution. However, the guide does not discuss how to contribute.
@@ -103,7 +116,7 @@ available for contribution and what is not so that their efforts are used
 effectively. This would help users and maintainers focus on relevant issues and
 work more effectively.
 
-### No active triage or first response
+#### No active triage or first response
 
 [Pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
 functionality to support cache usage. It is the pull request with the most
@@ -119,7 +132,7 @@ We need to triage and review community contributions in a timely
 manner. The steps that community members should use to make their contribution
 should be communicated clearly.
 
-### Unprioritized contributions
+#### Unprioritized contributions
 
 Some pull requests have correspondence from maintainers indicating interest in
 the change, but then have remained unprioritized and incomplete. For example,
@@ -136,7 +149,7 @@ first. A community contribution should not be left in an incomplete state or
 waiting on a maintainer; it should be resolved by merging it or closing it. When
 an issue is raised and reviewed, we need to prioritize it and see it through.
 
-### Pull requests with limited background and context
+#### Pull requests with limited background and context
 
 Many pull requests come as unsolicited changes that often do not correspond to
 an open issue that has been discussed by the maintainers or the community. They
@@ -186,12 +199,12 @@ guide review process.")
 
 **Figure A: Flowchart of contribution guide review process.**
 
-We propose to make changes to the maintainer engagement and review process for
-feature requests and pull requests. An accompanying contributing guide must
-document the review process, acceptance criteria, and expectations for
-communication. In addition, a transparent status must be published to indicate
-what is available for contribution and how close a contribution is to
-completion. 
+To improve the review process for feature requests and pull requests, we propose
+to modify the existing phases and add new ones. In addition, we propose to
+publish an improved contributing guide to document the review process,
+acceptance criteria, and expectations for communication. In addition, a
+transparent status must be published to indicate what is available for
+contribution and how close a contribution is to completion. 
 
 Figure A demonstrates a high level view of the proposed process. It has three
 phases: intake, implementation, and review.
