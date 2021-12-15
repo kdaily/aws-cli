@@ -51,19 +51,45 @@ development version. It does not describe what the review or acceptance criteria
 are for a contribution, nor does it state what is expected of the contributor or
 maintainer in the process.
 
-As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
-GitHub repository. 52 pull requests and 81 issues have not been updated in more
-than a year. This volume indicates that there are motivated users who want to
-contribute to the AWS CLI and are not successful. There is no indication of the
-status of a pull request, so a contributor has no way to know when, or if, their
-contribution will be accepted. The large backlog of open and stale pull requests
-indicates that the current 'best effort' process for reviewing contributed code
-is not keeping pace with the demands of the community.
+There is a backlog of hundreds of feature request issues and pull request
+contributions, which indicates that the maintainers cannot keep up with customer
+demand and that there are motivated users who want to contribute to the AWS CLI
+and are not successful. Contributors have no idea when, or if, their
+contribution will be accepted. This demonstrates that the current 'best effort'
+process for reviewing contributed code is not keeping pace with the demands of
+the community.
 
 ## Examples
 
 This section provides detailed use cases that demonstrate limitations of the
 current feature request and pull request review process.
+
+### No indication of what to contribute
+
+The AWS CLI has a list of open issues which are curated into bugs, feature
+requests, and guidance questions. We do not state which issues are available for
+community contributions. This results in users spending effort that ultimately
+will not be used. For example, users propose changes to waiters and paginators.
+These are standardized across AWS SDKs and implemented by the service teams, who
+know how to provide the best performance and experience.
+
+We need a curated list of issues to know what is available for contribution and
+what is not so that their efforts are used effectively. This would help users
+and maintainers focus on relevant issues and work more effectively.
+
+### Competing priorities and limited bandwidth to work on popular requests
+
+There are 151 open issues that have upvotes or reactions from five or more
+users, indicating broad interest. That volume is not tractable for the
+maintainers to implement themselves. Community members need to be able to
+contribute more easily while balancing the efforts of maintainers to conduct
+thorough reviews of code before merging.
+
+We need to collect and review user feedback to decide which requests are of
+interest for community contribution. We need to tell users how they can provide
+feedback in the best way for us to take action. We also need to strategically
+and fairly manage the amount of in flight work so that open requests do not pile
+up.
 
 ### Limited information on how contribute
 
@@ -76,19 +102,6 @@ We need a well-documented guide and process for the community to know what is
 available for contribution and what is not so that their efforts are used
 effectively. This would help users and maintainers focus on relevant issues and
 work more effectively.
-
-### No indication of what to contribute or the status of a contribution
-
-The AWS CLI has a list of open issues which are curated into bugs, feature
-requests, and guidance questions. We do not state which issues are available for
-community contributions. This results in users spending effort that ultimately
-will not be used. For example, users propose changes to waiters and paginators.
-These are standardized across AWS SDKs and implemented by the service teams, who
-know how to provide the best performance and experience.
-
-We need a curated list of issues to know what is available for contribution and
-what is not so that their efforts are used effectively. This would help users
-and maintainers focus on relevant issues and work more effectively.
 
 ### No active triage or first response
 
@@ -124,20 +137,6 @@ first. A community contribution should not be left in an incomplete state or
 waiting on a maintainer; it should be resolved by merging it or closing it. When
 an issue is raised and reviewed, we need to prioritize it and see it through.
 
-### Competing priorities and limited bandwidth to work on popular requests
-
-There are 151 open issues that have upvotes or reactions from five or more
-users, indicating broad interest. That volume is not tractable for the
-maintainers to implement themselves. Community members need to be able to
-contribute more easily while balancing the efforts of maintainers to conduct
-thorough reviews of code before merging.
-
-We need to collect and review user feedback to decide which requests are of
-interest for community contribution. We need to tell users how they can provide
-feedback in the best way for us to take action. We also need to strategically
-and fairly manage the amount of in flight work so that open requests do not pile
-up.
-
 ### Pull requests with limited background and context
 
 Many pull requests come as unsolicited changes that often do not correspond to
@@ -163,18 +162,17 @@ life cycle of an idea that can culminate in a community contribution.
 
 The approach for customer contributions should satisfy the following goals:
 
-1. Users should know how to contribute. It should be straightforward for
-   community members to make high quality contributions.
 1. Users should know what is available for contribution. It should be clear
    where they can spend their efforts that will be accepted. 
+1. We should prioritize the things that people want based on feedback they
+   provide on issues. Users should know how to provide that feedback.
+1. Users should know how to contribute. The should be able to reference
+   documentation to make high quality contributions.
 1. No requests should exist without a response. Communication from maintainers
    should happen in a timely manner, even (especially!) if that’s saying no. An
    initial response to open PRs should occur within [TBD] business days.
-1. A contribution should be completed through the efforts of the contributor and
-   maintainers and not be left abandoned. The maintainers are responsible see it
-   through to a conclusion.
-1. We should prioritize the things that people want based on feedback they
-   provide on issues. Users should know how to provide that feedback.
+1. A contribution should not be left abandoned. The maintainers are responsible
+   see it through to a conclusion.
 1. Users should know exactly what to expect when interacting with the
    maintainers. The current status should be clearly indicated and the next
    steps well defined.
@@ -309,6 +307,24 @@ determine if an improvement to the documentation will alleviate contributor
 frustration. It may also indicate that we need to make changes to the process as
 well.
 
+## Managing the existing backlog
+
+As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
+GitHub repository. 52 pull requests and 81 issues have not been updated in more
+than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
+of the open pull requests are extremely outdated and would require rebasing,
+which complicates the process of accepting them. [TBD] of the open pull requests are directly related to an existing feature request.
+
+Based on these numbers, we propose to close all issues that:
+
+1. Do not have at least 5 upvotes,
+1. Need a rebase that would require significant developer effort, and
+1. Do not have an open issue discussing the proposed change.
+
+To close these issues, we propose an appoach with two phases:
+
+1. We will use existing automated infrastructure to comment on ancient pull requests, defined as no activity in more than a year and less than 5 upvotes. This will post a comment indicating that the issue will be closed without further interaction.
+2. Next, we will review any remaining open pull requests and determine if there is an existing open issue tracking the feature request, and mark all such pull requests for automated closure after [TBD] days. In addition, we will review pull requests that have major conflicts to resolve and manually close them, indicating to the contributor that if they still wish to propose the change they should open an issue for discussion.
 ## Rationale/FAQ
 
 ### Q. Why do we limit the number of in flight reviews?
