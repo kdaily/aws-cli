@@ -65,73 +65,78 @@ is not keeping pace with the demands of the community.
 This section provides detailed use cases that demonstrate limitations of the
 current feature request and pull request review process.
 
-### Limited information on where and what to contribute
+### Limited information on how contribute
 
-The AWS CLI currently has code, documentation, and examples published publicly
-on a number of GitHub repositories. We have hundreds of open issues and pull
-requests across these areas. However, we do not have a guide for users to know
-what they should work on or how to contribute. We get frequent requests to
-contribute on specific issues, but it requires significant effort to respond to these
-requests individually. We also do not state which kinds of feature requests for which we do not accept contributions, 
-leading to users to spend effort that ultimately
-will not be used. For example, users often request waiters and paginators, which
-are now standardized across AWS SDKs and implemented by the service teams, who
-know how to provide the best performance and experience.
+The AWS CLI has a contributing guide focused on the technical aspects of writing
+code for a contribution. However, the guide does not discuss how to contribute.
+We get frequent requests to contribute on specific issues, but it requires
+significant effort to respond to these requests individually.
 
 We need a well-documented guide and process for the community to know what is
 available for contribution and what is not so that their efforts are used
 effectively. This would help users and maintainers focus on relevant issues and
 work more effectively.
 
+### No indication of what to contribute or the status of a contribution
+
+The AWS CLI has a list of open issues which are curated into bugs, feature
+requests, and guidance questions. We do not state which issues are available for
+community contributions. This results in users spending effort that ultimately
+will not be used. For example, users propose changes to waiters and paginators.
+These are standardized across AWS SDKs and implemented by the service teams, who
+know how to provide the best performance and experience.
+
+We need a curated list of issues to know what is available for contribution and
+what is not so that their efforts are used effectively. This would help users
+and maintainers focus on relevant issues and work more effectively.
+
 ### No active triage or first response
 
 [Pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
-functionality to support cache usage. It is the pull request with the most 👍🏻
-reactions (55) since being opened in March 2018. It was proposed as an
-[issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
+functionality to support cache usage. It is the pull request with the most
+upvotes (55 👍🏻 reactions) since being opened in March 2018. It was proposed as
+an [issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
 have been made since then. It is still getting comments noting the need as of
-April 2021. It currently would need rebasing since it has conflicts with the
-base branch. It would also need cross-SDK review since it involves credential
-behavior. This issue demonstrates the lack of response to high user request
-issues that impact cross-SDK features and a lack of process to make changes.
+April 2021. It currently would need rebasing due to conflicts. It would also
+need cross-SDK review since it involves credential behavior. This issue
+demonstrates the lack of response to high user request issues that impact
+cross-SDK features and a lack of process to make changes.
 
 We need to prioritize triage and review of community contributions in a timely
 manner. The steps that community members should use to make their contribution
-should be communicated clearly and be straightforward to follow.
+should be communicated clearly.
 
 ### Unprioritized contributions
 
-Some pull requests have had initial contact from maintainers as desirable
-changes, but then fall off the radar and remain unprioritized. This leaves the
-impression that user requests are not a priority. For example, [pull request
-2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync command excludes
-files more efficiently. It proposes to fix issue
+Some pull requests have correspondence from maintainers indicating interest in
+the change, but then have remained unprioritized and incomplete. For example,
+[pull request 2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync
+command excludes files more efficiently. It proposes to fix issue
 [#1138](https://github.com/aws/aws-cli/issues/1138) that had tacit approval from
 the maintainers. It was subsequently left uncompleted by the original author,
 but picked up by another community member and improved in a related [pull
 request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
 the maintainers has occurred.
 
-The AWS CLI team has limited bandwidth and competing priorities; without
-well-defined next steps for the maintainers, these types of requests are then
-the first to be neglected for prioritization. A community contribution should
-not be left in an incomplete state or waiting on a maintainer; it should be
-resolved by merging it or closing it. When an issue is raised and reviewed, we
-need to prioritize it and see it through.
+The AWS CLI team has limited bandwidth and competing priorities. Without
+well-defined next steps for the maintainers, these requests are deprioritized
+first. A community contribution should not be left in an incomplete state or
+waiting on a maintainer; it should be resolved by merging it or closing it. When
+an issue is raised and reviewed, we need to prioritize it and see it through.
 
-### Competing priorities and limited bandwidth
+### Competing priorities and limited bandwidth to work on popular requests
 
 There are 151 open issues that have upvotes or reactions from five or more
-users, indicating broader interest. That volume is not tractable for the
+users, indicating broad interest. That volume is not tractable for the
 maintainers to implement themselves. Community members need to be able to
 contribute more easily while balancing the efforts of maintainers to conduct
 thorough reviews of code before merging.
 
-We need to collect and review user feedback to decide on what to work on to
-determine what contributions are of interest. We need to tell users how they can
-provide feedback in the best way for us to take action. We also need to
-strategically and fairly manage the amount of in flight work so that open
-requests do not pile up.
+We need to collect and review user feedback to decide which requests are of
+interest for community contribution. We need to tell users how they can provide
+feedback in the best way for us to take action. We also need to strategically
+and fairly manage the amount of in flight work so that open requests do not pile
+up.
 
 ### Pull requests with limited background and context
 
@@ -152,16 +157,16 @@ difficult to approve; it's hard to have a conversation when it involves an idea
 proposal as well as code changes. It usually ends in an unmerged pull request or
 significant code revision, which is effort that was unnecessarily expended by
 the user and potentially the maintainer. We need a structured process for the
-life cycle of an idea that can culminate in a community contribution. We also
-need to prioritize issues against other requests from the community given the
-effort to contribute for users and review for maintainers.
+life cycle of an idea that can culminate in a community contribution.
 
 ## Goals
 
 The approach for customer contributions should satisfy the following goals:
 
-1. Users should know how they can help. It should be straightforward for
+1. Users should know how to contribute. It should be straightforward for
    community members to make high quality contributions.
+1. Users should know what is available for contribution. It should be clear
+   where they can spend their efforts that will be accepted. 
 1. No requests should exist without a response. Communication from maintainers
    should happen in a timely manner, even (especially!) if that’s saying no. An
    initial response to open PRs should occur within [TBD] business days.
@@ -171,10 +176,11 @@ The approach for customer contributions should satisfy the following goals:
 1. We should prioritize the things that people want based on feedback they
    provide on issues. Users should know how to provide that feedback.
 1. Users should know exactly what to expect when interacting with the
-   maintainers. The next steps should be clearly defined.
+   maintainers. The current status should be clearly indicated and the next
+   steps well defined.
 
 ## Specification
- 
+
  ![Figure A: Flowchart of contribution guide review
 process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
 guide review process.")
@@ -182,10 +188,11 @@ guide review process.")
 **Figure A: Flowchart of contribution guide review process.**
 
 We propose to make changes to the maintainer engagement and review process for
-feature requests and pull requests. The accompanying contributing guide must
-define what is required to move a feature request to be available for community
-contribution. It documents the review process and sets community expectations
-around communications to move a contribution forward. 
+feature requests and pull requests. An accompanying contributing guide must
+document the review process, acceptance criteria, and expectations for
+communication. In addition, a transparent status must be published to indicate
+what is available for contribution and how close a contribution is to
+completion. 
 
 Figure A demonstrates a high level view of the proposed process. It has three
 phases: intake, implementation, and review.
@@ -208,24 +215,33 @@ this determination. The criteria used to make that decision include:
 1. There is consensus with the maintainers on an implementation plan.
 
 Once these criteria have been met, an issue is available for the community to
-contribute. If it's not something that the maintainers feel should be added, the
-issue should be left for community discussion and upvotes. A comment should be
-added by the maintainers to describe how users can advocate for the feature with
-more use cases, or vote for the issue using reactions. The issue is subject to
-existing stale and ancient issue closure mechanisms.
+contribute.
+
+If it's not something that the maintainers feel should be added, the issue
+should be left for community discussion and upvotes. A comment should be added
+by the maintainers to describe how users can advocate for the feature with more
+use cases, or vote for the issue using reactions.
+
+All issues are subject to existing stale and ancient issue closure mechanisms,
+which will prompt for community input before they are automatically closed.
 
 ### Implementation
 
 Any issue that has been marked as available is open for a community contribution
 through a GitHub pull request. A user can start implementing an open issue using
-the CONTRIBUTING guide to assist them get started. 
+the CONTRIBUTING guide as a reference.
 
-When an issue is being worked on by the community, maintainers will provide
-guidance and support during the contribution process. They will engage with the
-contributor for discussion of implementation details or issues that arise during
-the contribution. 
+When an issue is being worked on by a contributor, maintainers will provide
+guidance and support during the implementation process. They will engage with
+the contributor for discussion of implementation details or issues that arise
+during the contribution. 
 
-The contribution can have a review when the maintainers confirm:
+When the contributor feels that they have completed their work, the contribution
+is marked as ready for review.
+### Ready for Review
+
+The contribution is then given an initial inspection by the maintainers to
+confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It passes all validation checks, including tests (both new and existing),
@@ -236,6 +252,7 @@ proposal requires a manual check that should be performed at a cursory level.
 
 Once these requirements have been satisfied, the pull request can be added to a
 queue for maintainer review.
+
 ### Review
 
 We will maintain a queue of issues that are ready for review once they are
@@ -244,32 +261,53 @@ business days on a PR review request to acknowledge the request and provide an
 update on when a review can be expected. This does not guarantee how long it
 will be until the PR is merged.
 
-We will publish the queue of pull requests to review and indicate their status:
-acknowledged, under review, and completed. The maintainers will review the pull
-request and provide any comments, feedback, or requested changes. If changes are
-requested, the contributor should make the changes within [TBD] business days.
-If a pull request becomes stale because the contributor is no longer actively
-engaged or working on it for more than [TBD] days, it should be reviewed to see
-if it is suitable for the maintainers to finish the work or marked as stale and
-documented for another user to continue working on it.
+We do not want to discourage users from contributing or proposing changes, but
+we need to acknowledge that the maintainers still have limited bandwidth to give
+feedback on implementation or design and review pull requests. We will limit the
+number of in flight pull request reviews to [TBD]. The maintainers will select
+issues for review based on their age, complexity, and time availability.
+
+The maintainers will review the pull request and provide any comments, feedback,
+or requested changes. If changes are requested, the contributor should make the
+changes within [TBD] business days. If a pull request becomes stale because the
+contributor is no longer actively engaged or working on it for more than [TBD]
+days, it should be reviewed to see if it is suitable for the maintainers to
+finish the work or marked as stale and documented for another user to continue
+working on it.
 
 Once a pull request is complete with to the satisfaction of the maintainers, it
 is approved and can be merged and acknowledged as contribution from the
 community.
 
-We do not want to discourage users from contributing or proposing changes, but
-we need to acknowledge that the maintainers still have limited bandwidth to give
-feedback on implementation or design and review pull requests. We will limit the
-number of in flight pull request reviews to [TBD]. The maintainers will
-prioritize completing PRs that have had a review over new review requests. If a
-pull request becomes stale but there is sufficient work to complete it, the
-maintainers will complete the pull request. If after review and the maintainers
-agree that the implementation is not as discussed or there is not significant
-demand or bandwidth to complete it, the issue may go back to the intake phase
-and be available for another user to contribute a change.
+The maintainers will prioritize completing PRs that have had a review over new
+review requests. If a pull request becomes stale but there is sufficient work to
+complete it, the maintainers will complete the pull request. If after review and
+the maintainers agree that the implementation is not as discussed or there is
+not significant demand or bandwidth to complete it, the issue may go back to the
+intake phase and be available for another user to contribute a change.
 
 If an issue has not been explicitly marked as being available for contribution,
 it should not be expected that a pull request will get a review.
+
+## Measuring success and making adjustments
+
+We acknowledge that the proposed timelines and queue sizes may need to be
+adjusted. We will quantify the process with metrics to determine if it is
+sustainable or if it can be improved. Specifically, we should measure:
+
+1. The number of issues in each state of the contribution process: available for
+   contribution, actively being contributed, ready for review.
+1. The number of popular and highly requested features.
+1. The time elapsed between each state of the contribution process: the start of
+   a contribution and when it is marked as ready for review, the time spent
+   waiting for review, and the time to accept or reject a contribution.
+1. The rate of acceptance and attrition for contributions.
+
+In addition, we will monitor qualitative feedback through comments left on
+issues and pull requests. We will review the feedback for common patterns to
+determine if an improvement to the documentation will alleviate contributor
+frustration. It may also indicate that we need to make changes to the process as
+well.
 
 ## Rationale/FAQ
 
