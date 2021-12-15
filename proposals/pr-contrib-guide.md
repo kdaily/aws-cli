@@ -23,21 +23,23 @@ currently three phases to manage issues: intake, implementation, and review.
 
 #### Intake
 
-GitHub issues are triaged regularly to determine that they are correctly categorized
-and express a real and relevant problem or request. An answer is provided as
-soon as possible to acknowledge or resolve the issue. Feature requests are
-reviewed for general suitability and uniqueness, but are not actively commented
-on by maintainers to move the feature forward to an implementation unless they
-are specifically singled out for further review or backlog grooming. Users can
-vote for features via "reactions" on the issue. The popularity of an issue is
- occasionally used to determine which features the maintainers will work on.
+GitHub issues are triaged regularly to determine that they are correctly
+categorized and express a real and relevant problem or request. An answer is
+provided as soon as possible to acknowledge or resolve the issue. Feature
+requests are reviewed for general suitability and uniqueness, but are not
+actively commented on by maintainers to move the feature forward to an
+implementation unless they are specifically singled out for further review or
+backlog grooming. Users can vote for features via "reactions" on the issue. The
+popularity of an issue is occasionally used to determine which features the
+maintainers will work on.
 
 #### Implementation
 
-Users can open pull requests to propose changes to the code base. Pull
-requests are triaged via best effort to determine the code owner and the change
-proposes something sensible. There is no requirement to discuss a contribution prior to opening a pull request.
-Occassionally, a cursory review is performed to determine if enough detail has been provided to understand the proposed change.
+Users can open pull requests to propose changes to the code base. Pull requests
+are triaged via best effort to determine the code owner and the change proposes
+something sensible. There is no requirement to discuss a contribution prior to
+opening a pull request. Occassionally, a cursory review is performed to
+determine if enough detail has been provided to understand the proposed change.
 
 #### Review
 
@@ -128,9 +130,9 @@ need cross-SDK review since it involves credential behavior. This issue
 demonstrates the lack of response to high user request issues that impact
 cross-SDK features and a lack of process to make changes.
 
-We need to triage and review community contributions in a timely
-manner. The steps that community members should use to make their contribution
-should be communicated clearly.
+We need to triage and review community contributions in a timely manner. The
+steps that community members should use to make their contribution should be
+communicated clearly.
 
 #### Unprioritized contributions
 
@@ -144,10 +146,11 @@ but picked up by another community member and improved in a related [pull
 request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
 the maintainers has occurred.
 
-Without well-defined next steps for the maintainers, these requests are deprioritized
-first. A community contribution should not be left in an incomplete state or
-waiting on a maintainer; it should be resolved by merging it or closing it. When
-an issue is raised and reviewed, we need to prioritize it and see it through.
+Without well-defined next steps for the maintainers, these requests are
+deprioritized first. A community contribution should not be left in an
+incomplete state or waiting on a maintainer; it should be resolved by merging it
+or closing it. When an issue is raised and reviewed, we need to prioritize it
+and see it through.
 
 #### Pull requests with limited background and context
 
