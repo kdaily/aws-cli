@@ -287,26 +287,6 @@ intake phase and be available for another user to contribute a change.
 If an issue has not been explicitly marked as being available for contribution,
 it should not be expected that a pull request will get a review.
 
-## Measuring success and making adjustments
-
-We acknowledge that the proposed timelines and queue sizes may need to be
-adjusted. We will quantify the process with metrics to determine if it is
-sustainable or if it can be improved. Specifically, we should measure:
-
-1. The number of issues in each state of the contribution process: available for
-   contribution, actively being contributed, ready for review.
-1. The number of popular and highly requested features.
-1. The time elapsed between each state of the contribution process: the start of
-   a contribution and when it is marked as ready for review, the time spent
-   waiting for review, and the time to accept or reject a contribution.
-1. The rate of acceptance and attrition for contributions.
-
-In addition, we will monitor qualitative feedback through comments left on
-issues and pull requests. We will review the feedback for common patterns to
-determine if an improvement to the documentation will alleviate contributor
-frustration. It may also indicate that we need to make changes to the process as
-well.
-
 ## Managing the existing backlog
 
 As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
