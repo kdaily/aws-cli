@@ -1,4 +1,4 @@
-# AWS CLI Contributing Guide
+# Improvements to the AWS CLI Contribution Process
 
 Proposal         | Metadata
 ---------------- | -------------
