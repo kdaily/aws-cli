@@ -313,7 +313,8 @@ As of 2021-11-02, there are 189 pull requests and 465 issues in the AWS CLI
 GitHub repository. 52 pull requests and 81 issues have not been updated in more
 than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
 of the open pull requests are extremely outdated and would require rebasing,
-which complicates the process of accepting them. [TBD] of the open pull requests are directly related to an existing feature request.
+which complicates the process of accepting them. [TBD] of the open pull requests
+are directly related to an existing feature request.
 
 Based on these numbers, we propose to close all issues that:
 
@@ -323,9 +324,17 @@ Based on these numbers, we propose to close all issues that:
 
 To close these issues, we propose an appoach with two phases:
 
-1. We will use existing automated infrastructure to comment on ancient pull requests, defined as no activity in more than a year and less than 5 upvotes. This will post a comment indicating that the issue will be closed without further interaction.
-2. Next, we will review any remaining open pull requests and determine if there is an existing open issue tracking the feature request, and mark all such pull requests for automated closure after [TBD] days. In addition, we will review pull requests that have major conflicts to resolve and manually close them, indicating to the contributor that if they still wish to propose the change they should open an issue for discussion.
-## Rationale/FAQ
+1. We will use existing automated infrastructure to comment on ancient pull
+   requests, defined as no activity in more than a year and less than 5 upvotes.
+   This will post a comment indicating that the issue will be closed without
+   further interaction.
+2. Next, we will review any remaining open pull requests and determine if there
+   is an existing open issue tracking the feature request, and mark all such
+   pull requests for automated closure after [TBD] days. In addition, we will
+   review pull requests that have major conflicts to resolve and manually close
+   them, indicating to the contributor that if they still wish to propose the
+   change they should open an issue for discussion.
+   ## Rationale/FAQ
 
 ### Q. Why do we limit the number of in flight reviews?
 
