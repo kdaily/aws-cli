@@ -18,11 +18,11 @@ the community to successfully contribute to the AWS CLI.
 The AWS CLI GitHub repository is where any user can open issues for bug reports,
 feature requests, and guidance questions. GitHub issues are triaged on a regular
 basis to determine that they are correctly categorized and express a real and
-relevant problem or request. An answer is provided to the requesting user as
-soon as possible to acknowledge or resolve the issue. Feature requests are
-reviewed for general suitability and uniqueness, but are not actively commented
-on by maintainers to move the feature forward to an implementation unless they
-are specifically singled out for further review or backlog grooming.
+relevant problem or request. An answer is provided as soon as possible to
+acknowledge or resolve the issue. Feature requests are reviewed for general
+suitability and uniqueness, but are not actively commented on by maintainers to
+move the feature forward to an implementation unless they are specifically
+singled out for further review or backlog grooming.
 
 Users can also open pull requests to propose changes to the code base. Pull
 requests are triaged to determine the code owner and the change proposes
@@ -31,12 +31,11 @@ triaged as well and marked for review. On occasion, a cursory review is
 performed to determine that enough detail has been provided to understand the
 request. The repository automatically runs the functional and unit test suites,
 and automated feedback is given to the contributor on the testing status (pass
-or fail). However, after the cursory and automated review, minimal interaction
-with the contributor occurs. Changes to code or functionality are not generally
-reviewed in depth, and an acceptance decision or detailed comments on next steps
-are not provided. The exception to this are for documentation changes or
-typographical errors. These changes are frequently reviewed, accepted, and
-merged in conjunction with the AWS documentation writers and the maintainers.
+or fail). If the maintainers decide a feature should be included, a pull request
+review is scheduled internally. Comments are left on GitHub for the contributor.
+If the pull request comments are not responded to, the maintainers will either
+continue working from the existing pull request or provide their own
+implementation in a new one.
 
 Pull requests are used as data in conjunction with issues to identify feature
 requests that should be prioritized by the maintainers, but the proposed code
@@ -74,22 +73,22 @@ current feature request and pull request review process.
 The AWS CLI currently has code, documentation, and examples published publicly
 on a number of GitHub repositories. We have hundreds of open issues and pull
 requests across these areas. However, we do not have a guide for users to know
-how to contribute or what they should work on. We get frequent requests to
-contribute on specific issues, but it's a significant effort to respond to these
-requests individually. We also do not have guidance for which kinds of issues we
-do not accept contributions, leading to users to spend effort that ultimately
+what they should work on or how to contribute. We get frequent requests to
+contribute on specific issues, but it requires significant effort to respond to these
+requests individually. We also do not state which kinds of feature requests for which we do not accept contributions, 
+leading to users to spend effort that ultimately
 will not be used. For example, users often request waiters and paginators, which
 are now standardized across AWS SDKs and implemented by the service teams, who
-know how their APIs work to provide the best performance and experience.
+know how to provide the best performance and experience.
 
 We need a well-documented guide and process for the community to know what is
-available to work (and what is not) on so that their efforts are used
+available for contribution and what is not so that their efforts are used
 effectively. This would help users and maintainers focus on relevant issues and
 work more effectively.
 
 ### No active triage or first response
 
-`aws-cli` [pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
+[Pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
 functionality to support cache usage. It is the pull request with the most 👍🏻
 reactions (55) since being opened in March 2018. It was proposed as an
 [issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
@@ -116,13 +115,12 @@ but picked up by another community member and improved in a related [pull
 request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
 the maintainers has occurred.
 
-The current review process is very *ad hoc*. The AWS CLI team has limited
-bandwidth and competing priorities; without well-defined next steps for the
-maintainers, these types of requests are then the first to be neglected for
-prioritization. A community contribution should not be left in an incomplete
-state or waiting on a maintainer; it should be resolved by merging it or closing
-it. When an issue is raised and reviewed, we need to prioritize it and see it
-through.
+The AWS CLI team has limited bandwidth and competing priorities; without
+well-defined next steps for the maintainers, these types of requests are then
+the first to be neglected for prioritization. A community contribution should
+not be left in an incomplete state or waiting on a maintainer; it should be
+resolved by merging it or closing it. When an issue is raised and reviewed, we
+need to prioritize it and see it through.
 
 ### Competing priorities and limited bandwidth
 
