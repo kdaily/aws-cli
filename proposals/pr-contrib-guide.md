@@ -312,25 +312,24 @@ than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
 of the open pull requests are directly related to an existing feature request.
 [TBD] of open pull requests have extensive merge conflicts.
 
-Based on these numbers, we propose to close all issues that:
-
-1. Do not have at least 5 upvotes,
-1. Need a rebase that would require significant developer effort, and
-1. Do not have an open issue discussing the proposed change.
-
-To close these issues, we propose an appoach with two phases:
+Based on these numbers, we propose to review and close existing pull requests in two phases:
 
 1. We will use existing automated infrastructure to comment on ancient pull
    requests, defined as no activity in more than a year and less than 5 upvotes.
    This will post a comment indicating that the issue will be closed without
    further interaction.
-2. Next, we will review any remaining open pull requests and determine if there
-   is an existing open issue tracking the feature request, and mark all such
-   pull requests for automated closure after [TBD] days. In addition, we will
-   review pull requests that have major conflicts to resolve and manually close
-   them, indicating to the contributor that if they still wish to propose the
-   change they should open an issue for discussion.
-   ## Rationale/FAQ
+2. Next, we will determine if any remaining remaining open pull requests meet
+   the criteria for "ready for contribution" or "ready for review". If a pull
+   request does not meet the criteria for either of these states, we should post
+   a comment to indicate what needs to be done and give the contributor [TBD]
+   days before the pull request is closed. If there is no response, the work is
+   not completed, or they respond that they are no longer interested in working
+   on it, we will close the pull request. If the request meets the criteria for
+   'ready for contribution' but not 'ready for review', we will comment in the
+   linked issue that it is no longer being worked on and is available for
+   contribution.
+
+## Rationale/FAQ
 
 ### Q. Why do we limit the number of in flight reviews?
 
