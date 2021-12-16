@@ -230,21 +230,20 @@ this determination. The criteria used to make that decision include:
 1. There is consensus with the maintainers on an implementation plan.
 
 Once these criteria have been met, an issue is available for the community to
-contribute.
+contribute. The issue will be labeled and added to a queue where users
+interested in contributing can discover what is available.
 
-If it's not something that the maintainers feel should be added, the issue
-should be left for community discussion and upvotes. A comment should be added
-by the maintainers to describe how users can advocate for the feature with more
-use cases, or vote for the issue using reactions.
-
-All issues are subject to existing stale and ancient issue closure mechanisms,
-which will prompt for community input before they are automatically closed.
+All issues are subject to existing automated issue closure mechanisms, which
+will prompt for community input before they are automatically closed if there
+are not enough upvotes ([TBD]) and no activity (comments or upvotes) for [TBD;
+currently a year].
 
 ### Implementation
 
 Any issue that has been marked as available is open for a community contribution
-through a GitHub pull request. A user can start implementing an open issue using
-the CONTRIBUTING guide as a reference.
+through a GitHub pull request. A user can comment on an issue that they would
+like to contribute. They can then start implementing an open issue using the
+CONTRIBUTING guide as a reference.
 
 When an issue is being worked on by a contributor, maintainers will provide
 guidance and support during the implementation process. They will engage with
@@ -263,18 +262,23 @@ confirm:
    code linting, and style checks.
 
 Validation checks are automated. Determining if the implementation matches the
-proposal requires a manual check that should be performed at a cursory level.
+proposal requires a manual check that should be performed at a cursory level. If
+the requirements are not satisfied, the maintainers will comment on the issue
+indicating what is work is needed. If a pull request becomes stale because the
+contributor is no longer actively engaged or working on it for more than [TBD]
+days, it should be reviewed to see if it is suitable for the maintainers to
+finish the work or marked as stale and sent back to the queue of issues ready
+for contribution.
 
 Once these requirements have been satisfied, the pull request can be added to a
-queue for maintainer review.
+queue for maintainer review. We will initially respond within [TBD] business
+days on a PR that is ready for review to acknowledge the request. This does not
+guarantee how long it will be until the PR is merged.
 
 ### Review
 
 We will maintain a queue of issues that are ready for review once they are
-through the implementation phase. We will initially respond within [TBD]
-business days on a PR review request to acknowledge the request and provide an
-update on when a review can be expected. This does not guarantee how long it
-will be until the PR is merged.
+through the implementation and ready for review phase. 
 
 We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
@@ -287,8 +291,8 @@ or requested changes. If changes are requested, the contributor should make the
 changes within [TBD] business days. If a pull request becomes stale because the
 contributor is no longer actively engaged or working on it for more than [TBD]
 days, it should be reviewed to see if it is suitable for the maintainers to
-finish the work or marked as stale and documented for another user to continue
-working on it.
+finish the work or marked as stale sent back to the queue of issues ready for
+contribution.
 
 Once a pull request is complete with to the satisfaction of the maintainers, it
 is approved and can be merged and acknowledged as contribution from the
@@ -312,7 +316,8 @@ than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
 of the open pull requests are directly related to an existing feature request.
 [TBD] of open pull requests have extensive merge conflicts.
 
-Based on these numbers, we propose to review and close existing pull requests in two phases:
+Based on these numbers, we propose to review and close existing pull requests in
+two phases:
 
 1. We will use existing automated infrastructure to comment on ancient pull
    requests, defined as no activity in more than a year and less than 5 upvotes.
@@ -336,7 +341,7 @@ Based on these numbers, we propose to review and close existing pull requests in
 The maintainers have work that comes from outside of the GitHub repository that
 needs to be prioritized along with user contributions. Controlling the volume of
 pull request reviews and prioritizing completing the in flight reviews over new
-reviews should result in a shorter time to merge and release a contributor's
+reviews will result in a shorter time to merge and release a contributor's
 change for a feature requested by the community. It will also reduce the amount
 of context switching for the maintainers, allowing them to focus on giving high
 quality feedback to users. As we use this framework to process existing feature
