@@ -317,7 +317,7 @@ Based on these numbers, we propose to review and close existing pull requests in
 1. We will use existing automated infrastructure to comment on ancient pull
    requests, defined as no activity in more than a year and less than 5 upvotes.
    This will post a comment indicating that the issue will be closed without
-   further interaction.
+   further interaction from the community.
 2. Next, we will determine if any remaining remaining open pull requests meet
    the criteria for "ready for contribution" or "ready for review". If a pull
    request does not meet the criteria for either of these states, we should post
