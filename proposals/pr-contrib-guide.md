@@ -15,12 +15,22 @@ the community to successfully contribute to the AWS CLI.
 
 ## Background and Motivation
 
+### Terminology
+
+In this document, we define a *user* as someone who opens, comments, or
+otherwise interacts with a GitHub issue. We define a *contributor* as someone
+who opens or makes changes to a pull request. We define the *maintainers* as the
+set of individuals who are AWS employees and have the ability to make changes to
+the GitHub repository. We define the *community* as all of the individuals who
+use the AWS CLI.
+
 ### Current contribution process
 
-The AWS CLI GitHub repository is available for any user to report bugs, make
-feature requests, and ask guidance questions through GitHub issues. There are
-currently roughly three stages to manage issues in use that are common to open
-source projects: intake, implementation, and review.
+The AWS CLI GitHub repository is available for any individual to report bugs, make
+feature requests, and ask guidance questions through GitHub issues, as well as
+open pull requests to propose code changes. There are currently roughly three
+stages to manage contributions that are common to open source projects: intake,
+implementation, and review.
 
 #### Intake
 
@@ -35,26 +45,30 @@ features the maintainers will work on.
 
 #### Implementation
 
-Users can open pull requests to propose changes to the code base. There is no
-requirement to work on an existing issue in the GitHub repository or to discuss
-a contribution prior to opening a pull request. Occassionally guidance is
-provided to the contributor to improve the proposed change.
+Users can open pull requests to propose changes that address bugs or feature
+requests. There is no requirement to work on an existing issue in the GitHub
+repository or to discuss a contribution prior to opening a pull request.
+Occassionally guidance is provided to the contributor to improve the proposed
+change.
 #### Review
 
 Pull requests are selected for review opportunistically when the maintainers
 have decided separately that a change or feature should be incorporated.
-Reactions and comments can influence the liklihood of prioritizing a
-contribution, but they do not guarantee it will be reviewed. When a feature is
-prioritized for work it is added to an internal queue for maintaining the
-status.
+Reactions and comments can influence the likelihood of prioritizing a
+contribution, but they do not guarantee it will be reviewed. 
 
-The change is automatically tested to indicate if the change is compatible with
-the existing code. Comments and change requests are made on the GitHub pull
-request for the contributor, or changes are made directly to their contribution.
-In some cases, the maintainers will open their own pull request if the proposed
-change is not acceptable as is or they fail to find an existing pull request.
-When the pull request is completed to the maintainers satisfaction, it is merged
-in for the next release.
+When a feature is selected for review it is added to an internal queue. This
+queue manages the prioritization of these features but is not visible to the
+community. 
+
+The change is automatically tested to indicate if it is compatible with the
+existing code. Maintainers review and request changes to a contributor's GitHub
+pull request. Maintainers may also push changes directly to a contributor's pull
+request in order to expedite completion of the contribution or if the
+contributor is no longer engaged. In some cases, the maintainers will open their
+own pull request if the proposed change is not acceptable as is or they fail to
+find an existing pull request. When the pull request is completed to the
+maintainers satisfaction, it is merged in for the next release.
 
 #### Documentation and tracking
 
@@ -90,11 +104,11 @@ and maintainers focus on relevant issues and work more effectively.
 
 #### Competing priorities and limited bandwidth to work on popular requests
 
-There are 95 open issues that have upvotes or reactions from 10 or more users,
-indicating broad community interest. That volume is not tractable for the
-maintainers to implement themselves. Community members need to be able to
-contribute more easily while balancing the efforts of maintainers to conduct
-thorough reviews of code before merging.
+There are 95 open issues that have 10 or more upvotes, indicating broad
+community interest. That volume is not tractable for the maintainers to
+implement themselves. Community members need to be able to contribute more
+easily while balancing the efforts of maintainers to conduct thorough reviews of
+code before merging.
 
 We need to collect and review user feedback to decide which requests are of
 interest for community contribution. We need to tell users how they can provide
@@ -200,54 +214,59 @@ guide review process.")
 
 **Figure A: Flowchart of contribution guide review process.**
 
-To improve the review process for feature requests and pull requests, we propose
-to modify the existing stages and expand them. Figure A demonstrates how a
-request and contribution will proceed through this improved process. The process
-extends and clarifies the three existing stages: 
+We propose to formalize the existing intake, implementation, and review stages
+to provide clarity and transparency to the community. In addition, we will add
+in specific stages to define what issues are available for contribution and what
+pull requests are currently being reviewed. Figure A demonstrates how a request
+and contribution will proceed through the improved process.
 
-1. Intake, where feature requests are triaged and those suitable for community
-   contribution are identified;
-2. Implementation, where a contributor acknowledges that they will work on an
-   issue and open a pull request, and
-3. Review, where pull requests are prioritized for review and the maintainers
-   work with the contributor to resolve the contribution.
+In addition, we will publish an improved contributing guide to document the
+review process, acceptance criteria, and expectations for communication. We will
+use existing issue labeling in conjunction with a GitHub Project to provide
+transparent status to the community to indicate what is available for
+contribution and to track the progress of a contribution.
 
-In addition, we propose to publish an improved contributing guide to document
-the review process, acceptance criteria, and expectations for communication. In
-addition, a transparent status must be published to indicate what is available
-for contribution and how close a contribution is to completion.
+The following sections detail the proposed improvements to the existing process. 
 ### Intake
 
-The intake process identifies feature requests, through GitHub issues, where
-community contributions are welcome. The maintainers will actively review GitHub
-issues for feature requests to make this determination. Depending on the issue
-type (bug or feature request) and area (code or documentation), a set of
-criteria must be met before marking it as ready for contribution. The criteria
-used to make that decision may include:
+The intake process identifies changes, through GitHub issues, where community
+contributions are welcome. The maintainers will actively review GitHub issues to
+make this determination. Depending on the issue type (bug or feature request)
+and area (code or documentation), a set of criteria must be met before marking
+it as ready for contribution. The criteria used to make that decision may
+include:
 
 1. The change is feasible for a community member to contribute. See the appendix
    for a definition of what would not be feasible for community contribution.
 1. There is enough detail provided for the maintainers to agree with the
    implementation plan.
-
-Specifically for feature requests, the change must impact a minimum of 10 of
-users, measured by GitHub reactions.
+1. Specifically for feature requests, the change must impact a minimum of 10 of
+   users, measured by GitHub :+1: reactions.
 
 Once these criteria have been met, an issue is available for the community to
-contribute. The issue will be labeled and added to a queue where users
-interested in contributing can discover what is available.
+contribute. 
 
-All issues are subject to existing automated issue closure mechanisms, which
-will prompt for community input before they are automatically closed if there
-are not enough upvotes ([TBD]) and no activity (comments or upvotes) for [TBD;
-currently a year].
+Issues that do not meet these criteria are subject to existing automated issue
+closure mechanisms. The maintainers will request community input before they are
+automatically closed if there are not enough upvotes (10) and no activity
+(comments or upvotes) for a year.
+
+### Contribution-ready
+
+Issues that are ready for contribution will be labeled and added to a queue
+where users interested in contributing can discover what is available. Any issue
+that has been marked as available is open for a community contribution through a
+GitHub pull request.
 
 ### Implementation
 
-Any issue that has been marked as available is open for a community contribution
-through a GitHub pull request. A user can comment that they would like to
-contribute to a specific issue. They then start implementing using the
-CONTRIBUTING guide as a reference. They open a pull request linked to the issue.
+An issue moves from the contribution-ready phase to the implementation phase
+when a contributor opens a pull request for the issue. In addition, a user can
+comment on the issue that they are planning to make a contribution. While not
+required, this can be an indicator to the community that work is ongoing and
+should be contributed instead of duplicated. The contributor can then implement
+their change using the CONTRIBUTING guide as a reference. They open a pull
+request linked to the issue.
 
 When an issue is being worked on by a contributor, the maintainers will provide
 guidance and support. They will engage with the contributor for discussion of
@@ -270,8 +289,6 @@ days, it should be reviewed to see if it is suitable for the maintainers to
 finish the work or marked as stale and sent back to the queue of issues ready
 for contribution.
 
-### Ready for Review
-
 Once these requirements have been satisfied, the pull request can be added to a
 queue for maintainer review. We will initially respond within [TBD] business
 days on a PR that is ready for review to acknowledge the request. This does not
@@ -286,7 +303,10 @@ We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
 feedback on implementation or design and review pull requests. We will limit the
 number of in flight pull request reviews to [TBD]. The maintainers will select
-issues for review based on their age, complexity, and time availability.
+issues for review based on their age, complexity, and time availability. Bugs
+and documentation changes will be prioritized over feature requests. In
+addition, completing the review and acceptance of existing PRs will be
+prioritized over new review requests.
 
 The maintainers will review the pull request and provide any comments, feedback,
 or requested changes. If changes are requested, the contributor should make the
@@ -300,8 +320,7 @@ Once a pull request is complete with to the satisfaction of the maintainers, it
 is approved and can be merged and acknowledged as contribution from the
 community.
 
-The maintainers will prioritize completing PRs that have had a review over new
-review requests. If a pull request becomes stale but there is sufficient work to
+If a pull request becomes stale but there is sufficient work to
 complete it, the maintainers will complete the pull request. If after review and
 the maintainers agree that the implementation is not as discussed or there is
 not significant demand or bandwidth to complete it, the issue may go back to the
@@ -328,15 +347,15 @@ what is currently being worked on by the community.
 
 As of 2021-12-15, there are 188 pull requests and 436 issues in the AWS CLI
 GitHub repository. 43 pull requests and 87 issues have not been updated in more
-than a year. 151 issues have upvotes or reactions from five or more users. [TBD]
-of the open pull requests are directly related to an existing feature request.
-[TBD] of open pull requests have extensive merge conflicts.
+than a year. 95 issues have ten or more upvotes. [TBD] of the open pull requests
+are directly related to an existing feature request. [TBD] of open pull requests
+have extensive merge conflicts.
 
 Based on these numbers, we propose to review and close existing pull requests in
 two phases:
 
 1. We will use existing automated infrastructure to comment on ancient pull
-   requests, defined as no activity in more than a year and less than 5 upvotes.
+   requests, defined as no activity in more than a year and less than 10 upvotes.
    This will post a comment indicating that the issue will be closed without
    further interaction from the community.
 2. Next, we will determine if any remaining remaining open pull requests meet
@@ -404,21 +423,22 @@ In this case, we would use the same format as this document for a proposal that
 would be opened for public comment and review. The document would be
 incorporated into the codebase as an accepted proposal as a matter of record.
 
-### Why should there be a minimum number of upvotes or reactions to open something for the community to work on?
+### Why should there be a minimum number of upvotes or reactions for a feature request?
 
-We propose that in order for the maintainers to engage in the code review
-process, an issue should demonstrate user impact beyond the individual who
-proposed it. This is difficult to measure objectively, but one proxy for impact
-can be the number of upvote reactions on the issue. This is intended to prevent
-narrowly scoped changes that only affect a single user. It also helps to limit
-the number of in flight reviews that the maintainers need to be engaged on, as
-there is not an unlimited amount of bandwidth to devote to this task.
+Feature requests carry a risk of adding new technical debt and increased
+maintenance cost and should have a higher bar to be included.
 
-At present, there are more than 140 open feature requests and 5 bugs in the AWS
-CLI GitHub repository that have five or more upvotes. We can use the current
-reactions to review the backlog and identify issues that we feel would be suited
-for community contributions. This process can then inform us how to handle new
-issues that might be candidates for community contribution.
+The request should have user impact beyond the individual who proposed it. This
+is difficult to measure objectively, but one proxy for impact can be the number
+of upvote reactions on the issue. This is intended to prevent narrowly scoped
+changes that only affect a single user. It also helps to limit the number of in
+flight reviews that the maintainers need to be engaged on, as there is not an
+unlimited amount of bandwidth to devote to this task.
+
+At present, there are more than 95 open issues with at least 10 upvotes. We will
+use the current upvote counts to review the backlog and identify issues that we
+feel would be suited for community contributions. This process can then inform
+us how to handle new issues that might be candidates for community contribution.
 
 As part of the contribution guide, we will provide more specific guidance on how
 to upvote a feature so we can more accurately estimate user impact.
@@ -429,6 +449,24 @@ Initially, most of the  will be human review besides code linting and testing.
 Automation will be implemented for issue labeling, state transitions, and
 template checks. We currently perform these types of processes for issues, and
 the proposed process is agnostic to how it's implemented.
+
+### Q. Why are pull requests for documentation changes and bug fixes prioritized over feature requests?
+
+Documentation changes, once triaged and validated, do not need to have upvote
+requirements to be available for contribution. Most documentation changes are
+generally low risk and should be able to move quickly through the review
+process. Documentation changes also have the potential for a high reward,
+measured by the number of users who would be impacted by the improvement. In
+addition, there are also more maintainers available for validation and review of
+documentation changes. Issues for incorrect documentation are treated as bugs
+and should receive high prioritization, while confusing or incomplete
+documentation are considered feature requests and may recieve lower
+prioritization.
+
+Similarly, once a bug has been triaged and confirmed, it should be made
+available for community contribution immediately without any upvote
+requirements. Bug fixes have an immediate impact on affected users and are
+addressed before taking on new potential technical debt from added features.
 
 ## Appendix
 ### Changes that will not be made available for contribution
