@@ -85,12 +85,11 @@ retrieving and building the development version.
 
 ### Problems with the current contribution process
 
-The number of open bugs reports and feature requests for the AWS CLI has grown
-by an average of 60 per year over the past four years. There are 95 open issues
-that have 10 or more upvotes, indicating broad community interest. Without a
+The current contribution process is applied unevenly and inconsistently. This
+has led to dissatisfaction and frustration in the AWS CLI community. Without a
 robust mechanism for prioritizing, implementing, and reviewing requests and
 contributions that includes the help of the community, the number of unresolved
-community requests will continue to grow.
+community requests, and community dissatisfaction, will continue to grow.
 
 After intake, community requests are prioritized for implementation
 opportunistically without regard to their popularity. The community doesn't know
@@ -101,10 +100,12 @@ progress is made on changes important to them.
 Without a curated list of issues available for implementation, users are free to
 open a pull request for any change. Pull requests are likewise reviewed
 opportunistically. Contributions are left unattended, which amounts to wasted
-effort by the contributors. Similarly, maintainers effort is wasted on
-identifying the pull requests that are fit for acceptance. Upvotes and comments
-can influence the likelihood of prioritizing a contribution for implementation
-or review, but it is not guaranteed.
+effort by the contributors.
+
+Similarly, maintainers effort is wasted on identifying the pull requests that
+are fit for acceptance. Upvotes and comments can influence the likelihood of
+prioritizing a contribution for implementation or review, but it is not
+guaranteed.
 
 These problems leave the community frustrated because their voices, votes and
 efforts do not have an impact.
