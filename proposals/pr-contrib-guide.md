@@ -60,9 +60,11 @@ have decided that a change or feature should be incorporated. When a feature is
 selected for review it is added to an internal queue. This queue manages the
 prioritization of these features but is not visible to the community. 
 
-The change is automatically tested to indicate if it is compatible with the
-existing code. Maintainers review and request changes to a contributor's GitHub
-pull request. Maintainers may also push changes directly to a contributor's pull
+Pull requests are subjected to automated tests and checks which provide
+preliminary feedback. Once a pull request passes all automated tests and checks,
+it requires review from a maintainer to proceed toward being merged.
+
+Maintainers may also push changes directly to a contributor's pull
 request in order to expedite completion or if the contributor is no longer
 engaged. In some cases, the maintainers will open their own pull request if the
 proposed change is not acceptable as is or they fail to find an existing pull
