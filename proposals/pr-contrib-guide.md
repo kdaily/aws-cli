@@ -109,12 +109,12 @@ efforts do not have an impact.
 
 #### No indication of what to contribute
 
-The AWS CLI has a list of open issues which are curated into bugs, feature
-requests, and guidance questions. We do not state which issues are available for
-community contributions. This results in users spending effort that ultimately
-will not be used. For example, users frequently propose changes to waiters and
-paginators. These are standardized across AWS SDKs and implemented by the
-service teams, who know how to provide the best performance and experience.
+We do not state which issues are available for community contributions. This
+results in users spending effort and the maintainers spending effort
+contributing and reviewing changes that ultimately will not be accepted. For
+example, users frequently propose changes to waiters and paginators. These are
+implemented by the service teams and changes cannot be made directly to the AWS
+CLI.
 
 We need a curated list of issues to know what is available for contribution and
 what is not so that their efforts are used effectively. This would help users
@@ -128,11 +128,10 @@ implement themselves. Community members need to be able to contribute more
 easily while balancing the efforts of maintainers to conduct thorough reviews of
 code before merging.
 
-We need to collect and review user feedback to decide which requests are of
-interest for community contribution. We need to tell users how they can provide
-contstuctive feedback. The maintainers have limited bandwidth and competing
-priorities. We need to strategically and fairly manage the amount of in flight
-work so that open requests do not pile up. 
+We need to tell users how they can provide constructive quantitative and
+qualitative feedback. The maintainers need to review the feedback to
+strategically and fairly manage the amount of in flight work so that open
+requests do not pile up.
 
 #### Limited information on how contribute
 
@@ -152,33 +151,22 @@ effectively.
 
 #### No active triage or first response
 
-[Pull request 3174](https://github.com/aws/aws-cli/pull/3174) adds MFA
-functionality to support cache usage. It is the pull request with the most
-upvotes (55 👍🏻 reactions) since being opened in March 2018. It was proposed as
-an [issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
+The maintainers need to triage, respond to, and review community contributions
+in a timely manner. [Pull request
+3174](https://github.com/aws/aws-cli/pull/3174) adds MFA functionality to
+support cache usage. It is the pull request with the most upvotes (55 👍🏻
+reactions) since being opened in March 2018. It was proposed as an
+[issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
 have been made since then. It is still getting comments noting the need as of
 April 2021.
 
-This demonstrates the lack of response to and resolution of a popular issue. We
-need to triage, respond to, and review community contributions in a timely manner.
-
 #### Unprioritized contributions
 
-Some pull requests have correspondence from maintainers indicating interest in
-the change, but then have remained unprioritized and incomplete. For example,
-[pull request 2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync
+A community contribution should not be left incomplete. The maintainers should engage to resolve by merging or closing it. [Pull request 2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync
 command excludes files more efficiently. It proposes to fix issue
 [#1138](https://github.com/aws/aws-cli/issues/1138) that had tacit approval from
-the maintainers. It was subsequently left uncompleted by the original author,
-but picked up by another community member and improved in a related [pull
-request](https://github.com/aws/aws-cli/pull/5425). No further interaction from
-the maintainers has occurred.
-
-Without well-defined next steps for the maintainers, these requests are
-deprioritized first. A community contribution should not be left in an
-incomplete state or waiting on a maintainer; it should be resolved by merging it
-or closing it. When an issue is raised and reviewed, we need to prioritize it
-and see it through.
+the maintainers. It was abandoned by the original author,
+but picked up by another contributor and [improved](https://github.com/aws/aws-cli/pull/5425). No further interaction from the maintainers has occurred.
 
 #### Pull requests with limited background and context
 
