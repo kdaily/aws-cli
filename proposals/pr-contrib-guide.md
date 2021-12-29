@@ -272,7 +272,7 @@ An issue moves from the contribution-ready phase to the implementation phase
 when a contributor opens a pull request for the issue. In addition, a user can
 comment on the issue that they are planning to make a contribution. While not
 required, this can be an indicator to the community that work is ongoing and
-should be contributed instead of duplicated. The contributor can then implement
+should be collaboarated on instead of duplicated. The contributor can then implement
 their change using the CONTRIBUTING guide as a reference. They open a pull
 request linked to the issue.
 
@@ -339,7 +339,7 @@ it should not be expected that a pull request will get a review.
 
 ## Implementation
 
-The contribution process will be formalized by extending the use of GitHub issue
+The contribution process will be implemented by extending the use of GitHub issue
 labels along with a GitHub project to curate the list of issues available for
 contribution and track their progress towards completion. Labels will be used to
 drive the movement of the issue through the stages of the process. This will
