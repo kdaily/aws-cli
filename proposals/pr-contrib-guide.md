@@ -44,57 +44,68 @@ implementation, and review.
 GitHub issues are triaged regularly to determine that they are correctly
 categorized and express a real and relevant problem or request. An answer is
 provided as soon as possible to acknowledge or resolve the issue. Feature
-requests are reviewed for general suitability and uniqueness, but are not
-actively commented on by maintainers to move the feature forward to a
-contribution from the community. Users can vote for features via "reactions" on
-the issue. The popularity of an issue is occasionally used to determine which
-features the maintainers will work on.
+requests are reviewed for general suitability and uniqueness. Users can vote for
+features via "reactions" on the issue. 
 
 #### Implementation
 
 Users can open pull requests to propose changes that address bugs or feature
-requests. There is no requirement to work on an existing issue in the GitHub
-repository or to discuss a contribution prior to opening a pull request.
-Occassionally guidance is provided to the contributor to improve the proposed
-change.
+requests. There is no requirement to work on an existing feature request or to
+discuss a contribution prior to opening a pull request. Occassionally guidance
+is provided to the contributor to improve the proposed change.
 #### Review
 
 Pull requests are selected for review opportunistically when the maintainers
-have decided separately that a change or feature should be incorporated.
-Reactions and comments can influence the likelihood of prioritizing a
-contribution, but they do not guarantee it will be reviewed. 
-
-When a feature is selected for review it is added to an internal queue. This
-queue manages the prioritization of these features but is not visible to the
-community. 
+have decided that a change or feature should be incorporated. When a feature is
+selected for review it is added to an internal queue. This queue manages the
+prioritization of these features but is not visible to the community. 
 
 The change is automatically tested to indicate if it is compatible with the
 existing code. Maintainers review and request changes to a contributor's GitHub
 pull request. Maintainers may also push changes directly to a contributor's pull
-request in order to expedite completion of the contribution or if the
-contributor is no longer engaged. In some cases, the maintainers will open their
-own pull request if the proposed change is not acceptable as is or they fail to
-find an existing pull request. When the pull request is completed to the
-maintainers satisfaction, it is merged in for the next release.
+request in order to expedite completion or if the contributor is no longer
+engaged. In some cases, the maintainers will open their own pull request if the
+proposed change is not acceptable as is or they fail to find an existing pull
+request.
+
+When the pull request is completed to the maintainers satisfaction, it is merged
+in for the next release.
 
 #### Documentation and tracking
 
-The GitHub repository hosts a [contribution
+The GitHub repository has a [contribution
 guide](https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md),
 standard to many open source projects, to provide guidance on contributing code
-to the project. The current guide describes at a high level how to report an
-issue or request and states the minimum requirements and suggestions for a code
+to the project. The guide describes how to report an issue or feature
+request and states the minimum requirements and suggestions for a code
 contribution. It describes how to perform the basic tasks using Git, including
-retrieving and building the development version. It does not describe what the
-review or acceptance criteria are for a contribution, nor does it state what is
-expected of the contributor or maintainer in the process.
+retrieving and building the development version.
 
 ### Problems with the current contribution process
 
-The AWS CLI has a backlog of hundreds of feature request issues and pull request
-contributions. This section provides detailed use cases that demonstrate
-limitations of the current feature request and pull request review process that
-resulted in this backlog.
+The number of open bugs reports and feature requests for the AWS CLI has grown
+by an average of 60 per year over the past four years. There are 95 open issues
+that have 10 or more upvotes, indicating broad community interest. Without a
+robust mechanism for prioritizing, implementing, and reviewing requests and
+contributions that includes the help of the community, the number of unresolved
+community requests will continue to grow.
+
+After intake, community requests are prioritized for implementation
+opportunistically without regard to their popularity. The community doesn't know
+what's of interest to implement, and the maintainers do not consistently move
+features toward implementation. The community is dissatisfied as it appears no
+progress is made on changes important to them.
+
+Without a curated list of issues available for implementation, users are free to
+open a pull request for any change. Pull requests are likewise reviewed
+opportunistically. Contributions are left unattended, which amounts to wasted
+effort by the contributors. Similarly, maintainers effort is wasted on
+identifying the pull requests that are fit for acceptance. Upvotes and comments
+can influence the likelihood of prioritizing a contribution for implementation
+or review, but it is not guaranteed.
+
+These problems leave the community frustrated because their voices, votes and
+efforts do not have an impact.
 
 #### No indication of what to contribute
 
