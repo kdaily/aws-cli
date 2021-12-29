@@ -20,9 +20,16 @@ the community to successfully contribute to the AWS CLI.
 The following terms are used throughout this document:
 
 - The *community* comprises the individuals who use the AWS CLI.
-- A *user* is a member of the community who uses the AWS CLI and may open, comment, or otherwise interacts with a GitHub issue.
-- A *contributor* is a user who makes a contribution to the AWS CLI via a pull request.
-- The *maintainers* are the individuals that have the ability to make changes to the GitHub repository.
+- A *user* is a member of the community who uses the AWS CLI. They may also
+  interact with the AWS CLI GitHub repository by opening or commenting on
+  issues.
+* A *contribution* is a proposed change to the AWS CLI code base. This can be
+  adding new functionality, fixing a bug, or improving documentation.
+- A *contributor* is a user who makes a contribution to the AWS CLI via a pull
+  request. Contributors are not able to merge pull requests.
+- A *maintainer* is a user who maintains the AWS CLI GitHub repository. They
+  write core functionality, triage and moderate GitHub issues, review pull
+  requests, and accept contributions by merging pull requests.
 
 ### Current contribution process
 
