@@ -89,7 +89,8 @@ The current contribution process is applied unevenly and inconsistently. This
 has led to dissatisfaction and frustration in the AWS CLI community. Without a
 robust mechanism for prioritizing, implementing, and reviewing requests and
 contributions that includes the help of the community, the number of unresolved
-community requests, and community dissatisfaction, will continue to grow.
+community requests, and community dissatisfaction, will continue to grow. Here,
+we describe some examples of deficiencies in the current process.
 
 After intake, community requests are prioritized for implementation
 opportunistically without regard to their popularity. The community doesn't know
