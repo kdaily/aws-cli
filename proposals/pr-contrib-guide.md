@@ -227,18 +227,19 @@ guide review process.")
 **Figure A: Flowchart of contribution guide review process.**
 
 We propose to formalize the existing intake, implementation, and review stages
-to provide clarity and transparency to the community. In addition, we will add
-in specific stages to define what issues are available for contribution and what
-pull requests are currently being reviewed. Figure A demonstrates how a request
-and contribution will proceed through the improved process.
+to assure they are applied systematically and transparently. In addition, we
+will augment the current process with new stages to clarify what issues are
+available for contribution and what stage they are in. Figure A demonstrates how
+a request and contribution will proceed through the improved process.
 
-In addition, we will publish an improved contributing guide to document the
-review process, acceptance criteria, and expectations for communication. We will
-use existing issue labeling in conjunction with a GitHub Project to provide
+We will also publish an improved contributing guide to document the review
+process, acceptance criteria, and expectations for communication. We will use
+existing issue labeling in conjunction with a GitHub Project to provide
 transparent status to the community to indicate what is available for
 contribution and to track the progress of a contribution.
 
-The following sections detail the proposed improvements to the existing process. 
+The following sections detail the proposed improvements to the existing process.
+
 ### Intake
 
 The intake process identifies changes, through GitHub issues, where community
