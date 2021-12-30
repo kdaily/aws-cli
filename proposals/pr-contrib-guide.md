@@ -27,9 +27,10 @@ The following terms are used throughout this document:
   adding new functionality, fixing a bug, or improving documentation.
 - A *contributor* is a user who makes a contribution to the AWS CLI via a pull
   request. Contributors are not able to merge pull requests.
-- A *maintainer* is a user who maintains the AWS CLI GitHub repository. They
-  write core functionality, triage and moderate GitHub issues, review pull
-  requests, and accept contributions by merging pull requests.
+- A *maintainer* is a user who maintains the AWS CLI GitHub repository. They are
+  also a contributor and write core functionality. They triage and moderate
+  GitHub issues, review pull requests, and accept contributions by merging pull
+  requests.
 
 ### Current contribution process
 
