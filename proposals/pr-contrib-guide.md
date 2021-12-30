@@ -242,12 +242,12 @@ The following sections detail the proposed improvements to the existing process.
 
 ### Intake
 
-The intake process identifies changes, through GitHub issues, where community
-contributions are welcome. The maintainers will actively review GitHub issues to
-make this determination. Depending on the issue type (bug or feature request)
-and area (code or documentation), a set of criteria must be met before marking
-it as ready for contribution. The criteria used to make that decision may
-include:
+The intake process will be modified to explicitly identifies changes, through
+GitHub issues, where community contributions are welcome. The maintainers will
+actively review GitHub issues to make this determination. Depending on the issue
+type (bug or feature request) and area (code or documentation), a set of
+criteria must be met before marking it as ready for contribution. The criteria
+used to make that decision may include:
 
 1. The change is feasible for a community member to contribute. See [the
    appendix](#changes-not-available-for-contribution) for a definition of what
@@ -267,20 +267,21 @@ automatically closed if there are not enough upvotes (10) and no activity
 
 ### Contribution-ready
 
-Issues that are ready for contribution will be labeled and added to a queue
-where users interested in contributing can discover what is available. Any issue
-that has been marked as available is open for a community contribution through a
-GitHub pull request.
+We will add a new stage that identifies which issues are ready for contribution.
+Issues will be labeled and added to a queue where users interested in
+contributing can discover what is available. Any issue that has been marked as
+available is open for a community contribution through a GitHub pull request.
 
 ### Implementation
 
-An issue moves from the contribution-ready phase to the implementation phase
-when a contributor opens a pull request for the issue. In addition, a user can
-comment on the issue that they are planning to make a contribution. While not
-required, this can be an indicator to the community that work is ongoing and
-should be collaboarated on instead of duplicated. The contributor can then implement
-their change using the CONTRIBUTING guide as a reference. They open a pull
-request linked to the issue.
+We will improve the implementation stage with specific instructions and criteria
+for completing an implementation. An issue moves from the contribution-ready
+phase to the implementation phase when a contributor opens a pull request for
+the issue. In addition, a user can comment on the issue that they are planning
+to make a contribution. While not required, this can be an indicator to the
+community that work is ongoing and should be collaborated on instead of
+duplicated. The contributor can then implement their change using the
+CONTRIBUTING guide as a reference. They open a pull request linked to the issue.
 
 When an issue is being worked on by a contributor, the maintainers will provide
 guidance and support. They will engage with the contributor for discussion of
@@ -310,8 +311,9 @@ guarantee how long it will be until the PR is merged.
 
 ### Review
 
-We will maintain a queue of issues that are ready for review once they are
-through the implementation and ready for review stage. 
+Similar to the contribution-ready stage, we will maintain a queue of issues that
+are ready for review once they are through the implementation and pre-
+review stages. 
 
 We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
