@@ -246,8 +246,9 @@ and area (code or documentation), a set of criteria must be met before marking
 it as ready for contribution. The criteria used to make that decision may
 include:
 
-1. The change is feasible for a community member to contribute. See the appendix
-   for a definition of what would not be feasible for community contribution.
+1. The change is feasible for a community member to contribute. See [the
+   appendix](#changes-not-available-for-contribution) for a definition of what
+   would not be feasible for community contribution.
 1. There is enough detail provided for the maintainers to agree with the
    implementation plan.
 1. Specifically for feature requests, the change must impact a minimum of 10 of
@@ -479,7 +480,7 @@ requirements. Bug fixes have an immediate impact on affected users and are
 addressed before taking on new potential technical debt from added features.
 
 ## Appendix
-### Changes that will not be made available for contribution
+### Changes not available for contribution
 
 There are parts of the codebase that are not suitable for community
 contributions. They may pose a security risk, be part of the code that is
