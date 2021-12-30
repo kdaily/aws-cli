@@ -197,13 +197,14 @@ contribution.
 
 ## Goals
 
-The approach for customer contributions should satisfy the following goals:
+Based on the issues identified in the current process, the proposed improvements
+for customer contributions should satisfy the following goals:
 
 1. Users should know what is available for contribution. It should be clear
-   where they can spend their efforts that will be accepted.
-1. We should prioritize issues based on feedback provided by the community to
-   focus the efforts of the maintainers and the community. Users should know how
-   to provide that feedback.
+   where they can expend effort that will be accepted.
+1. Maintainers should prioritize issues based on feedback provided by the
+   community to focus the efforts of the maintainers and the community. Users
+   should know how to provide that feedback.
 1. Users should know how to contribute. The should be able to reference
    documentation to make high quality contributions. It should be accessible to
    first time contributors.
