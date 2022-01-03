@@ -94,22 +94,18 @@ we describe some examples of deficiencies in the current process.
 
 After intake, community requests are prioritized for implementation
 opportunistically without regard to their popularity. The community doesn't know
-what's of interest to implement, and the maintainers do not consistently move
-features toward implementation. The community is dissatisfied as it appears no
-progress is made on changes important to them.
+what the maintainers would agree to be implemented, and the maintainers do not
+consistently move features toward implementation. The community is dissatisfied
+as it appears no progress is made on changes important to them.
 
 Without a curated list of issues available for implementation, users are free to
 open a pull request for any change. Pull requests are likewise reviewed
 opportunistically. Contributions are left unattended, which amounts to wasted
-effort by the contributors.
-
-Similarly, maintainers effort is wasted on identifying the pull requests that
-are fit for acceptance. Upvotes and comments can influence the likelihood of
-prioritizing a contribution for implementation or review, but it is not
-guaranteed.
-
-These problems leave the community frustrated because their voices, votes and
-efforts do not have an impact.
+effort by the contributors. Similarly, maintainers effort is wasted on
+identifying the pull requests that are fit for acceptance. Upvotes and comments
+can influence the likelihood of prioritizing a contribution for implementation
+or review, but it is not guaranteed. These problems leave the community
+frustrated because their voices, votes and efforts do not have an impact.
 
 <!--
 
