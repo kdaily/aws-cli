@@ -111,6 +111,8 @@ guaranteed.
 These problems leave the community frustrated because their voices, votes and
 efforts do not have an impact.
 
+<!--
+
 #### No indication of what to contribute
 
 We do not state which issues are available for community contributions. This
@@ -197,6 +199,7 @@ the user and potentially the maintainer. We need a structured, transparent
 process for the life cycle of an idea that can culminate in a community
 contribution.
 
+-->
 ## Goals
 
 Based on the issues identified in the current process, the proposed improvements
