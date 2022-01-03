@@ -34,9 +34,9 @@ The following terms are used throughout this document:
 
 ### Current contribution process
 
-The AWS CLI GitHub repository is available for any individual to report bugs, make
-feature requests, and ask guidance questions through GitHub issues, as well as
-open pull requests to propose code changes. There are currently roughly three
+The AWS CLI GitHub repository is available for any individual to report bugs,
+make feature requests, and ask guidance questions through GitHub issues, as well
+as open pull requests to propose code changes. There are currently roughly three
 stages to manage contributions that are common to open source projects: intake,
 implementation, and review.
 
@@ -65,11 +65,10 @@ Pull requests are subjected to automated tests and checks which provide
 preliminary feedback. Once a pull request passes all automated tests and checks,
 it requires review from a maintainer to proceed toward being merged.
 
-Maintainers may also push changes directly to a contributor's pull
-request in order to expedite completion or if the contributor is no longer
-engaged. In some cases, the maintainers will open their own pull request if the
-proposed change is not acceptable as is or they fail to find an existing pull
-request.
+Maintainers may also push changes directly to a contributor's pull request in
+order to expedite completion or if the contributor is no longer engaged. In some
+cases, the maintainers will open their own pull request if the proposed change
+is not acceptable as is or they fail to find an existing pull request.
 
 When the pull request is completed to the maintainers satisfaction, it is merged
 in for the next release.
@@ -79,10 +78,10 @@ in for the next release.
 The GitHub repository has a [contribution
 guide](https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md),
 standard to many open source projects, to provide guidance on contributing code
-to the project. The guide describes how to report an issue or feature
-request and states the minimum requirements and suggestions for a code
-contribution. It describes how to perform the basic tasks using Git, including
-retrieving and building the development version.
+to the project. The guide describes how to report an issue or feature request
+and states the minimum requirements and suggestions for a code contribution. It
+describes how to perform the basic tasks using Git, including retrieving and
+building the development version.
 
 ### Problems with the current contribution process
 
@@ -167,11 +166,14 @@ April 2021.
 
 #### Unprioritized contributions
 
-A community contribution should not be left incomplete. The maintainers should engage to resolve by merging or closing it. [Pull request 2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync
-command excludes files more efficiently. It proposes to fix issue
+A community contribution should not be left incomplete. The maintainers should
+engage to resolve by merging or closing it. [Pull request
+2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync command excludes
+files more efficiently. It proposes to fix issue
 [#1138](https://github.com/aws/aws-cli/issues/1138) that had tacit approval from
-the maintainers. It was abandoned by the original author,
-but picked up by another contributor and [improved](https://github.com/aws/aws-cli/pull/5425). No further interaction from the maintainers has occurred.
+the maintainers. It was abandoned by the original author, but picked up by
+another contributor and [improved](https://github.com/aws/aws-cli/pull/5425). No
+further interaction from the maintainers has occurred.
 
 #### Pull requests with limited background and context
 
@@ -275,21 +277,20 @@ available is open for a community contribution through a GitHub pull request.
 ### Implementation
 
 We will improve the implementation stage with specific instructions and criteria
-for completing an implementation. An issue moves from the contribution-ready
-phase to the implementation phase when a contributor opens a pull request for
-the issue. In addition, a user can comment on the issue that they are planning
-to make a contribution. While not required, this can be an indicator to the
-community that work is ongoing and should be collaborated on instead of
-duplicated. The contributor can then implement their change using the
-CONTRIBUTING guide as a reference. They open a pull request linked to the issue.
+for completing an implementation. A contributor can select an issue from the
+list of contribution ready issues and implement their change using the
+CONTRIBUTING guide as a reference. A user can also comment on the issue that
+they are planning to implement. While not required, this can be an indicator to
+the community that work is ongoing and should be collaborated on instead of
+duplicated. 
 
 When an issue is being worked on by a contributor, the maintainers will provide
 guidance and support. They will engage with the contributor for discussion of
 implementation details or questions that arise during the contribution. 
 
-When the contributor feels that they have completed their work, the contribution
-is marked as ready for review. The contribution is then given an initial
-inspection by the maintainers to confirm:
+When the contributor feels that they have completed their work, they should open
+a pull request to indicate that their contribution is ready  for review. The
+contribution is then given an initial inspection by the maintainers to confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It passes all validation checks, including tests (both new and existing),
@@ -336,11 +337,11 @@ Once a pull request is complete with to the satisfaction of the maintainers, it
 is approved and can be merged and acknowledged as contribution from the
 community.
 
-If a pull request becomes stale but there is sufficient work to
-complete it, the maintainers will complete the pull request. If after review and
-the maintainers agree that the implementation is not as discussed or there is
-not significant demand or bandwidth to complete it, the issue may go back to the
-intake stage and be available for another user to contribute a change.
+If a pull request becomes stale but there is sufficient work to complete it, the
+maintainers will complete the pull request. If after review and the maintainers
+agree that the implementation is not as discussed or there is not significant
+demand or bandwidth to complete it, the issue may go back to the intake stage
+and be available for another user to contribute a change.
 
 If an issue has not been explicitly marked as being available for contribution,
 it should not be expected that a pull request will get a review.
