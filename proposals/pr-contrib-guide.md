@@ -348,17 +348,34 @@ it should not be expected that a pull request will get a review.
 
 ## Implementation
 
-The contribution process will be implemented by extending the use of GitHub issue
-labels along with a GitHub project to curate the list of issues available for
-contribution and track their progress towards completion. Labels will be used to
-drive the movement of the issue through the stages of the process. This will
-move the issue between lanes of the GitHub project.
+The contribution process will be implemented by extending the use of GitHub
+issue labels and the addition of a GitHub project to curate the list of
+contribution-ready issues and track their progress towards completion. GitHub
+labels and events will be used to drive the movement of the issue between the
+lanes of the GitHub project, which map to the stages of the contribution
+process.
 
-The first lane in the GitHub project will be the list of issues available for
-contribution. This is the entry point for a user interested in contributing.
-After a user comments that they would like to work on an issue, it will be moved
-to the implementation lane. The maintainers and other users will be able to see
-what is currently being worked on by the community.
+The first lane in the GitHub project will be the list of contribution-ready
+issues. This is the entry point for a user interested in contributing to
+identify something that the maintainers would accept a change for.
+
+Once a pull request is open for an issue in the contribution ready list, it will
+be moved to the Implementation lane. The maintainers and other users or
+contributors can see what is currently being worked on by the community. It also
+indicates that the contibution is ready for an initial review by the maintainers
+to assert that it meets the acceptance criteria. The maintainers will perform an
+initial review within [TBD] days.
+
+Once the initial review is confirmed to be complete, the issue can be labeled as
+ready for review. This will move it to the 'Ready for Review' lane. These issues
+will be prioritized, selected, and labeled for review on a [TBD] basis. Labeling
+an issue as ready for review will move it to the 'Under Review' lane of the
+GitHub project. This lane will provide visibility to the community for what the
+maintainers are currently working on. 
+
+After the review process is completed and a pull request is merged, the issue
+will be closed and moved to the 'Done' lane. This will provide the community
+with a list of successful contributions. 
 
 ## Managing the existing backlog
 
@@ -372,9 +389,9 @@ Based on these numbers, we propose to review and close existing pull requests in
 two phases:
 
 1. We will use existing automated infrastructure to comment on ancient pull
-   requests, defined as no activity in more than a year and less than 10 upvotes.
-   This will post a comment indicating that the issue will be closed without
-   further interaction from the community.
+   requests, defined as no activity in more than a year and less than 10
+   upvotes. This will post a comment indicating that the issue will be closed
+   without further interaction from the community.
 2. Next, we will determine if any remaining remaining open pull requests meet
    the criteria for "ready for contribution" or "ready for review". If a pull
    request does not meet the criteria for either of these states, we should post
