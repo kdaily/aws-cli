@@ -313,8 +313,8 @@ guarantee how long it will be until the PR is merged.
 ### Review
 
 Similar to the contribution-ready stage, we will maintain a queue of issues that
-are ready for review once they are through the implementation and pre-
-review stages. 
+are ready for review once they are through the implementation and pre-review
+stages. 
 
 We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers still have limited bandwidth to give
