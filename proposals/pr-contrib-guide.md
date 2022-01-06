@@ -85,27 +85,27 @@ building the development version.
 
 ### Problems with the current contribution process
 
-The current contribution process is applied unevenly and inconsistently. This
-has led to dissatisfaction and frustration in the AWS CLI community. Without a
-robust mechanism for prioritizing, implementing, and reviewing requests and
-contributions that includes the help of the community, the number of unresolved
-community requests, and community dissatisfaction, will continue to grow. Here,
-we describe some examples of deficiencies in the current process.
+The current contribution process is applied unevenly and inconsistently. The
+community is frustrated because their voices, votes and efforts do not have an
+impact. Here, we describe some examples of deficiencies in the current process.
 
 After intake, community requests are prioritized for implementation
 opportunistically without regard to their popularity. The community doesn't know
-what the maintainers would agree to be implemented, and the maintainers do not
-consistently move features toward implementation. The community is dissatisfied
-as it appears no progress is made on changes important to them.
+what the maintainers would agree to be implemented. Without a curated list of
+issues available for implementation, users are free to open a pull request for
+any change, most of which will not be accepted. When pull requests are made,
+they are left unattended with no clear path forward. Pull requests are likewise
+reviewed opportunistically. Upvotes and comments can influence the likelihood of
+prioritizing a review, but it is not guaranteed. Maintainer effort is
+inefficiently applied to retroactively identify pull requests that meet
+acceptance criteria.
 
-Without a curated list of issues available for implementation, users are free to
-open a pull request for any change. Pull requests are likewise reviewed
-opportunistically. Contributions are left unattended, which amounts to wasted
-effort by the contributors. Similarly, maintainers effort is wasted on
-identifying the pull requests that are fit for acceptance. Upvotes and comments
-can influence the likelihood of prioritizing a contribution for implementation
-or review, but it is not guaranteed. These problems leave the community
-frustrated because their voices, votes and efforts do not have an impact.
+As a result, community requested improvements are not satisfied. We do not
+communicate with the community consistently, and their efforts are not utilized
+effectively. Without a robust mechanism for prioritizing, implementing, and
+reviewing requests and contributions that includes the help of the community,
+the number of unresolved community requests, and community dissatisfaction, will
+continue to grow. 
 
 <!--
 
