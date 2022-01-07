@@ -300,7 +300,7 @@ the queue of issues ready for contribution.
 
 ### Ready for review
 
-Once the criteria have been satisfied, the pull request can be added to a
+Once the criteria have been satisfied, the pull request is added to a
 queue for maintainer review. We will initially respond within [TBD] business
 days on a PR that is ready for review to acknowledge the request. This does not
 guarantee how long it will be until the PR is merged.
