@@ -243,68 +243,63 @@ The following sections detail the proposed improvements to the existing process.
 
 ### Intake
 
-The intake process will be modified to explicitly identifies changes, through
-GitHub issues, where community contributions are welcome. The maintainers will
-actively review GitHub issues to make this determination. Depending on the issue
-type (bug or feature request) and area (code or documentation), a set of
-criteria must be met before marking it as ready for contribution. The criteria
-used to make that decision may include:
+We will modify the the intake process to set contribution expectations for the
+community. A contribution is initiated by opening a GitHub issue. The GitHub issue captures information necessary to make the contribution, such as:
+
+1. A description of the requested change.
+1. The number of users in the community that request the change, measured through GitHub :+1: reactions.
+1. Design discussions, including use cases, edge cases, and alternative solutions.
+
+Contributions made without a GitHub issue will be subject to closure by the
+maintainers.
+
+Maintainers will regularly review open GitHub issues to determine if they are
+ready for community contribution. The decision to label an issue as ready for
+community contribution is ultimately up to the maintainers. Depending on the
+issue type (bug or feature request) and area (code or documentation), the
+maintainers will use a set of criteria to decide if the issue is ready for
+contribution. This may include:
 
 1. The change is feasible for a community member to contribute. See [the
-   appendix](#changes-not-available-for-contribution) for a definition of what
+   appendix](#changes-not-available-for-contribution) for examples of what
    would not be feasible for community contribution.
-1. There is enough detail provided for the maintainers to agree with the
-   implementation plan.
-1. Specifically for feature requests, the change must impact a minimum of 10 of
-   users, measured by GitHub :+1: reactions.
+1. Feature requests must have at least 10 :+1: reactions.
+1. The maintainers agree with the implementation plan.
 
-Once these criteria have been met, an issue is available for the community to
-contribute. 
-
-Issues that do not meet these criteria are subject to existing automated issue
-closure mechanisms. The maintainers will request community input before they are
-automatically closed if there are not enough upvotes (10) and no activity
-(comments or upvotes) for a year.
+If the criteria are not satisfied, the maintainers will comment on the GitHub
+issue to request more information and to update the current status or next
+steps. Issues that do not receive enough :+1: reactions and do not have any
+activty for a year are considered stale. The maintainers will make a request for
+comment from the community. Without further interaction, the issue will be
+closed.
 
 ### Contribution-ready
 
-We will add a new stage that identifies which issues are ready for contribution.
-Issues will be labeled and added to a queue where users interested in
-contributing can discover what is available. Any issue that has been marked as
+We will add a new stage that clearly identifies which issues the maintainers
+have determined are ready for contribution. Issues will be labeled and added to
+a queue where users can discover them. Any issue that has been marked as
 available is open for a community contribution through a GitHub pull request.
 
 ### Implementation
 
 We will improve the implementation stage with specific instructions and criteria
-for completing an implementation. A contributor can select an issue from the
-list of contribution ready issues and implement their change using the
-CONTRIBUTING guide as a reference. A user can also comment on the issue that
-they are planning to implement. While not required, this can be an indicator to
-the community that work is ongoing and should be collaborated on instead of
-duplicated. 
+for completing an implementation. A user can select an issue from the list of
+contribution ready issues and implement their change. The contributor should use the CONTRIBUTING guide as a reference for the criteria to be met before a contribution will be reviewed by the maintainers. This criteria includes passing validation checks, passing new and existing tests, code linting, and style checks.They can also communicate with the maintainers on the issue with questions that arise. 
 
-When an issue is being worked on by a contributor, the maintainers will provide
-guidance and support. They will engage with the contributor for discussion of
-implementation details or questions that arise during the contribution. 
-
-When the contributor feels that they have completed their work, they should open
-a pull request to indicate that their contribution is ready  for review. The
-contribution is then given an initial inspection by the maintainers to confirm:
+When the contributor has completed their implementation, they should open
+a pull request. The contribution is then given an initial inspection by the maintainers to confirm:
 
 1. It is implemented in the manner described in the issue.
-1. It passes all validation checks, including tests (both new and existing),
-   code linting, and style checks.
+1. It meets the criteria specified in the contribution guide.
 
-Validation checks are automated. Determining if the implementation matches the
-proposal requires a manual check that should be performed at a cursory level. If
-the requirements are not satisfied, the maintainers will comment on the issue
+If the criteria are not satisfied, the maintainers will comment on the issue
 indicating what is work is needed. If a pull request becomes stale because the
-contributor is no longer actively engaged or working on it for more than [TBD]
-days, it should be reviewed to see if it is suitable for the maintainers to
-finish the work or marked as stale and sent back to the queue of issues ready
-for contribution.
+contributor is no longer actively engaged on it for more than [TBD] days, it
+should be reviewed to see if it is suitable for the maintainers to finish the
+work. If it is not, the pull request will be marked as stale and sent back to
+the queue of issues ready for contribution.
 
-Once these requirements have been satisfied, the pull request can be added to a
+Once the criteria have been satisfied, the pull request can be added to a
 queue for maintainer review. We will initially respond within [TBD] business
 days on a PR that is ready for review to acknowledge the request. This does not
 guarantee how long it will be until the PR is merged.
@@ -312,38 +307,16 @@ guarantee how long it will be until the PR is merged.
 ### Review
 
 Similar to the contribution-ready stage, we will maintain a queue of issues that
-are ready for review once they are through the implementation and pre-review
-stages. 
-
-We do not want to discourage users from contributing or proposing changes, but
-we need to acknowledge that the maintainers still have limited bandwidth to give
-feedback on implementation or design and review pull requests. We will limit the
-number of in flight pull request reviews to [TBD]. The maintainers will select
-issues for review based on their age, complexity, and time availability. Bugs
-and documentation changes will be prioritized over feature requests. In
-addition, completing the review and acceptance of existing PRs will be
-prioritized over new review requests.
+are ready for review once the criteria for a contribution have been met. We will limit the number of in flight pull request reviews to [TBD]. The maintainers will select issues for review based on their age, complexity, and time availability. Bugs and documentation changes will be prioritized over feature requests. In addition, completing the review and acceptance of existing pull requests will be prioritized over new review requests.
 
 The maintainers will review the pull request and provide any comments, feedback,
 or requested changes. If changes are requested, the contributor should make the
-changes within [TBD] business days. If a pull request becomes stale because the
-contributor is no longer actively engaged or working on it for more than [TBD]
-days, it should be reviewed to see if it is suitable for the maintainers to
-finish the work or marked as stale sent back to the queue of issues ready for
-contribution.
+changes within [TBD] business days. If the contributor does not respond within [TBD] days, the pull request will be marked as stale. If the implementation matches the proposal and the maintainers have time to allocate, the maintainers will complete the pull request. If not, the issue will go back to the intake stage
+and become available for another user to make a contribution.
 
-Once a pull request is complete with to the satisfaction of the maintainers, it
-is approved and can be merged and acknowledged as contribution from the
-community.
-
-If a pull request becomes stale but there is sufficient work to complete it, the
-maintainers will complete the pull request. If after review and the maintainers
-agree that the implementation is not as discussed or there is not significant
-demand or bandwidth to complete it, the issue may go back to the intake stage
-and be available for another user to contribute a change.
-
-If an issue has not been explicitly marked as being available for contribution,
-it should not be expected that a pull request will get a review.
+Once a pull request is completed to the satisfaction of the maintainers, it will
+be approved and merged. The contribution will be labeled to acknowledge it as a
+community contribution.
 
 ## Implementation
 
@@ -406,9 +379,12 @@ two phases:
 
 ### Q. Why do we limit the number of in flight reviews?
 
-The maintainers have work that comes from outside of the GitHub repository that
-needs to be prioritized along with user contributions. Controlling the volume of
-pull request reviews and prioritizing completing the in flight reviews over new
+We do not want to discourage users from contributing or proposing changes, but
+we need to acknowledge that the maintainers still have limited bandwidth to give
+feedback on implementation or design and review pull requests. The maintainers
+have work that comes from outside of the GitHub repository that needs to be
+prioritized along with user contributions. Controlling the volume of pull
+request reviews and prioritizing completing the in flight reviews over new
 reviews will result in a shorter time to merge and release a contributor's
 change for a feature requested by the community. It will also reduce the amount
 of context switching for the maintainers, allowing them to focus on giving high
@@ -476,6 +452,13 @@ us how to handle new issues that might be candidates for community contribution.
 As part of the contribution guide, we will provide more specific guidance on how
 to upvote a feature so we can more accurately estimate user impact.
 
+### Q. Do users need to request or acknowledge to work on an issue that is ready for contribution?
+
+No. We do not want to require that users who want to contribute pre-register
+their interest. Multiple contributions can result in a better implementation.
+However, we should encourage users to comment on the issue that they are working
+on it. This can be an opportunity for community collaboration instead of
+duplicated effort.
 ### Q. What is automated review, and what is human review?
 
 Initially, most of the  will be human review besides code linting and testing.
