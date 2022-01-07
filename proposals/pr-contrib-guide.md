@@ -308,10 +308,13 @@ guarantee how long it will be until the PR is merged.
 ### Review
 
 Similar to the contribution-ready stage, we will maintain a queue of issues that
-are ready for review once the criteria for a contribution have been met. We will limit the number of in flight pull request reviews to [TBD]. The maintainers will select issues for review based on their age, complexity, and time availability. Bugs and documentation changes will be prioritized over feature requests. In addition, completing the review and acceptance of existing pull requests will be prioritized over new review requests.
+are ready for review once the criteria for a contribution have been met. We will limit the number of in flight pull request reviews to [TBD]. The maintainers will select issues for review based on the following criteria:
 
-The maintainers will review the pull request and provide any comments, feedback,
-or requested changes. If changes are requested, the contributor should make the
+1. The age, complexity, and time availability of the contribution. 
+1. Bugs and documentation changes will be prioritized over feature requests. 
+1. Completing the review existing pull requests take precedence over new review requests.
+
+The maintainers will review the pull request and provide feedback or requested changes. If changes are requested, the contributor should make the
 changes within [TBD] business days. If the contributor does not respond within [TBD] days, the pull request will be marked as stale. If the implementation matches the proposal and the maintainers have time to allocate, the maintainers will complete the pull request. If not, the issue will go back to the intake stage
 and become available for another user to make a contribution.
 
