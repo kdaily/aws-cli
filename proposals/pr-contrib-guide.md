@@ -261,8 +261,7 @@ maintainers will use a set of criteria to decide if the issue is ready for
 contribution. This may include:
 
 1. The change is feasible for a community member to contribute. See [the
-   appendix](#changes-not-available-for-contribution) for examples of what
-   would not be feasible for community contribution.
+   appendix](#changes-not-available-for-contribution) for details.
 1. Feature requests must have at least 10 :+1: reactions.
 1. The maintainers agree with the implementation plan.
 
