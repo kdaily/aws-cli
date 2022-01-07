@@ -267,7 +267,9 @@ contribution. This may include:
 
 If the criteria are not satisfied, the maintainers will comment on the GitHub
 issue to request more information and to update the current status or next
-steps. Issues that do not receive enough :+1: reactions and do not have any
+steps. Any design discussions (e.g., public interface design, edge cases, backwards compatibility concerns) must be resolved prior to making a contribution so that feedback during the review process focuses on the implementation of the agreed upon design.
+
+Issues that do not receive enough :+1: reactions and do not have any
 activty for a year are considered stale. The maintainers will make a request for
 comment from the community. Without further interaction, the issue will be
 closed.
