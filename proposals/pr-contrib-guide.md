@@ -284,7 +284,7 @@ available is open for a community contribution through a GitHub pull request.
 
 We will improve the implementation stage with specific instructions and criteria
 for completing an implementation. A user can select an issue from the list of
-contribution ready issues and implement their change. The contributor should use the CONTRIBUTING guide as a reference for the criteria to be met before a contribution will be reviewed by the maintainers. This criteria includes passing validation checks, passing new and existing tests, code linting, and style checks.They can also communicate with the maintainers on the issue with questions that arise. 
+contribution ready issues and implement their change. The contributor should use the CONTRIBUTING guide as a reference for the criteria to be met before a contribution will be reviewed by the maintainers. This criteria includes passing validation checks, passing new and existing tests, code linting, and style checks. The contributor can also communicate with the maintainers on the issue with questions that arise. 
 
 When the contributor has completed their implementation, they should open
 a pull request. The contribution is then given an initial inspection by the maintainers to confirm:
