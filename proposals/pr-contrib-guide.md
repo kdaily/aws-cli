@@ -298,6 +298,8 @@ should be reviewed to see if it is suitable for the maintainers to finish the
 work. If it is not, the pull request will be marked as stale and sent back to
 the queue of issues ready for contribution.
 
+### Ready for review
+
 Once the criteria have been satisfied, the pull request can be added to a
 queue for maintainer review. We will initially respond within [TBD] business
 days on a PR that is ready for review to acknowledge the request. This does not
