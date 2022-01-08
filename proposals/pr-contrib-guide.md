@@ -244,11 +244,14 @@ The following sections detail the proposed improvements to the existing process.
 ### Intake
 
 We will modify the the intake process to set contribution expectations for the
-community. A contribution is initiated by opening a GitHub issue. The GitHub issue captures information necessary to make the contribution, such as:
+community. A contribution is initiated by opening a GitHub issue. The GitHub
+issue captures information necessary to make the contribution, such as:
 
 1. A description of the requested change.
-1. The number of users in the community that request the change, measured through GitHub :+1: reactions.
-1. Design discussions, including use cases, edge cases, and alternative solutions.
+1. The number of users in the community that request the change, measured
+   through GitHub :+1: reactions.
+1. Design discussions, including use cases, edge cases, and alternative
+   solutions.
 
 Contributions made without a GitHub issue will be subject to closure by the
 maintainers.
@@ -267,12 +270,14 @@ contribution. This may include:
 
 If the criteria are not satisfied, the maintainers will comment on the GitHub
 issue to request more information and to update the current status or next
-steps. Any design discussions (e.g., public interface design, edge cases, backwards compatibility concerns) must be resolved prior to making a contribution so that feedback during the review process focuses on the implementation of the agreed upon design.
+steps. Any design discussions (e.g., public interface design, edge cases,
+backwards compatibility concerns) must be resolved prior to making a
+contribution so that feedback during the review process focuses on the
+implementation of the agreed upon design.
 
-Issues that do not receive enough :+1: reactions and do not have any
-activty for a year are considered stale. The maintainers will make a request for
-comment from the community. Without further interaction, the issue will be
-closed.
+Issues that do not receive enough :+1: reactions and do not have any activty for
+a year are considered stale. The maintainers will make a request for comment
+from the community. Without further interaction, the issue will be closed.
 
 ### Contribution-ready
 
@@ -285,10 +290,16 @@ available is open for a community contribution through a GitHub pull request.
 
 We will improve the implementation stage with specific instructions and criteria
 for completing an implementation. A user can select an issue from the list of
-contribution ready issues and implement their change. The contributor should use the CONTRIBUTING guide as a reference for the criteria to be met before a contribution will be reviewed by the maintainers. This criteria includes passing validation checks, passing new and existing tests, code linting, and style checks. The contributor can also communicate with the maintainers on the issue with questions that arise. 
+contribution ready issues and implement their change. The contributor should use
+the CONTRIBUTING guide as a reference for the criteria to be met before a
+contribution will be reviewed by the maintainers. This criteria includes passing
+validation checks, passing new and existing tests, code linting, and style
+checks. The contributor can also communicate with the maintainers on the issue
+with questions that arise. 
 
-When the contributor has completed their implementation, they should open
-a pull request. The contribution is then given an initial inspection by the maintainers to confirm:
+When the contributor has completed their implementation, they should open a pull
+request. The contribution is then given an initial inspection by the maintainers
+to confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It meets the criteria specified in the contribution guide.
@@ -313,7 +324,8 @@ based on the following criteria:
 1. Completing the review of existing pull requests take precedence over new
    review requests.
 1. Older contributions will be selected before more recent ones.
-1. The time available to the maintainers will be considered against the complexity of the contribution.
+1. The time available to the maintainers will be considered against the
+   complexity of the contribution.
 
 ### Review
 
