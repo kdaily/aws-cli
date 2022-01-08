@@ -302,22 +302,26 @@ the queue of issues ready for contribution.
 
 ### Ready for review
 
-Once the criteria have been satisfied, the pull request is added to a
-queue for maintainer review. We will initially respond within [TBD] business
-days on a PR that is ready for review to acknowledge the request. This does not
-guarantee how long it will be until the PR is merged.
-
-### Review
-
-Similar to the contribution-ready stage, we will maintain a queue of issues that
-are ready for review once the criteria for a contribution have been met. We will limit the number of in flight pull request reviews to [TBD]. The maintainers will select issues for review based on the following criteria:
+Once the criteria have been satisfied, the pull request is added to a queue for
+maintainer review. We will initially respond within [TBD] business days on a PR
+that is ready for review to acknowledge the request. This does not guarantee how
+long it will be until the PR is merged.  We will limit the number of in flight
+pull request reviews to [TBD]. The maintainers will select issues for review
+based on the following criteria:
 
 1. The age, complexity, and time availability of the contribution. 
 1. Bugs and documentation changes will be prioritized over feature requests. 
-1. Completing the review existing pull requests take precedence over new review requests.
+1. Completing the review of existing pull requests take precedence over new
+   review requests.
 
-The maintainers will review the pull request and provide feedback or requested changes. If changes are requested, the contributor should make the
-changes within [TBD] business days. If the contributor does not respond within [TBD] days, the pull request will be marked as stale. If the implementation matches the proposal and the maintainers have time to allocate, the maintainers will complete the pull request. If not, the issue will go back to the intake stage
+### Review
+
+The maintainers will review the pull request and provide feedback or requested
+changes. If changes are requested, the contributor should make the changes
+within [TBD] business days. If the contributor does not respond within [TBD]
+days, the pull request will be marked as stale. If the implementation matches
+the proposal and the maintainers have time to allocate, the maintainers will
+complete the pull request. If not, the issue will go back to the intake stage
 and become available for another user to make a contribution.
 
 Once a pull request is completed to the satisfaction of the maintainers, it will
