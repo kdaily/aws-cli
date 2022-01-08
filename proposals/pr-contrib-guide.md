@@ -309,10 +309,11 @@ long it will be until the PR is merged.  We will limit the number of in flight
 pull request reviews to [TBD]. The maintainers will select issues for review
 based on the following criteria:
 
-1. The age, complexity, and time availability of the contribution. 
 1. Bugs and documentation changes will be prioritized over feature requests. 
 1. Completing the review of existing pull requests take precedence over new
    review requests.
+1. The age of the contribution.
+1. The complexity of the contribution relative to the time available to the maintainers.
 
 ### Review
 
