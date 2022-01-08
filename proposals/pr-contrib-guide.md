@@ -312,8 +312,8 @@ based on the following criteria:
 1. Bugs and documentation changes will be prioritized over feature requests. 
 1. Completing the review of existing pull requests take precedence over new
    review requests.
-1. The age of the contribution.
-1. The complexity of the contribution relative to the time available to the maintainers.
+1. Older contributions will be selected before more recent ones.
+1. The time available to the maintainers will be considered against the complexity of the contribution.
 
 ### Review
 
