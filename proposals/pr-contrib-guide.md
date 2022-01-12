@@ -281,10 +281,12 @@ from the community. Without further interaction, the issue will be closed.
 
 ### Contribution-ready
 
-We will add a new stage that clearly identifies which issues the maintainers
-have determined are ready for contribution. Issues will be labeled and added to
-a queue where users can discover them. Any issue that has been marked as
-available is open for a community contribution through a GitHub pull request.
+If the criteria for ready for contribution are satisfied, the issue will be
+labelled to identify it as ready to contribute. This new stage clearly
+identifies which issues the maintainers have determined are ready for
+contribution and makes them visible for users can discover them. Any issue that
+has been marked as available is open for a community contribution through a
+GitHub pull request.
 
 ### Implementation
 
