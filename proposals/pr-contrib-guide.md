@@ -185,7 +185,7 @@ during the review process focuses on the implementation of the agreed upon
 design.
 
 Issues that do not receive enough :+1: reactions and do not have any activty for
-a year are considered stale. Without further interaction, the issue will be closed.
+a year are considered stale. Without further interaction, they will be closed.
 
 ### Contribution-ready
 
@@ -199,9 +199,9 @@ ready issues are listed publicly for the community to discover.
 A user can select an issue from the list of contribution ready issues and
 implement their change. When the contributor has completed their implementation,
 they should open a pull request. The maintainers will respond within [TBD]
-business days on a pull request that is ready for review to acknowledge the
-request. The contribution is then given an pre-review by the maintainers
-to confirm:
+business days after a pull request is open to acknowledge. The contribution is
+then given an pre-review by the maintainers within [TBD] business days to
+confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It meets the criteria specified in the contribution guide.
@@ -222,27 +222,29 @@ corresponding issue will be marked as ready for contribution.
 Once the pre-review criteria from the implementation stage have been met, the
 pull request is added to a queue for maintainer review. This means that the
 maintainers will include the pull request in a prioritization process for
-review. The maintainers will select issues for review based on
-the following criteria:
+review. The maintainers will select issues for review based on the following
+criteria:
 
-1. Completing the review of existing pull requests take precedence over new
-   review requests.
+1. Existing pull request reviews will be completed before starting new reviews.
 1. Older contributions will be selected before more recent ones.
 1. Bugs and documentation changes will be prioritized over feature requests. 
 1. The time available to the maintainers will be considered against the
    complexity of the contribution.
 1. The maintainers will limit the number of active reviews to [TBD].
 
-The maintainers will also publicly announce when the review has begun. This does
-not guarantee how long it will be until it is merged.
+The maintainers will also publicly label a pull request that has been selected
+for review. All pull requests selected for review will be listed publicly.
+Having a pull request selected for review does not guarantee how long it will be
+until it is merged.
 ### Review
 
 Once a pull request has been prioritized for review, the maintainers will
-perform the review. This criteria for accepting a pull request includes:
+perform a review. This criteria for accepting a pull request includes:
 
-1. The code is readable and follows best practices and conventions.
+1. The change is made in the right place and fits in the existing architecture.
 1. The change does not increase the maintainability in an unreasonable fashion.
 1. There is sufficient documentation, both in the code and for end users.
+1. The code is readable and follows best practices and conventions.
 
 The maintainers can request feedback and changes from the contributor by asking
 specific questions or specifying criteria that should be met to accept the pull
