@@ -261,30 +261,31 @@ community contribution.
 
 ## Implementation
 
-The contribution process will be implemented by extending the use of GitHub
-issue labels and the addition of a GitHub project to curate the list of
-contribution-ready issues and track their progress towards completion. GitHub
-labels and events will be used to drive the movement of the issue between the
-lanes of the GitHub project, which map to the stages of the contribution
-process.
+The contribution process will be implemented with a publicly visible [GitHub
+project
+board](https://docs.github.com/en/issues/organizing-your-work-with-project-boards).
+This project board will track contributions from the contribution-ready stage
+through a merged pull request. New and existing GitHub labels and GitHub issue
+events will be used to drive the movement of the issue between the lanes of the
+GitHub project, which map to the stages of the contribution process.
 
-The first lane in the GitHub project will be the list of contribution-ready
-issues. This is the entry point for a user interested in contributing to
-identify something that the maintainers would accept a change for.
+The first lane in the GitHub project contains the list of contribution-ready
+issues. This is the entry point for a user interested in making a contribution.
 
-Once a pull request is open for an issue in the contribution ready list, it will
-be moved to the Implementation lane. The maintainers and other users or
-contributors can see what is currently being worked on by the community. It also
-indicates that the contibution is ready for an initial review by the maintainers
-to assert that it meets the acceptance criteria. The maintainers will perform an
-initial review within [TBD] days.
+When a contributor opens a pull request for an issue in the contribution ready
+list, it will be moved to the Implementation lane. This indicates that the
+contibution is ready for an initial review by the maintainers. The community can
+see what is currently being worked on. The maintainers will perform an initial
+review within [TBD] days.
 
 Once the initial review is confirmed to be complete, the issue can be labeled as
-ready for review. This will move it to the 'Ready for Review' lane. These issues
-will be prioritized, selected, and labeled for review on a [TBD] basis. Labeling
-an issue as ready for review will move it to the 'Under Review' lane of the
-GitHub project. This lane will provide visibility to the community for what the
-maintainers are currently working on. 
+ready for review, and it moves to the 'Ready for Review' lane. These issues
+will be prioritized, selected, and labeled for review on a [TBD] basis.
+
+Once the maintainers have selected a pull request for review, a label marking it
+as ready for review will be added, and the pull request will move to the 'Under
+Review' lane of the GitHub project. This lane will provide visibility to the
+community for what the maintainers are currently working on. 
 
 After the review process is completed and a pull request is merged, the issue
 will be closed and moved to the 'Done' lane. This will provide the community
