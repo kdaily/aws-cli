@@ -152,9 +152,8 @@ The following sections detail the proposed improvements to the existing process.
 
 ### Intake
 
-We will modify the the intake process to set contribution expectations for the
-community. A contribution is initiated by opening a GitHub issue. The GitHub
-issue captures information necessary to make the contribution, such as:
+A contribution is initiated by opening a GitHub issue. The GitHub issue captures
+information necessary to make the contribution, such as:
 
 1. A description of the requested change.
 1. The number of users in the community that request the change, measured
@@ -165,48 +164,42 @@ issue captures information necessary to make the contribution, such as:
 Contributions made without a GitHub issue will be subject to closure by the
 maintainers.
 
-Maintainers will regularly review open GitHub issues to determine if they are
-ready for community contribution. The decision to label an issue as ready for
-community contribution is ultimately up to the maintainers. Depending on the
-issue type (bug or feature request) and area (code or documentation), the
-maintainers will use a set of criteria to decide if the issue is ready for
-contribution. This may include:
+Maintainers will regularly review open GitHub issues and label the ones that
+are ready for community contribution. The decision to label an issue as ready
+for community contribution is ultimately up to the discretion of the
+maintainers. Depending on the issue type (bug or feature request) and area (code
+or documentation), the maintainers will use a set of criteria to decide if the
+issue is ready for contribution. This may include:
 
 1. The change is feasible for a community member to contribute. See [the
    appendix](#changes-not-available-for-contribution) for details.
 1. Feature requests must have at least 10 :+1: reactions.
-1. The maintainers agree with the implementation plan.
+1. The maintainers agree with the implementation plan, including any design
+   discussions (e.g., public interface design, edge cases, backwards
+   compatibility concerns).
 
-If the criteria are not satisfied, the maintainers will comment on the GitHub
-issue to request more information and to update the current status or next
-steps. Any design discussions (e.g., public interface design, edge cases,
-backwards compatibility concerns) must be resolved prior to making a
-contribution so that feedback during the review process focuses on the
-implementation of the agreed upon design.
+If the criteria are not satisfied, the maintainers should explicitly comment what criteria are not satsified and how the community can satisfy them. All discussions must be resolved prior to making a contribution so that
+feedback during the review process focuses on the implementation of the agreed
+upon design.
 
 Issues that do not receive enough :+1: reactions and do not have any activty for
-a year are considered stale. The maintainers will make a request for comment
-from the community. Without further interaction, the issue will be closed.
+a year are considered stale. Without further interaction, the issue will be closed.
 
 ### Contribution-ready
 
-If the criteria for ready for contribution are satisfied, the issue will be
-labelled to identify it as ready to contribute. This new stage clearly
-identifies which issues the maintainers have determined are ready for
-contribution and makes them visible for users can discover them. Any issue that
-has been marked as available is open for a community contribution through a
-GitHub pull request.
+A GitHub issue enters the contribution ready stage when a maintainer publicly
+labels the issue ready for contribution. This stage indicates any user is
+welcome to initiate a contribution via a GitHub pull request. All contribution
+ready issues are listed publicly for the community to discover.
 
 ### Implementation
 
-We will improve the implementation stage with specific instructions and criteria
-for completing an implementation. A user can select an issue from the list of
-contribution ready issues and implement their change. The contributor should use
-the CONTRIBUTING guide as a reference for the criteria to be met before a
-contribution will be reviewed by the maintainers. This criteria includes passing
-validation checks, passing new and existing tests, code linting, and style
-checks. The contributor can also communicate with the maintainers on the issue
-with questions that arise. 
+A user can select an issue from the list of contribution ready issues and
+implement their change. The contributor should use the CONTRIBUTING guide as a
+reference for the criteria to be met before a contribution will be reviewed by
+the maintainers. This criteria includes passing validation checks, passing new
+and existing tests, code linting, and style checks. The contributor can also
+communicate with the maintainers on the issue with questions that arise. 
 
 When the contributor has completed their implementation, they should open a pull
 request. The contribution is then given an initial inspection by the maintainers
