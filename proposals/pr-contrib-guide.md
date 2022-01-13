@@ -86,138 +86,47 @@ building the development version.
 ### Problems with the current contribution process
 
 The current contribution process is applied unevenly and inconsistently. The
-community is frustrated because their voices, votes and efforts do not have an
-impact. Here, we describe some examples of deficiencies in the current process.
+lack of commitment to the process has led to an accumulation of community
+feature requests and bug fixes. In turn, the AWS CLI community is dissatisfied
+and frustrated because their voices, votes and efforts do not have an impact.
+Here, we describe some examples of deficiencies in the current process.
 
-After intake, community requests are prioritized for implementation
-opportunistically without regard to their popularity. The community doesn't know
-what the maintainers would agree to be implemented. Without a curated list of
-issues available for implementation, users are free to open a pull request for
-any change, most of which will not be accepted. When pull requests are made,
-they are left unattended with no clear path forward. Pull requests are likewise
-reviewed opportunistically. Upvotes and comments can influence the likelihood of
-prioritizing a review, but it is not guaranteed. Maintainer effort is
-inefficiently applied to retroactively identify pull requests that meet
-acceptance criteria.
+#### Community contributions are not frequently reviewed.
 
-As a result, community requested improvements are not satisfied. We do not
-communicate with the community consistently, and their efforts are not utilized
-effectively. Without a robust mechanism for prioritizing, implementing, and
-reviewing requests and contributions that includes the help of the community,
-the number of unresolved community requests, and community dissatisfaction, will
-continue to grow. 
+[86 community pull
+requests](https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues)
+were opened in 2021. Of these, 43 (50%) have been closed: [24 by
+merging](https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues)
+and 19 by closing without merging. The pull requests that were reviewed and
+merged were chosen opportunistically - they corresponded to work the team needed
+to complete, like bumping versions, or were low risk, like documentation
+changes. There is a willingness from the community to make improvements to the
+AWS CLI through contributions, but their contributions are not reviewed. This
+inconsistent approach frustrates contributors and results in missed
+opportunities to support community efforts to improve AWS CLI.
 
-<!--
+#### Contributors do not have enough information on how their contributions can be accepted.
 
-#### No indication of what to contribute
+[34 pull requests](https://github.com/search?q=is%3Apr+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues) opened in 2021 do not have any response from a maintainer. Of these, [27 pull requests](https://github.com/search?q=is%3Apr+is%3Aopen+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues) (79%) are still open. The project lacks documentation on the guidelines and requirements for making a contribution as well as what types of contributions would be accepted. Furthermore, the maintainers do not consistently provide acknowledgement, feedback, next steps, or indications of when a review would occur. The result is contributors are unaware if they are making a contribution correctly, what the next steps are, and when it will be reviewed.  Contributors are frustrated that their efforts are not being acknowledged and do not know what to do to move forward.
 
-We do not state which issues are available for community contributions. This
-results in users spending effort and the maintainers spending effort
-contributing and reviewing changes that ultimately will not be accepted. For
-example, users frequently propose changes to waiters and paginators. These are
-implemented by the service teams and changes cannot be made directly to the AWS
-CLI.
+#### Community contributions stall and are left incomplete.
 
-We need a curated list of issues to know what is available for contribution and
-what is not so that their efforts are used effectively. This would help users
-and maintainers focus on relevant issues and work more effectively.
-
-#### Competing priorities and limited bandwidth to work on popular requests
-
-There are 95 open issues that have 10 or more upvotes, indicating broad
-community interest. That volume is not tractable for the maintainers to
-implement themselves. Community members need to be able to contribute more
-easily while balancing the efforts of maintainers to conduct thorough reviews of
-code before merging.
-
-We need to tell users how they can provide constructive quantitative and
-qualitative feedback. The maintainers need to review the feedback to
-strategically and fairly manage the amount of in flight work so that open
-requests do not pile up.
-
-#### Limited information on how contribute
-
-The AWS CLI has a [contributing
-guide](https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md)
-focused on the technical aspects of writing code for a contribution. However,
-the guide does not discuss how to contribute. We get frequent requests to
-contribute on specific issues, but it requires significant effort to respond to
-these requests individually. This also contributes to the negative sentiment
-that issues are not resolved and there is no path for the community to
-contribute. Users often express frustration that they cannot make a change.
-
-We need a well-documented guide and process for the community to know how to
-contribute, what the requirements are, and what to expect from maintainers. This
-will help users and maintainers focus on relevant issues and work more
-effectively.
-
-#### No active triage or first response
-
-The maintainers need to triage, respond to, and review community contributions
-in a timely manner. [Pull request
-3174](https://github.com/aws/aws-cli/pull/3174) adds MFA functionality to
-support cache usage. It is the pull request with the most upvotes (55 👍🏻
-reactions) since being opened in March 2018. It was proposed as an
-[issue](https://github.com/aws/aws-cli/issues/3172), and no comments from AWS
-have been made since then. It is still getting comments noting the need as of
-April 2021.
-
-#### Unprioritized contributions
-
-A community contribution should not be left incomplete. The maintainers should
-engage to resolve by merging or closing it. [Pull request
-2105](https://github.com/aws/aws-cli/pull/2105) makes S3 sync command excludes
-files more efficiently. It proposes to fix issue
-[#1138](https://github.com/aws/aws-cli/issues/1138) that had tacit approval from
-the maintainers. It was abandoned by the original author, but picked up by
-another contributor and [improved](https://github.com/aws/aws-cli/pull/5425). No
-further interaction from the maintainers has occurred.
-
-#### Pull requests with limited background and context
-
-Many pull requests come as unsolicited changes that often do not correspond to
-an open issue that has been discussed by the maintainers or the community. They
-often end up lingering with no communication from the maintainers to indicate
-the feasibility or appropriateness of the changes. As an example, [`aws-cli`
-pull request 2636](https://github.com/aws/aws-cli/pull/2636)  adds functionality
-to configure MFA. It adds or alters 231 lines of code across five files, and is
-a significant new feature. There is no open issue or discussion about the
-feature other than on the PR. It has no comments from AWS employees, other than
-to indicate that it is a “large” pull request, since 2017. Conversation
-continued for a year on the PR by interested users with no other interaction or
-guidance from AWS.
-
-A idea that has not been vetted by the community and the maintainers is
-difficult to approve; it's hard to have a conversation when it involves an idea
-proposal as well as code changes. It usually ends in an unmerged pull request or
-significant code revision, which is effort that was unnecessarily expended by
-the user and potentially the maintainer. We need a structured, transparent
-process for the life cycle of an idea that can culminate in a community
-contribution.
-
--->
+There are [14 pull
+requests](https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues)
+opened in 2021 that had a comment from a maintainer but remain open. These
+comments include feedback that the contributor responded to and was not followed
+up on by a maintainer. In some cases, approval was given for a contribution but
+never merged. The maintainers do not consistently check on the status of
+existing pull requests and the contribution process stalls. The loss of momentum
+of the contribution process erodes trust with individual contributors, who feel
+ignored, and the community at large, who see stale contributions.
 ## Goals
 
-Based on the issues identified in the current process, the proposed improvements
-for customer contributions should satisfy the following goals:
+Based on the problems identified in the current process, the proposed improvements for customer contributions should satisfy the following goals:
 
-1. Users should know what is available for contribution. It should be clear
-   where they can expend effort that will be accepted.
-1. Maintainers should prioritize issues based on feedback provided by the
-   community to focus the efforts of the maintainers and the community. Users
-   should know how to provide that feedback.
-1. Users should know how to contribute. The should be able to reference
-   documentation to make high quality contributions. It should be accessible to
-   first time contributors.
-1. All requests should get a response from the maintainers. Communication from
-   maintainers should happen in a timely manner, even (especially!) if that’s
-   saying no. An initial response to open PRs should occur within [TBD] business
-   days.
-1. A contribution should not be left abandoned. The maintainers are responsible
-   see it through to a conclusion.
-1. Contributors should know exactly what to expect when interacting with the
-   maintainers. The current status should be clearly indicated and the next
-   steps well defined.
+1. Maintainers should review community contributions regularly.
+1. Contributors and maintainers should always know what is the current state of a contribution and what steps remain to drive the contribution to a resolution.
+1. Maintainers should resolve in-flight contribution reviews before committing to any new reviews.
 
 ## Specification
 
