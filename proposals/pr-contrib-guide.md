@@ -120,7 +120,8 @@ never merged. The maintainers do not consistently check on the status of
 existing pull requests and the contribution process stalls. The loss of momentum
 of the contribution process erodes trust with individual contributors, who feel
 ignored, and the community at large, who see stale contributions.
-## Goals
+
+### Goals
 
 Based on the problems identified in the current process, the proposed improvements for customer contributions should satisfy the following goals:
 
@@ -198,10 +199,9 @@ ready issues are listed publicly for the community to discover.
 
 A user can select an issue from the list of contribution ready issues and
 implement their change. When the contributor has completed their implementation,
-they should open a pull request. The maintainers will respond within [TBD]
-business days after a pull request is open to acknowledge. The contribution is
-then given an pre-review by the maintainers within [TBD] business days to
-confirm:
+they should open a pull request. The maintainers will respond to acknowledge the
+pull request and let the contributor know to expect a preliminary review by the
+within 5 business days to confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It meets the criteria specified in the contribution guide.
@@ -209,17 +209,17 @@ confirm:
 If the criteria are not satisfied, the maintainers will comment on the issue
 specifically indicating what work is still required. If the contributor has
 questions, they should refer to the contributing guide documentation or ask the
-maintainers to clarify.
+maintainers to clarify. Once the contributor makes the required changes, the
+maintainers will follow up within 5 business days.
 
 If the contributor is no longer actively engaged by responding to comments from
-maintainers or making code changes for more than [TBD] days, the contribution is
-stale. Stale contributions should be reviewed by the maintainers enough progress
-has been made to finish. If not, the pull request will be closed and the
+maintainers or making code changes for more than 30 business days, the
+contribution is stale. If not, the pull request will be closed and the
 corresponding issue will be marked as ready for contribution.
 
 ### Ready for review
 
-Once the pre-review criteria from the implementation stage have been met, the
+Once the preliminary review criteria from the implementation stage have been met, the
 pull request is added to a queue for maintainer review. This means that the
 maintainers will include the pull request in a prioritization process for
 review. The maintainers will select issues for review based on the following
