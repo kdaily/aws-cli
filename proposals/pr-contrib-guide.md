@@ -428,7 +428,7 @@ addressed before taking on new potential technical debt from added features.
 
 ## References
 
-[open-pr-with-comment-from-maintainer]: (https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues)
+[open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
 ## Appendix
 ### Changes not available for contribution
 
