@@ -112,7 +112,7 @@ opportunities to support community efforts to improve AWS CLI.
 #### Community contributions stall and are left incomplete.
 
 There are [14 pull
-requests](https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues)
+requests][open-pr-with-comment-from-maintainer]
 opened in 2021 that had a comment from a maintainer but remain open. These
 comments include feedback that the contributor responded to and was not followed
 up on by a maintainer. In some cases, approval was given for a contribution but
@@ -126,7 +126,7 @@ ignored, and the community at large, who see stale contributions.
 Based on the problems identified in the current process, the proposed improvements for customer contributions should satisfy the following goals:
 
 1. Maintainers should review community contributions regularly.
-1. Contributors and maintainers should always know what is the current state of a contribution and what steps remain to drive the contribution to a resolution.
+1. Contributors and maintainers should always be able to determine the current state of a contribution and what steps remain to drive the contribution to a resolution.
 1. Maintainers should resolve in-flight contribution reviews before committing to any new reviews.
 
 ## Specification
@@ -426,6 +426,9 @@ available for community contribution immediately without any upvote
 requirements. Bug fixes have an immediate impact on affected users and are
 addressed before taking on new potential technical debt from added features.
 
+## References
+
+[open-pr-with-comment-from-maintainer]: (https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues)
 ## Appendix
 ### Changes not available for contribution
 
@@ -446,3 +449,4 @@ include (but are not limited to):
 1. Changes to configuration or credential files or processes. These changes can
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
+
