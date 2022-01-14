@@ -106,7 +106,7 @@ opportunities to support community efforts to improve AWS CLI.
 
 [34 pull requests][prs-no-maintainer-response] opened in 2021 do not have any
 response from a maintainer. Of these, [27 pull
-requests][prs-no-maintainer-response-open (79%) are still open. The project
+requests][prs-no-maintainer-response-open] (79%) are still open. The project
 lacks documentation on the guidelines and requirements for making a contribution
 as well as what types of contributions would be accepted. Furthermore, the
 maintainers do not consistently provide acknowledgement, feedback, next steps,
