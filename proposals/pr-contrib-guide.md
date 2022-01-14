@@ -75,13 +75,12 @@ in for the next release.
 
 #### Documentation and tracking
 
-The GitHub repository has a [contribution
-guide](https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md),
-standard to many open source projects, to provide guidance on contributing code
-to the project. The guide describes how to report an issue or feature request
-and states the minimum requirements and suggestions for a code contribution. It
-describes how to perform the basic tasks using Git, including retrieving and
-building the development version.
+The GitHub repository has a [contribution guide], standard to many open source
+projects, to provide guidance on contributing code to the project. The guide
+describes how to report an issue or feature request and states the minimum
+requirements and suggestions for a code contribution. It describes how to
+perform the basic tasks using Git, including retrieving and building the
+development version.
 
 ### Problems with the current contribution process
 
@@ -93,11 +92,9 @@ Here, we describe some examples of deficiencies in the current process.
 
 #### Community contributions are not frequently reviewed.
 
-[86 community pull
-requests](https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues)
-were opened in 2021. Of these, 43 (50%) have been closed: [24 by
-merging](https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues)
-and 19 by closing without merging. The pull requests that were reviewed and
+[86 community pull requests][open-prs-2021] were opened in 2021. Of these, 43
+(50%) have been closed: [24 by
+merging][prs-closed-by-merging-2021] and 19 by closing without merging. The pull requests that were reviewed and
 merged were chosen opportunistically - they corresponded to work the team needed
 to complete, like bumping versions, or were low risk, like documentation
 changes. There is a willingness from the community to make improvements to the
@@ -107,7 +104,16 @@ opportunities to support community efforts to improve AWS CLI.
 
 #### Contributors do not have enough information on how their contributions can be accepted.
 
-[34 pull requests](https://github.com/search?q=is%3Apr+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues) opened in 2021 do not have any response from a maintainer. Of these, [27 pull requests](https://github.com/search?q=is%3Apr+is%3Aopen+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues) (79%) are still open. The project lacks documentation on the guidelines and requirements for making a contribution as well as what types of contributions would be accepted. Furthermore, the maintainers do not consistently provide acknowledgement, feedback, next steps, or indications of when a review would occur. The result is contributors are unaware if they are making a contribution correctly, what the next steps are, and when it will be reviewed.  Contributors are frustrated that their efforts are not being acknowledged and do not know what to do to move forward.
+[34 pull requests][prs-no-maintainer-response] opened in 2021 do not have any
+response from a maintainer. Of these, [27 pull
+requests][prs-no-maintainer-response-open (79%) are still open. The project
+lacks documentation on the guidelines and requirements for making a contribution
+as well as what types of contributions would be accepted. Furthermore, the
+maintainers do not consistently provide acknowledgement, feedback, next steps,
+or indications of when a review would occur. The result is contributors are
+unaware if they are making a contribution correctly, what the next steps are,
+and when it will be reviewed.  Contributors are frustrated that their efforts
+are not being acknowledged and do not know what to do to move forward.
 
 #### Community contributions stall and are left incomplete.
 
@@ -425,10 +431,6 @@ Similarly, once a bug has been triaged and confirmed, it should be made
 available for community contribution immediately without any upvote
 requirements. Bug fixes have an immediate impact on affected users and are
 addressed before taking on new potential technical debt from added features.
-
-## References
-
-[open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
 ## Appendix
 ### Changes not available for contribution
 
@@ -450,3 +452,9 @@ include (but are not limited to):
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
 
+[contribution guide]: https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md
+[open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
+[open-prs-2021]: https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
+[prs-closed-by-merging-2021]: https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
+[prs-no-maintainer-response]: https://github.com/search?q=is%3Apr+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
+[prs-no-maintainer-response-open]: https://github.com/search?q=is%3Apr+is%3Aopen+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
