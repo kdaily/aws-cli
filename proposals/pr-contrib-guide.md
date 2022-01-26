@@ -203,11 +203,11 @@ ready issues are listed publicly for the community to discover.
 
 ### Implementation
 
-A user can select an issue from the list of contribution ready issues and
-implement their change. When the contributor has completed their implementation,
-they should open a pull request. The maintainers will respond to acknowledge the
-pull request and let the contributor know to expect a preliminary review by the
-within 5 business days to confirm:
+A GitHub issue enters the implementation stage once a user submits a GitHub pull
+request implementing the change. This stage indicates that a contribution has
+been submitted for the issue, but the maintainers have not committed to a full
+review of the contribution. The maintainers will respond to let the contributor
+know to expect a preliminary review by the within 5 business days to confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It meets the criteria specified in the contribution guide.
@@ -225,41 +225,42 @@ corresponding issue will be marked as ready for contribution.
 
 ### Ready for review
 
-Once the preliminary review criteria from the implementation stage have been met, the
-pull request is added to a queue for maintainer review. This means that the
-maintainers will include the pull request in a prioritization process for
-review. The maintainers will select issues for review based on the following
-criteria:
+Once the preliminary review criteria from the implementation stage have been
+met, the tracking GitHub issue is labeled as ready for review and added to a
+queue for maintainer review. The maintainers will select issues for full review
+from this queue. The issues will be prioritized for review publicly based on the
+following criteria in descending order of importance:
 
-1. Existing pull request reviews will be completed before starting new reviews.
-1. Older contributions will be selected before more recent ones.
-1. Bugs and documentation changes will be prioritized over feature requests. 
+1. Bugs, documentation changes, and feature requests will be prioritized in that
+   order.
 1. The time available to the maintainers will be considered against the
    complexity of the contribution.
-1. The maintainers will limit the number of active reviews to [TBD].
+1. Older contributions will be selected before more recent ones.
 
-The maintainers will also publicly label a pull request that has been selected
-for review. All pull requests selected for review will be listed publicly.
-Having a pull request selected for review does not guarantee how long it will be
-until it is merged.
+When selecting an issue to review from the queue, a maintainer must select the
+issue with the current highest priority. The prioritization of issues in the
+queue is dynamic, reviewed on a regular cadence, and is ultimately decided based
+on the maintainers' discretion. Having a pull request selected for review does
+not guarantee how long it will be until it is merged.
+
 ### Review
 
-Once a pull request has been prioritized for review, the maintainers will
-perform a review. This criteria for accepting a pull request includes:
+Once a pull request has been selected for review, the GitHub issue will move to
+the under review stage, and the maintainers will perform a review. The
+maintainers will limit the number of active reviews to [TBD]. This criteria for
+accepting a pull request includes:
 
 1. The change is made in the right place and fits in the existing architecture.
 1. The change does not increase the maintainability in an unreasonable fashion.
 1. There is sufficient documentation, both in the code and for end users.
 1. The code is readable and follows best practices and conventions.
 
-The maintainers can request feedback and changes from the contributor by asking
-specific questions or specifying criteria that should be met to accept the pull
-request. If changes are requested, the contributor should make the changes
-within [TBD] business days. If the contributor does not respond within [TBD]
-days, the pull request will be marked as stale. If the implementation matches
-the proposal and the maintainers have time to allocate, the maintainers will
-complete the pull request. If not, the issue will go back to the intake stage
-and become available for another user to make a contribution.
+If a pull request is not ready to merge, the maintainers will request feedback
+and changes from the contributor by asking specific questions or specifying
+criteria that should be met. If changes are requested, the contributor should
+make the changes within [TBD] business days. If the contributor does not respond
+within [TBD] days, the pull request will be marked as stale and the maintainers
+will complete the pull request.
 
 Once a pull request is completed to the satisfaction of the maintainers, it will
 be approved and merged. The contribution will be labeled to acknowledge it as a
@@ -270,8 +271,8 @@ community contribution.
 The contribution process will be implemented with a publicly visible [GitHub
 project
 board](https://docs.github.com/en/issues/organizing-your-work-with-project-boards).
-This project board will track contributions from the contribution-ready stage
-through a merged pull request. New and existing GitHub labels and GitHub issue
+This project board will track GitHub issues from the contribution-ready stage
+through completion by merging a pull request. New and existing GitHub labels and GitHub issue
 events will be used to drive the movement of the issue between the lanes of the
 GitHub project, which map to the stages of the contribution process.
 
@@ -280,9 +281,8 @@ issues. This is the entry point for a user interested in making a contribution.
 
 When a contributor opens a pull request for an issue in the contribution ready
 list, it will be moved to the Implementation lane. This indicates that the
-contibution is ready for an initial review by the maintainers. The community can
-see what is currently being worked on. The maintainers will perform an initial
-review within [TBD] days.
+contibution is ready for an initial review by the maintainers. The maintainers
+will perform an initial review within [TBD] days.
 
 Once the initial review is confirmed to be complete, the issue can be labeled as
 ready for review, and it moves to the 'Ready for Review' lane. These issues
@@ -316,12 +316,11 @@ two phases:
    the criteria for "ready for contribution" or "ready for review". If a pull
    request does not meet the criteria for either of these states, we should post
    a comment to indicate what needs to be done and give the contributor [TBD]
-   days before the pull request is closed. If there is no response, the work is
-   not completed, or they respond that they are no longer interested in working
-   on it, we will close the pull request. If the request meets the criteria for
-   'ready for contribution' but not 'ready for review', we will comment in the
-   linked issue that it is no longer being worked on and is available for
-   contribution.
+   days before the pull request is closed. If there is no response or they
+   respond that they are no longer interested in working on it, we will close
+   the pull request. If the request meets the criteria for 'ready for
+   contribution' but not 'ready for review', we will comment in the linked issue
+   that it is no longer being worked on and is available for contribution.
 
 ## Rationale/FAQ
 
@@ -414,23 +413,21 @@ Automation will be implemented for issue labeling, state transitions, and
 template checks. We currently perform these types of processes for issues, and
 the proposed process is agnostic to how it's implemented.
 
-### Q. Why are pull requests for documentation changes and bug fixes prioritized over feature requests?
+### Q. Why are issue types prioritized in the order of bug fixes, documentation, and feature requests?
 
-Documentation changes, once triaged and validated, do not need to have upvote
-requirements to be available for contribution. Most documentation changes are
-generally low risk and should be able to move quickly through the review
-process. Documentation changes also have the potential for a high reward,
-measured by the number of users who would be impacted by the improvement. In
-addition, there are also more maintainers available for validation and review of
-documentation changes. Issues for incorrect documentation are treated as bugs
-and should receive high prioritization, while confusing or incomplete
-documentation are considered feature requests and may recieve lower
-prioritization.
+Once a bug has been triaged and confirmed, it should be made available for
+community contribution immediately without any upvote requirements. Bug fixes
+have an immediate impact on affected users from using the AWS CLI as intended.
 
-Similarly, once a bug has been triaged and confirmed, it should be made
-available for community contribution immediately without any upvote
-requirements. Bug fixes have an immediate impact on affected users and are
-addressed before taking on new potential technical debt from added features.
+Most documentation changes are low risk and should move quickly through the
+review process. Documentation changes also have a high reward potential,
+measured by the number of users who would read the documentation to solve their
+problem. In addition, there are also more maintainers available for validation
+and review of documentation changes.
+
+Feature requests need to be carefully assessed before taking on new potential
+technical debt.
+
 ## Appendix
 ### Changes not available for contribution
 
@@ -451,6 +448,19 @@ include (but are not limited to):
 1. Changes to configuration or credential files or processes. These changes can
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
+
+### Criteria for passing pre-review
+
+To move from the implementation to the ready for review stage, a pull request
+must pass the following criteria. These criteria will be added to the
+CONTRIBUTING guide.
+
+1. The pull request must have tests that pass.
+1. The pull request must pass all existing tests.
+1. The code must work on all supported operating systems.
+1. The code must pass all linting and style checks.
+1. The code must be documented, which may include inline documentation and user
+   documentation.
 
 [contribution guide]: https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md
 [open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
