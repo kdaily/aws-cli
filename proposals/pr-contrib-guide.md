@@ -40,7 +40,7 @@ as open pull requests to propose code changes. There are currently roughly three
 stages to manage contributions that are common to open source projects: intake,
 implementation, and review.
 
-#### Intake
+#### Intake stage
 
 GitHub issues are triaged regularly to determine that they are correctly
 categorized and express a real and relevant problem or request. An answer is
@@ -48,13 +48,13 @@ provided as soon as possible to acknowledge or resolve the issue. Feature
 requests are reviewed for general suitability and uniqueness. Users can vote for
 features via "reactions" on the issue. 
 
-#### Implementation
+#### Implementation stage
 
 Users can open pull requests to propose changes that address bugs or feature
 requests. There is no requirement to work on an existing feature request or to
 discuss a contribution prior to opening a pull request. Occassionally guidance
 is provided to the contributor to improve the proposed change.
-#### Review
+#### Review stage
 
 Pull requests are selected for review opportunistically when the maintainers
 have decided that a change or feature should be incorporated. When a feature is
@@ -157,7 +157,7 @@ contribution and to track the progress of a contribution.
 
 The following sections detail the proposed improvements to the existing process.
 
-### Intake
+### Intake stage
 
 A contribution is initiated by opening a GitHub issue. The GitHub issue captures
 information necessary to make the contribution, such as:
@@ -194,14 +194,14 @@ design.
 Issues that do not receive enough :+1: reactions and do not have any activty for
 a year are considered stale. Without further interaction, they will be closed.
 
-### Contribution-ready
+### Contribution-ready stage
 
 A GitHub issue enters the contribution ready stage when a maintainer publicly
 labels the issue ready for contribution. This stage indicates any user is
 welcome to initiate a contribution via a GitHub pull request. All contribution
 ready issues are listed publicly for the community to discover.
 
-### Implementation
+### Implementation stage
 
 A GitHub issue enters the implementation stage once a user submits a GitHub pull
 request implementing the change. This stage indicates that a contribution has
@@ -223,7 +223,7 @@ maintainers or making code changes for more than 30 business days, the
 contribution is stale. If not, the pull request will be closed and the
 corresponding issue will be marked as ready for contribution.
 
-### Ready for review
+### Ready for review stage
 
 Once the preliminary review criteria from the implementation stage have been
 met, the tracking GitHub issue is labeled as ready for review and added to a
@@ -243,7 +243,7 @@ queue is dynamic, reviewed on a regular cadence, and is ultimately decided based
 on the maintainers' discretion. Having a pull request selected for review does
 not guarantee how long it will be until it is merged.
 
-### Review
+### Review stage
 
 Once a pull request has been selected for review, the GitHub issue will move to
 the under review stage, and the maintainers will perform a review. The
@@ -266,7 +266,7 @@ Once a pull request is completed to the satisfaction of the maintainers, it will
 be approved and merged. The contribution will be labeled to acknowledge it as a
 community contribution.
 
-## Implementation
+## Process implementation
 
 The contribution process will be implemented with a publicly visible [GitHub
 project
@@ -455,7 +455,7 @@ To move from the implementation to the ready for review stage, a pull request
 must pass the following criteria. These criteria will be added to the
 CONTRIBUTING guide.
 
-1. The pull request must have tests that pass.
+1. The pull request must include passing tests.
 1. The pull request must pass all existing tests.
 1. The code must work on all supported operating systems.
 1. The code must pass all linting and style checks.
