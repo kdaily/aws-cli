@@ -7,6 +7,7 @@ Proposal         | Metadata
 **Created**      | 19-October-2021
 
 ## Abstract
+**TODO: Update abstract.**
 
 This document proposes standards and processes to improve and publish community
 expectations for contributions. It defines the process for proposing,
@@ -207,10 +208,11 @@ A GitHub issue enters the implementation stage once a user submits a GitHub pull
 request implementing the change. This stage indicates that a contribution has
 been submitted for the issue, but the maintainers have not committed to a full
 review of the contribution. The maintainers will respond to let the contributor
-know to expect a preliminary review by the within 5 business days to confirm:
+know to expect a preliminary review within 5 business days to confirm:
 
 1. It is implemented in the manner described in the issue.
-1. It meets the criteria specified in the contribution guide.
+1. It meets the criteria specified in the contribution guide. See the
+   [appendix](#preliminary-review-criteria) for details.
 
 If the criteria are not satisfied, the maintainers will comment on the issue
 specifically indicating what work is still required. If the contributor has
@@ -237,18 +239,17 @@ following criteria in descending order of importance:
    complexity of the contribution.
 1. Older contributions will be selected before more recent ones.
 
-When selecting an issue to review from the queue, a maintainer must select the
-issue with the current highest priority. The prioritization of issues in the
-queue is dynamic, reviewed on a regular cadence, and is ultimately decided based
-on the maintainers' discretion. Having a pull request selected for review does
-not guarantee how long it will be until it is merged.
+A maintainer must select the issue from the queue with the current highest
+priority. The prioritization of issues in the queue is dynamic, reviewed on a
+regular cadence, and is ultimately decided based on the maintainers' discretion.
+Having a pull request selected for review does not guarantee how long it will be
+until it is merged.
 
 ### Review stage
 
-Once a pull request has been selected for review, the GitHub issue will move to
-the under review stage, and the maintainers will perform a review. The
-maintainers will limit the number of active reviews to [TBD]. This criteria for
-accepting a pull request includes:
+Selecting a pull request for review will move the tracking GitHub issue to the
+under review stage. The maintainers will limit the number of active reviews to
+[TBD]. This criteria for accepting a pull request includes:
 
 1. The change is made in the right place and fits in the existing architecture.
 1. The change does not increase the maintainability in an unreasonable fashion.
@@ -449,7 +450,7 @@ include (but are not limited to):
    also affect the behavior in other SDKs and must thus be made in coordination
    with internal teams.
 
-### Criteria for passing pre-review
+### Preliminary review criteria 
 
 To move from the implementation to the ready for review stage, a pull request
 must pass the following criteria. These criteria will be added to the
