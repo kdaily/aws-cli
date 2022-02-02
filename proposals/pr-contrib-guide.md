@@ -242,93 +242,73 @@ following criteria in descending order of importance:
 A maintainer must select the issue from the queue with the current highest
 priority. The prioritization of issues in the queue is dynamic, reviewed on a
 regular cadence, and is ultimately decided based on the maintainers' discretion.
-Having a pull request selected for review does not guarantee how long it will be
-until it is merged.
 
 ### Review stage
 
 Selecting a pull request for review will move the tracking GitHub issue to the
-under review stage. The maintainers will limit the number of active reviews to
-[TBD]. This criteria for accepting a pull request includes:
+under review stage. In this stage, the maintainers will work with the
+contributor to perform a full review of the contribution with the goal of
+merging the pull request. Having a pull request selected for review does not
+guarantee how long it will be until it is merged. The maintainers will review no
+more than four pull requests at a time. The criteria for merging a pull request
+may include:
 
 1. The change is made in the right place and fits in the existing architecture.
 1. The change does not increase the maintainability in an unreasonable fashion.
 1. There is sufficient documentation, both in the code and for end users.
 1. The code is readable and follows best practices and conventions.
 
-If a pull request is not ready to merge, the maintainers will request feedback
-and changes from the contributor by asking specific questions or specifying
-criteria that should be met. If changes are requested, the contributor should
-make the changes within [TBD] business days. If the contributor does not respond
-within [TBD] days, the pull request will be marked as stale and the maintainers
-will complete the pull request.
+If a pull request is not ready to merge, the maintainers will comment on the
+pull request with their feedback and questions for the contributor to address.
+If changes are requested, the contributor should make the changes within 15
+business days. If the contributor does not respond within 15 days, the pull
+request will be marked as stale and the contributor will have 5 days to respond.
+If there is no response, the maintainers will complete the pull request.
 
 Once a pull request is completed to the satisfaction of the maintainers, it will
-be approved and merged. The contribution will be labeled to acknowledge it as a
-community contribution.
+be approved and merged. The corresponding tracking issue will be closed closed
+and labeled to acknowledge it as a community contribution.
 
-## Process implementation
+## Tracking contribution stages
 
 The contribution process will be implemented with a publicly visible [GitHub
 project
 board](https://docs.github.com/en/issues/organizing-your-work-with-project-boards).
 This project board will track GitHub issues from the contribution-ready stage
-through completion by merging a pull request. New and existing GitHub labels and GitHub issue
-events will be used to drive the movement of the issue between the lanes of the
-GitHub project, which map to the stages of the contribution process.
+through completion by merging a pull request. Each lane of the project board
+maps to a stage of the contribution process. New and existing GitHub labels and
+GitHub issue events will be used to drive the movement of the issue between the
+lanes of the GitHub project, which map to the stages of the contribution
+process. GitHub issue labels will be used to move an issue to the next lane.
 
-The first lane in the GitHub project contains the list of contribution-ready
-issues. This is the entry point for a user interested in making a contribution.
+The contribution-ready lane is the entry point for users interested in making a
+contribution. The ready for review lane is the prioritization queue, and issues
+will be ordered in decreasing priority from top to bottom.
 
-When a contributor opens a pull request for an issue in the contribution ready
-list, it will be moved to the Implementation lane. This indicates that the
-contibution is ready for an initial review by the maintainers. The maintainers
-will perform an initial review within [TBD] days.
-
-Once the initial review is confirmed to be complete, the issue can be labeled as
-ready for review, and it moves to the 'Ready for Review' lane. These issues
-will be prioritized, selected, and labeled for review on a [TBD] basis.
-
-Once the maintainers have selected a pull request for review, a label marking it
-as ready for review will be added, and the pull request will move to the 'Under
-Review' lane of the GitHub project. This lane will provide visibility to the
-community for what the maintainers are currently working on. 
-
-After the review process is completed and a pull request is merged, the issue
-will be closed and moved to the 'Done' lane. This will provide the community
-with a list of successful contributions. 
 
 ## Managing the existing backlog
 
 As of 2021-12-15, there are 188 pull requests and 436 issues in the AWS CLI
 GitHub repository. 43 pull requests and 87 issues have not been updated in more
-than a year. 95 issues have ten or more upvotes. [TBD] of the open pull requests
-are directly related to an existing feature request. [TBD] of open pull requests
-have extensive merge conflicts.
+than a year. 95 issues have ten or more upvotes. 
+<!-- [TBD] open pull requests are directly related to an existing feature request. -->
 
-Based on these numbers, we propose to review and close existing pull requests in
-two phases:
-
-1. We will use existing automated infrastructure to comment on ancient pull
-   requests, defined as no activity in more than a year and less than 10
-   upvotes. This will post a comment indicating that the issue will be closed
-   without further interaction from the community.
-2. Next, we will determine if any remaining remaining open pull requests meet
-   the criteria for "ready for contribution" or "ready for review". If a pull
-   request does not meet the criteria for either of these states, we should post
-   a comment to indicate what needs to be done and give the contributor [TBD]
-   days before the pull request is closed. If there is no response or they
-   respond that they are no longer interested in working on it, we will close
-   the pull request. If the request meets the criteria for 'ready for
-   contribution' but not 'ready for review', we will comment in the linked issue
-   that it is no longer being worked on and is available for contribution.
+Based on these numbers, we propose to manage existing pull requests in two
+phases. First, we will determine if there is a corresponding tracking issue for
+each pull request and [link them
+together](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+If no tracking issue exists, we will create one and link it to the pull request.
+Then, we will review all open issues and apply the new specification to identify
+the current stage. We will prioritize the review of issues with a linked pull
+request. After review, all pull requests will follow the process and timelines
+defined in the specification.
 
 ## Rationale/FAQ
 
 ### Q. Why do we limit the number of in flight reviews?
 
 We do not want to discourage users from contributing or proposing changes, but
-we need to acknowledge that the maintainers still have limited bandwidth to give
+we need to acknowledge that the maintainers have limited bandwidth to give
 feedback on implementation or design and review pull requests. The maintainers
 have work that comes from outside of the GitHub repository that needs to be
 prioritized along with user contributions. Controlling the volume of pull
