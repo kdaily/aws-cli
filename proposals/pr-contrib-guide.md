@@ -235,13 +235,11 @@ following criteria in descending order of importance:
 
 1. Bugs, documentation changes, and feature requests will be prioritized in that
    order.
-1. The time available to the maintainers will be considered against the
-   complexity of the contribution.
 1. Older contributions will be selected before more recent ones.
 
 A maintainer must select the issue from the queue with the current highest
-priority. The prioritization of issues in the queue is dynamic, reviewed on a
-regular cadence, and is ultimately decided based on the maintainers' discretion.
+priority. The prioritization of issues in the queue is reviewed on a
+regular cadence and is ultimately decided based on the maintainers' discretion.
 
 ### Review stage
 
@@ -269,10 +267,10 @@ Once a pull request is completed to the satisfaction of the maintainers, it will
 be approved and merged. The corresponding tracking issue will be closed closed
 and labeled to acknowledge it as a community contribution.
 
-## Tracking contribution stages
+## Contribution Kanban board
 
 The contribution process will be implemented with a publicly visible [GitHub
-project
+project Kanban
 board](https://docs.github.com/en/issues/organizing-your-work-with-project-boards).
 This project board will track GitHub issues from the contribution-ready stage
 through completion by merging a pull request. Each lane of the project board
@@ -346,6 +344,18 @@ a pull request without an issue, we will use the opportunity to educate them
 about our process, and when necessary assist them in opening an issue. We can
 also open the issue ourselves on behalf of the user as well.
 
+### Why would we re-prioritize contributions for review instead of taking them first in, first out?
+
+By default issues should be selected for review based on the stated criteria,
+and existing issues should not be pulled up above other existing issues.
+However, there are scenarios where a new issue may be added to the queue in an
+'insertion sort' fashion. One example considers if the issues currently
+prioritized for review are all large and complex. In this case, they risk
+blocking smaller and easier changes. We may pull up the smaller issues to keep
+the queue moving. In another case, a new feature may increase in urgency due to
+other API changes. Since the main responsibility of the AWS CLI is to facilitate
+access to the AWS API, we would re-prioritize a feature request to address that
+change.
 ### Q: What do we do if a user requests a feature or change that would involve a major change in the way the SDK currently works?
 
 There are times when a change warrants an even more intentional and structured
