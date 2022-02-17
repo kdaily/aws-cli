@@ -315,7 +315,8 @@ reviews will result in a shorter time to merge and release a contributor's
 change for a feature requested by the community. It will also reduce the amount
 of context switching for the maintainers, allowing them to focus on giving high
 quality feedback to users. As we use this framework to process existing feature
-requests, we can revisit what the in flight limit should be. 
+requests, we can revisit what the in flight limit should be.
+
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
 Having a defined process for intake reduces the burden on deciding which way is
@@ -397,12 +398,6 @@ their interest. Multiple contributions can result in a better implementation.
 However, we should encourage users to comment on the issue that they are working
 on it. This can be an opportunity for community collaboration instead of
 duplicated effort.
-### Q. What is automated review, and what is human review?
-
-Initially, most of the  will be human review besides code linting and testing.
-Automation will be implemented for issue labeling, state transitions, and
-template checks. We currently perform these types of processes for issues, and
-the proposed process is agnostic to how it's implemented.
 
 ### Q. Why are issue types prioritized in the order of bug fixes, documentation, and feature requests?
 
