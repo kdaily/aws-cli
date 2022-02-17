@@ -344,7 +344,7 @@ a pull request without an issue, we will use the opportunity to educate them
 about our process, and when necessary assist them in opening an issue. We can
 also open the issue ourselves on behalf of the user as well.
 
-### Why would we re-prioritize contributions for review instead of taking them first in, first out?
+### Q. Why would we re-prioritize contributions for review instead of taking them first in, first out?
 
 By default issues should be selected for review based on the stated criteria,
 and existing issues should not be pulled up above other existing issues.
@@ -370,7 +370,7 @@ In this case, we would use the same format as this document for a proposal that
 would be opened for public comment and review. The document would be
 incorporated into the codebase as an accepted proposal as a matter of record.
 
-### Why should there be a minimum number of upvotes or reactions for a feature request?
+### Q. Why should there be a minimum number of upvotes or reactions for a feature request?
 
 Feature requests carry a risk of adding new technical debt and increased
 maintenance cost and should have a higher bar to be included.
