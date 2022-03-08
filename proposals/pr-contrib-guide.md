@@ -152,7 +152,7 @@ a request and contribution will proceed through the improved process.
 
 We will also publish an improved contributing guide to document the review
 process, acceptance criteria, and expectations for communication. We will use
-existing issue labeling in conjunction with a GitHub Project to provide
+existing issue labeling in conjunction with a GitHub Project Board to provide
 transparent status to the community to indicate what is available for
 contribution and to track the progress of a contribution.
 
