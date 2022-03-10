@@ -288,22 +288,25 @@ will be ordered in decreasing priority from top to bottom.
 
 As of 2021-12-15, there are 188 pull requests and 436 issues in the AWS CLI
 GitHub repository. 43 pull requests and 87 issues have not been updated in more
-than a year. 95 issues have ten or more upvotes. 
+than a year. 95 issues have ten or more upvotes. Many of these issues are
+candidates for the ready to contribute or ready for review stages. We can use
+them to backfill the proposed contribution process, providing the team with pull
+requests to review and issues for the community to contribute.
 <!-- [TBD] open pull requests are directly related to an existing feature request. -->
 
-Based on these numbers, we propose to manage existing pull requests in two
+We propose to manage existing pull requests in two
 phases. First, we will determine if there is a corresponding tracking issue for
 each pull request and [link them
 together](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 If no tracking issue exists, we will create one and link it to the pull request.
-Then, we will review all open issues and apply the new specification to identify
+Then, we will apply the new specification to all open issues identify
 the current stage. We will prioritize the review of issues with a linked pull
 request. After review, all pull requests will follow the process and timelines
 defined in the specification.
 
 ## Rationale/FAQ
 
-### Q. Why do we limit the number of in flight reviews?
+### Q. Why do we limit the number of issues in the review stage?
 
 We do not want to discourage users from contributing or proposing changes, but
 we need to acknowledge that the maintainers have limited bandwidth to give
@@ -319,26 +322,24 @@ requests, we can revisit what the in flight limit should be.
 
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
-Having a defined process for intake reduces the burden on deciding which way is
-the best way. We're taking an opinionated stance that code changes made in
-isolation generally do not provide enough context on what problem exists and why
-the proposed change is the best way to fix it. Reviewing a pull request also
-requires significant effort on the part of maintainers - reading someone elses
-code can be an intensive task. Before dedicating that effort, we feel that
-having a more general discussion about the problem and solutions will help
-reduce the overall effort into code review.
+Having a defined process for intake removes any ambiguity on how to initiate a
+contribution by ensuring that all potential contributions start out as a
+GitHub issue. Reviewing a pull request also requires significant effort on the
+part of maintainers - reading someone elses code can be an intensive task.
+Before dedicating that effort, we feel that having a more general discussion
+about the problem and solutions will help reduce the overall effort into code
+review.
+
+This requirement also solidifies the position that all pull requests that are
+currently open are something we'd like to pull in. It removes any ambiguity for
+a contributor about the status of the request. Pull requests linked to an issue
+need prioritization for review, while those not linked to an issue are not
+planned to be accepted.
 
 Pull requests are often made for problems that only affect the contributor or a
 very small portion of the user base. Requiring an issue provides a mechanism to
 request structured feedback in the form of "upvotes" or GitHub reactions to
 estimate the impact of the issue on the community.
-
-Logistically, using GitHub issues also centralizes the metadata on what work is
-available and ongoing via labels. While pull requests are really GitHub issues
-with code changes attached to them, it is difficult to interrogate issues and
-pull requests together to gather metrics, check on statuses and assignments, and
-perform automated tasks. Having all of the labels and data on a single entity
-type reduces the burden on maintaining the system.
  
 We do not intend this to be a gatekeeping or pointless task. If a user does open
 a pull request without an issue, we will use the opportunity to educate them
