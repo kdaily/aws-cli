@@ -358,20 +358,6 @@ the queue moving. In another case, a new feature may increase in urgency due to
 other API changes. Since the main responsibility of the AWS CLI is to facilitate
 access to the AWS API, we would re-prioritize a feature request to address that
 change.
-### Q: What do we do if a user requests a feature or change that would involve a major change in the way the SDK currently works?
-
-There are times when a change warrants an even more intentional and structured
-process before introducing a change. For example, a recent proposal for a source
-distribution method for the AWS CLI was made. Before implementation was
-finalized, the proposal was made public for open comments and to get feedback
-that the approach would solve the problems that exist. The change was a major
-deviation from how the AWS CLI works currently, and it was felt that having a
-formalized process for this change would result in better decisions.
-
-In this case, we would use the same format as this document for a proposal that
-would be opened for public comment and review. The document would be
-incorporated into the codebase as an accepted proposal as a matter of record.
-
 ### Q. Why should there be a minimum number of upvotes or reactions for a feature request?
 
 Feature requests carry a risk of adding new technical debt and increased
@@ -389,8 +375,8 @@ use the current upvote counts to review the backlog and identify issues that we
 feel would be suited for community contributions. This process can then inform
 us how to handle new issues that might be candidates for community contribution.
 
-As part of the contribution guide, we will provide more specific guidance on how
-to upvote a feature so we can more accurately estimate user impact.
+As part of the contribution guide, we will provide specific guidance on how to
+upvote a feature so we can more accurately estimate user impact.
 
 ### Q. Do users need to request or acknowledge to work on an issue that is ready for contribution?
 
@@ -402,9 +388,13 @@ duplicated effort.
 
 ### Q. Why are issue types prioritized in the order of bug fixes, documentation, and feature requests?
 
-Once a bug has been triaged and confirmed, it should be made available for
-community contribution immediately without any upvote requirements. Bug fixes
-have an immediate impact on affected users from using the AWS CLI as intended.
+The AWS CLI is a tool that is widely used in critical, production environments.
+Reliability is essential and as such the priority is to address known bugs.
+Adding new features before known bugs are addressed would reduce the reliability
+of the AWS CLI. Once a bug has been triaged and confirmed, it should be made
+available for community contribution immediately without any upvote
+requirements. High priority or high impact bugs will be handled by the
+maintainers immediately without waiting for community contributions.
 
 Most documentation changes are low risk and should move quickly through the
 review process. Documentation changes also have a high reward potential,
@@ -414,6 +404,12 @@ and review of documentation changes.
 
 Feature requests need to be carefully assessed before taking on new potential
 technical debt.
+
+### Q. Why do maintainers complete the pull request in the review phase once it becomes stale?
+
+### Q. Why do we need a GitHub project Kanban board?
+
+Currently, all open issues in the AWS CLI GitHub repository are visible to the community on the issues tab. We use GitHub issue labels to group related issues together, and users can use these labels in issue searches and filters. However, there is no way to for users to see the bigger picture of the different stages of the contribution process.
 
 ## Appendix
 ### Changes not available for contribution
@@ -438,9 +434,9 @@ include (but are not limited to):
 
 ### Preliminary review criteria 
 
-To move from the implementation to the ready for review stage, a pull request
-must pass the following criteria. These criteria will be added to the
-CONTRIBUTING guide.
+The maintainers will use a set of criteria to move a pull request from the
+implementation to the ready for review stage, which may include (but are not
+limited to):
 
 1. The pull request must include passing tests.
 1. The pull request must pass all existing tests.
@@ -448,6 +444,23 @@ CONTRIBUTING guide.
 1. The code must pass all linting and style checks.
 1. The code must be documented, which may include inline documentation and user
    documentation.
+
+### Future work
+
+#### Proposals and request for comments
+
+There are times when a change warrants an even more intentional and structured
+process before introducing a change. For example, we [publicly posted a
+proposal](https://github.com/aws/aws-cli/pull/6352) for a source distribution
+for the AWS CLI v2. The proposal was open for comments and feedback that the
+approach would solve the problems that exist. The proposed change was a major
+deviation from how users currently install the AWS CLI, and we felt that
+including users in the conversation for this change would result in better
+decisions.
+
+In this situation, we would use the same format as this document for a proposal that
+would be opened for public comment and review. The document would be
+incorporated into the codebase as an accepted proposal as a matter of record.
 
 [contribution guide]: https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md
 [open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
