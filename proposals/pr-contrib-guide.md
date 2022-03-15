@@ -55,6 +55,7 @@ Users can open pull requests to propose changes that address bugs or feature
 requests. There is no requirement to work on an existing feature request or to
 discuss a contribution prior to opening a pull request. Occassionally guidance
 is provided to the contributor to improve the proposed change.
+
 #### Review stage
 
 Pull requests are selected for review opportunistically when the maintainers
@@ -169,9 +170,6 @@ information necessary to make the contribution, such as:
 1. Design discussions, including use cases, edge cases, and alternative
    solutions.
 
-Contributions made without a GitHub issue will be subject to closure by the
-maintainers.
-
 Maintainers will regularly review open GitHub issues and label the ones that
 are ready for community contribution. The decision to label an issue as ready
 for community contribution is ultimately up to the discretion of the
@@ -208,7 +206,7 @@ A GitHub issue enters the implementation stage once a user submits a GitHub pull
 request implementing the change. This stage indicates that a contribution has
 been submitted for the issue, but the maintainers have not committed to a full
 review of the contribution. The maintainers will respond to let the contributor
-know to expect a preliminary review within 5 business days to confirm:
+know to expect a preliminary review to confirm:
 
 1. It is implemented in the manner described in the issue.
 1. It meets the criteria specified in the contribution guide. See the
@@ -218,12 +216,17 @@ If the criteria are not satisfied, the maintainers will comment on the issue
 specifically indicating what work is still required. If the contributor has
 questions, they should refer to the contributing guide documentation or ask the
 maintainers to clarify. Once the contributor makes the required changes, the
-maintainers will follow up within 5 business days.
+maintainers will follow up.
 
 If the contributor is no longer actively engaged by responding to comments from
 maintainers or making code changes for more than 30 business days, the
 contribution is stale. If not, the pull request will be closed and the
 corresponding issue will be marked as ready for contribution.
+
+Contributions made without a GitHub issue will not be prioritized to move to the
+next stage. Pull requests that are not linked to an issue and are more than six
+months old will be considered stale and closed. See the
+[rationale](#rationale-require-issues) for further discussion.
 
 ### Ready for review stage
 
@@ -320,31 +323,28 @@ of context switching for the maintainers, allowing them to focus on giving high
 quality feedback to users. As we use this framework to process existing feature
 requests, we can revisit what the in flight limit should be.
 
+<a name="rationale-require-issues"></a>
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
 Having a defined process for intake removes any ambiguity on how to initiate a
 contribution by ensuring that all potential contributions start out as a
-GitHub issue. Reviewing a pull request also requires significant effort on the
-part of maintainers - reading someone elses code can be an intensive task.
-Before dedicating that effort, we feel that having a more general discussion
+GitHub issue. We feel that having a more general discussion
 about the problem and solutions will help reduce the overall effort into code
-review.
+review and provide contributors with enough detail to make a sucessful contribution.
 
 This requirement also solidifies the position that all pull requests that are
 currently open are something we'd like to pull in. It removes any ambiguity for
-a contributor about the status of the request. Pull requests linked to an issue
-need prioritization for review, while those not linked to an issue are not
-planned to be accepted.
+a contributor about the status of the request.
 
 Pull requests are often made for problems that only affect the contributor or a
-very small portion of the user base. Requiring an issue provides a mechanism to
-request structured feedback in the form of "upvotes" or GitHub reactions to
+small portion of the user base. An issue provides a mechanism to
+gather quantitative feedback in the form of "upvotes" through GitHub reactions to
 estimate the impact of the issue on the community.
  
-We do not intend this to be a gatekeeping or pointless task. If a user does open
-a pull request without an issue, we will use the opportunity to educate them
-about our process, and when necessary assist them in opening an issue. We can
-also open the issue ourselves on behalf of the user as well.
+We intend for issues to be a way to improve contributor confidence in both their
+contributions and the overall process. If a user does open a pull request
+without an issue, we will use the opportunity to educate them about our process,
+and when necessary assist them in opening an issue.
 
 ### Q. Why would we re-prioritize contributions for review instead of taking them first in, first out?
 
@@ -390,10 +390,11 @@ duplicated effort.
 
 The AWS CLI is a tool that is widely used in critical, production environments.
 Reliability is essential and as such the priority is to address known bugs.
-Adding new features before known bugs are addressed would reduce the reliability
-of the AWS CLI. Once a bug has been triaged and confirmed, it should be made
-available for community contribution immediately without any upvote
-requirements. High priority or high impact bugs will be handled by the
+Feature requests need to be carefully assessed before taking on new potential
+technical debt. Adding new features before known bugs are addressed would reduce
+the reliability of the AWS CLI. Once a bug has been triaged and confirmed, it
+should be made available for community contribution immediately without any
+upvote requirements. High priority or high impact bugs will be handled by the
 maintainers immediately without waiting for community contributions.
 
 Most documentation changes are low risk and should move quickly through the
@@ -402,14 +403,20 @@ measured by the number of users who would read the documentation to solve their
 problem. In addition, there are also more maintainers available for validation
 and review of documentation changes.
 
-Feature requests need to be carefully assessed before taking on new potential
-technical debt.
 
 ### Q. Why do maintainers complete the pull request in the review phase once it becomes stale?
 
 ### Q. Why do we need a GitHub project Kanban board?
 
-Currently, all open issues in the AWS CLI GitHub repository are visible to the community on the issues tab. We use GitHub issue labels to group related issues together, and users can use these labels in issue searches and filters. However, there is no way to for users to see the bigger picture of the different stages of the contribution process.
+Currently, all open issues in the AWS CLI GitHub repository are visible to the
+community on the issues tab. We use GitHub issue labels to group related issues
+together, The labels can be used to search and filter issues. However, there is
+no way to for users to see the all of the stages of the contribution process or
+how issues transition through it. A user would need to use predefined searches
+to see which issues are in each stage and could only look at one stage at a
+time. A Kanban board is a natural tool to display this information, and a GitHub
+project board implements this using GitHub issues. Lanes in the Kanban board map
+naturally to the stages of the contribution process.
 
 ## Appendix
 ### Changes not available for contribution
