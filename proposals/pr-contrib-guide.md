@@ -411,6 +411,14 @@ and review of documentation changes.
 
 ### Q. Why do maintainers complete the pull request in the review phase once it becomes stale?
 
+The contribution process requires significant effort from both contributors and
+maintainers. The process encourages high quality, desirable changes make it to
+the review phase, and much of the work to vet the idea and an accompanying pull
+request has already been completed. At this point, there is enough evidence and
+effort that a proposed change should be accepted. If the original contributor is
+unable to finish the work, the maintainers should finish it so that the whole
+community benefits.
+
 ### Q. Why do we need a GitHub project Kanban board?
 
 Currently, all open issues in the AWS CLI GitHub repository are visible to the
