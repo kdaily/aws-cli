@@ -97,12 +97,12 @@ Here, we describe some examples of deficiencies in the current process.
 #### Community contributions are not frequently reviewed.
 
 [86 community pull requests][open-prs-2021] were opened in 2021. Of these, 43
-(50%) have been closed: [24 by
-merging][prs-closed-by-merging-2021] and 19 by closing without merging. The pull requests that were reviewed and
-merged were chosen opportunistically - they corresponded to work the team needed
-to complete, like bumping versions, or were low risk, like documentation
-changes. There is a willingness from the community to make improvements to the
-AWS CLI through contributions, but their contributions are not reviewed. This
+(50%) have been closed: [24 by merging][prs-closed-by-merging-2021] and 19 by
+closing without merging. The pull requests that were reviewed and merged were
+chosen opportunistically - they corresponded to work the team needed to
+complete, like bumping versions, or were low risk, like documentation changes.
+There is a willingness from the community to make improvements to the AWS CLI
+through contributions, but their contributions are not reviewed. This
 inconsistent approach frustrates contributors and results in missed
 opportunities to support community efforts to improve AWS CLI.
 
@@ -121,23 +121,26 @@ are not being acknowledged and do not know what to do to move forward.
 
 #### Community contributions stall and are left incomplete.
 
-There are [14 pull
-requests][open-pr-with-comment-from-maintainer]
-opened in 2021 that had a comment from a maintainer but remain open. These
-comments include feedback that the contributor responded to and was not followed
-up on by a maintainer. In some cases, approval was given for a contribution but
-never merged. The maintainers do not consistently check on the status of
-existing pull requests and the contribution process stalls. The loss of momentum
-of the contribution process erodes trust with individual contributors, who feel
+There are [14 pull requests][open-pr-with-comment-from-maintainer] opened in
+2021 that had a comment from a maintainer but remain open. These comments
+include feedback that the contributor responded to and was not followed up on by
+a maintainer. In some cases, approval was given for a contribution but never
+merged. The maintainers do not consistently check on the status of existing pull
+requests and the contribution process stalls. The loss of momentum of the
+contribution process erodes trust with individual contributors, who feel
 ignored, and the community at large, who see stale contributions.
 
 ### Goals
 
-Based on the problems identified in the current process, the proposed improvements for customer contributions should satisfy the following goals:
+Based on the problems identified in the current process, the proposed
+improvements for customer contributions should satisfy the following goals:
 
 1. Maintainers should review community contributions regularly.
-1. Contributors and maintainers should always be able to determine the current state of a contribution and what steps remain to drive the contribution to a resolution.
-1. Maintainers should resolve in-flight contribution reviews before committing to any new reviews.
+1. Contributors and maintainers should always be able to determine the current
+   state of a contribution and what steps remain to drive the contribution to a
+   resolution.
+1. Maintainers should resolve in-flight contribution reviews before committing
+   to any new reviews.
 
 ## Specification
 
@@ -172,11 +175,11 @@ information necessary to make the contribution, such as:
 1. Design discussions, including use cases, edge cases, and alternative
    solutions.
 
-Maintainers will regularly review open GitHub issues and label the ones that
-are ready for community contribution. The decision to label an issue as ready
-for community contribution is ultimately up to the discretion of the
-maintainers. Depending on the issue type (bug or feature request) and area (code
-or documentation), the maintainers will use a set of criteria to decide if the
+Maintainers will regularly review open GitHub issues and label the ones that are
+ready for community contribution. The decision to label an issue as ready for
+community contribution is ultimately up to the discretion of the maintainers.
+Depending on the issue type (bug or feature request) and area (code or
+documentation), the maintainers will use a set of criteria to decide if the
 issue is ready for contribution. This may include:
 
 1. The change is feasible for a community member to contribute. See [the
@@ -243,8 +246,8 @@ following criteria in descending order of importance:
 1. Older contributions will be selected before more recent ones.
 
 A maintainer must select the issue from the queue with the current highest
-priority. The prioritization of issues in the queue is reviewed on a
-regular cadence and is ultimately decided based on the maintainers' discretion.
+priority. The prioritization of issues in the queue is reviewed on a regular
+cadence and is ultimately decided based on the maintainers' discretion.
 
 ### Review stage
 
@@ -299,13 +302,13 @@ them to backfill the proposed contribution process, providing the team with pull
 requests to review and issues for the community to contribute.
 <!-- [TBD] open pull requests are directly related to an existing feature request. -->
 
-We propose to manage existing pull requests in two
-phases. First, we will determine if there is a corresponding tracking issue for
-each pull request and [link them
+We propose to manage existing pull requests in two phases. First, we will
+determine if there is a corresponding tracking issue for each pull request and
+[link them
 together](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 If no tracking issue exists, we will create one and link it to the pull request.
-Then, we will apply the new specification to all open issues identify
-the current stage. We will prioritize the review of issues with a linked pull
+Then, we will apply the new specification to all open issues identify the
+current stage. We will prioritize the review of issues with a linked pull
 request. After review, all pull requests will follow the process and timelines
 defined in the specification.
 
@@ -329,18 +332,18 @@ requests, we can revisit what the in flight limit should be.
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
 Having a defined process for intake removes any ambiguity on how to initiate a
-contribution by ensuring that all potential contributions start out as a
-GitHub issue. We feel that having a more general discussion
-about the problem and solutions will help reduce the overall effort into code
-review and provide contributors with enough detail to make a sucessful contribution.
+contribution by ensuring that all potential contributions start out as a GitHub
+issue. We feel that having a more general discussion about the problem and
+solutions will help reduce the overall effort into code review and provide
+contributors with enough detail to make a sucessful contribution.
 
 This requirement also solidifies the position that all pull requests that are
 currently open are something we'd like to pull in. It removes any ambiguity for
 a contributor about the status of the request.
 
 Pull requests are often made for problems that only affect the contributor or a
-small portion of the user base. An issue provides a mechanism to
-gather quantitative feedback in the form of "upvotes" through GitHub reactions to
+small portion of the user base. An issue provides a mechanism to gather
+quantitative feedback in the form of "upvotes" through GitHub reactions to
 estimate the impact of the issue on the community.
  
 We intend for issues to be a way to improve contributor confidence in both their
@@ -467,13 +470,19 @@ deviation from how users currently install the AWS CLI, and we felt that
 including users in the conversation for this change would result in better
 decisions.
 
-In this situation, we would use the same format as this document for a proposal that
-would be opened for public comment and review. The document would be
+In this situation, we would use the same format as this document for a proposal
+that would be opened for public comment and review. The document would be
 incorporated into the codebase as an accepted proposal as a matter of record.
 
-[contribution guide]: https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md
-[open-pr-with-comment-from-maintainer]: https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
-[open-prs-2021]: https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
-[prs-closed-by-merging-2021]: https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
-[prs-no-maintainer-response]: https://github.com/search?q=is%3Apr+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
-[prs-no-maintainer-response-open]: https://github.com/search?q=is%3Apr+is%3Aopen+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
+[contribution guide]:
+    https://github.com/aws/aws-cli/blob/2069bf6735560da48440b743eb323488df5fa6c8/CONTRIBUTING.md
+[open-pr-with-comment-from-maintainer]:
+    https://github.com/search?q=is%3Apr+is%3Aopen+commenter%3Ajustindho+commenter%3Aelysahall+commenter%3AjoguSD+commenter%3Anateprewitt+commenter%3Azdutta+commenter%3Astobrien89+commenter%3Atim-finnigan+commenter%3Ajamesls+commenter%3Astealthycoin+commenter%3Avz10+commenter%3Akyleknap+commenter%3Akdaily+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
+[open-prs-2021]:
+    https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
+[prs-closed-by-merging-2021]:
+    https://github.com/search?q=is%3Apr+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A%3E2021-01-01&type=Issues
+[prs-no-maintainer-response]:
+    https://github.com/search?q=is%3Apr+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
+[prs-no-maintainer-response-open]:
+    https://github.com/search?q=is%3Apr+is%3Aopen+-commenter%3AJordonPhillips+-commenter%3Ajustindho+-commenter%3Aelysahall+-commenter%3AjoguSD+-commenter%3Anateprewitt+-commenter%3Azdutta+-commenter%3Astobrien89+-commenter%3Atim-finnigan+-commenter%3Ajamesls+-commenter%3Astealthycoin+-commenter%3Avz10+-commenter%3Akyleknap+-commenter%3Akdaily+-author%3AConnorKirk+-author%3Asankalpbhandari+-author%3Amicahhausler+-author%3Ajustindho+-author%3Aelysahall+-author%3AjoguSD+-author%3Anateprewitt+-author%3Azdutta+-author%3Astobrien89+-author%3Atim-finnigan+-author%3Ajamesls+-author%3Astealthycoin+-author%3Avz10+-author%3Akyleknap+-author%3Akdaily+repo%3Aaws%2Faws-cli+created%3A2021-01-01..2021-12-31&type=Issues
