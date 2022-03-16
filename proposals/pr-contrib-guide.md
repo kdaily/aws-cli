@@ -7,12 +7,13 @@ Proposal         | Metadata
 **Created**      | 19-October-2021
 
 ## Abstract
-**TODO: Update abstract.**
 
-This document proposes standards and processes to improve and publish community
-expectations for contributions. It defines the process for proposing,
-submitting, and reviewing a contribution. This proposal will make it easier for
-the community to successfully contribute to the AWS CLI.
+Community contributions for the AWS CLI are not frequently reviewed, resulting
+in stale and incomplete contributions. This document proposes changes to the
+contribution process to ensure that community contributed feature requests are
+successfully added to the AWS CLI. The new process will regain the trust of
+contributors who have not had successful contributions and will demonstrate our
+customer obsession through a renewed focus on the community.
 
 ## Background and Motivation
 
@@ -77,12 +78,13 @@ in for the next release.
 
 #### Documentation and tracking
 
-The GitHub repository has a [contribution guide], standard to many open source
-projects, to provide guidance on contributing code to the project. The guide
-describes how to report an issue or feature request and states the minimum
-requirements and suggestions for a code contribution. It describes how to
-perform the basic tasks using Git, including retrieving and building the
-development version.
+The GitHub repository has a [contribution
+guide](https://github.com/aws/aws-cli/blob/develop/CONTRIBUTING.md), standard to
+many open source projects, to provide guidance on contributing code to the
+project. The guide describes how to report an issue or feature request and
+states the minimum requirements and suggestions for a code contribution. It
+describes how to perform the basic tasks using Git, including retrieving and
+building the development version.
 
 ### Problems with the current contribution process
 
