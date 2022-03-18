@@ -347,9 +347,11 @@ quantitative feedback in the form of "upvotes" through GitHub reactions to
 estimate the impact of the issue on the community.
  
 We intend for issues to be a way to improve contributor confidence in both their
-contributions and the overall process. If a user does open a pull request
-without an issue, we will use the opportunity to educate them about our process,
-and when necessary assist them in opening an issue.
+contributions and the overall process. Draft pull requests can be used to
+demonstrate a potential implementation and get community feedback or interest,
+but they may not be reviewed by the maintainers. If a user does open a pull
+request without an issue, we will use the opportunity to educate them about our
+process, and when necessary assist them in opening an issue.
 
 ### Q. Why would we re-prioritize contributions for review instead of taking them first in, first out?
 
