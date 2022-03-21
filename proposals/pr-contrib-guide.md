@@ -184,7 +184,8 @@ issue is ready for contribution. This may include:
 
 1. The change is feasible for a community member to contribute. See [the
    appendix](#changes-not-available-for-contribution) for details.
-1. Feature requests must have at least 10 :+1: reactions.
+1. Feature requests must have at least 10 :+1: reactions. See the
+   [rationale](#rationale-upvotes) for further discussion.
 1. The maintainers agree with the implementation plan, including any design
    discussions (e.g., public interface design, edge cases, backwards
    compatibility concerns).
@@ -365,6 +366,8 @@ the queue moving. In another case, a new feature may increase in urgency due to
 other API changes. Since the main responsibility of the AWS CLI is to facilitate
 access to the AWS API, we would re-prioritize a feature request to address that
 change.
+
+<a name="rationale-upvotes"></a>
 ### Q. Why should there be a minimum number of upvotes or reactions for a feature request?
 
 Feature requests carry a risk of adding new technical debt and increased
