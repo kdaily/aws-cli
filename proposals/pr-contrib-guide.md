@@ -11,8 +11,8 @@ Proposal         | Metadata
 Community contributions for the AWS CLI are not frequently reviewed, resulting
 in stale and incomplete contributions. This document proposes changes to the
 contribution process to ensure that community contributed feature requests are
-successfully added to the AWS CLI. The new process will regain the trust of
-contributors who have not had successful contributions and will demonstrate our
+successfully added to the AWS CLI. The new process aims to regain the trust of
+contributors who have not had successful contributions and demonstrates our
 customer obsession through a renewed focus on the community.
 
 ## Background and Motivation
@@ -91,7 +91,7 @@ building the development version.
 The current contribution process is applied unevenly and inconsistently. The
 lack of commitment to the process has led to an accumulation of community
 feature requests and bug fixes. In turn, the AWS CLI community is dissatisfied
-and frustrated because their voices, votes and efforts do not have an impact.
+and frustrated because their voices, votes, and efforts do not have an impact.
 Here, we describe some examples of deficiencies in the current process.
 
 #### Community contributions are not frequently reviewed.
