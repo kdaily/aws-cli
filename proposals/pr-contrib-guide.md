@@ -243,7 +243,7 @@ from this queue. The issues will be prioritized for review publicly based on the
 following criteria in descending order of importance:
 
 1. Bugs, documentation changes, and feature requests will be prioritized in that
-   order.
+   order. See the [rationale](#rationale-priority-order) for further discussion.
 1. Older contributions will be selected before more recent ones.
 
 A maintainer must select the issue from the queue with the current highest
@@ -330,6 +330,7 @@ quality feedback to users. As we use this framework to process existing feature
 requests, we can revisit what the in flight limit should be.
 
 <a name="rationale-require-issues"></a>
+
 ### Q. Why do we require issues to be opened instead of just pull requests?
 
 Having a defined process for intake removes any ambiguity on how to initiate a
@@ -349,25 +350,27 @@ estimate the impact of the issue on the community.
  
 We intend for issues to be a way to improve contributor confidence in both their
 contributions and the overall process. Draft pull requests can be used to
-demonstrate a potential implementation and get community feedback or interest,
-but they may not be reviewed by the maintainers. If a user does open a pull
-request without an issue, we will use the opportunity to educate them about our
-process, and when necessary assist them in opening an issue.
+demonstrate a potential implementation and get community feedback or interest
+and may be converted to pull requests for review at a later time. If a user does
+open a pull request without an issue, we will use the opportunity to educate
+them about our process, and when necessary assist them in opening an issue.
+
+<a name="rationale-reprioritize"></a>
 
 ### Q. Why would we re-prioritize contributions for review instead of taking them first in, first out?
 
-By default issues should be selected for review based on the stated criteria,
-and existing issues should not be pulled up above other existing issues.
-However, there are scenarios where a new issue may be added to the queue in an
-'insertion sort' fashion. One example considers if the issues currently
-prioritized for review are all large and complex. In this case, they risk
-blocking smaller and easier changes. We may pull up the smaller issues to keep
-the queue moving. In another case, a new feature may increase in urgency due to
-other API changes. Since the main responsibility of the AWS CLI is to facilitate
-access to the AWS API, we would re-prioritize a feature request to address that
-change.
+We add issues to the queue in a way so that those with higher priority can be
+resolved quickly and not blocked by larger proposed changes. However, there are
+scenarios where a new issue may be added to the queue ahead of issues already
+there. One example considers if the issues currently prioritized for review are
+all large and complex. In this case, they risk blocking smaller and easier
+changes. We may pull up the smaller issues to keep the queue moving. In another
+case, a new feature may increase in urgency due to other API changes. Since the
+main responsibility of the AWS CLI is to facilitate access to the AWS API, we
+would re-prioritize a feature request to address that change.
 
 <a name="rationale-upvotes"></a>
+
 ### Q. Why should there be a minimum number of upvotes or reactions for a feature request?
 
 Feature requests carry a risk of adding new technical debt and increased
@@ -396,6 +399,8 @@ However, we should encourage users to comment on the issue that they are working
 on it. This can be an opportunity for community collaboration instead of
 duplicated effort.
 
+<a name="rationale-priority-order"></a>
+
 ### Q. Why are issue types prioritized in the order of bug fixes, documentation, and feature requests?
 
 The AWS CLI is a tool that is widely used in critical, production environments.
@@ -420,9 +425,11 @@ The contribution process requires significant effort from both contributors and
 maintainers. The process encourages high quality, desirable changes make it to
 the review phase, and much of the work to vet the idea and an accompanying pull
 request has already been completed. At this point, there is enough evidence and
-effort that a proposed change should be accepted. If the original contributor is
-unable to finish the work, the maintainers should finish it so that the whole
-community benefits.
+effort that a proposed change should be accepted. In addition, the changes are
+fresh in the maintainer's minds and will be easier to push to completion than
+waiting for another review cycle. If the original contributor is unable to
+finish the work, the maintainers should finish it so that the whole community
+benefits.
 
 ### Q. Why do we need a GitHub project Kanban board?
 
