@@ -116,7 +116,7 @@ as well as what types of contributions would be accepted. Furthermore, the
 maintainers do not consistently provide acknowledgement, feedback, next steps,
 or indications of when a review would occur. The result is contributors are
 unaware if they are making a contribution correctly, what the next steps are,
-and when it will be reviewed.  Contributors are frustrated that their efforts
+and when it will be reviewed. Contributors are frustrated that their efforts
 are not being acknowledged and do not know what to do to move forward.
 
 #### Community contributions stall and are left incomplete.
