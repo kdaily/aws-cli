@@ -145,7 +145,7 @@ improvements for customer contributions should satisfy the following goals:
 ## Specification
 
  ![Figure A: Flowchart of contribution guide review
-process.](contrib-guide-high-level.png "Figure A: Flowchart of contribution
+process.](assets/pr-contribution-guide/contrib-guide-high-level.png "Figure A: Flowchart of contribution
 guide review process.")
 
 **Figure A: Flowchart of contribution guide review process.**
