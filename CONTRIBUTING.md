@@ -29,7 +29,7 @@ The list below are guidelines to use when submitting pull requests. These are th
 
 When sending a pull request, please follow these guidelines:
 
-- The PR should target the `develop` branch. If you send a PR to the `master` branch, the travis CI jobs will fail.
+- The PR must target the `develop` branch. If you send a PR to the `master` branch, the travis CI jobs will fail.
 - Your PR branch should be based off a recent commit of the `develop` branch. Preferably the base commit for the PR should use the latest commit of `develop` at the time the PR was created. This helps to ensure there are no merge conflicts or test failures when the PR is merged back to the develop branch.
 - Make separate commits for logically separate changes. Avoid commits such as \"update\", \"fix typo again\", \"more updates\". Rebase your commits before submitting your PR to ensure they represent a logical change.
 - Avoid merge commits in your PRs. If you want to pull in the latest changes from the `develop` branch, rebase on top of the `develop` branch instead of merging the `develop` branch into your feature branch.
