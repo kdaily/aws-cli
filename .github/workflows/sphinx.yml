@@ -1,0 +1,31 @@
+name: Sphinx build
+
+on:
+  push:
+    branches:
+    - docs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v2
+    - uses: actions/checkout@master
+      with:
+        # Set persist-credentials to false; otherwise, the token used
+        # is the GITHUB_TOKEN, instead of your personal access token.
+        persist-credentials: false
+        # Set fetch-depth to 0; otherwise, it will fail to push refs 
+        # to destination repository
+        fetch-depth: 0
+    - name: Build and Commit
+      uses: sphinx-notes/pages@v2
+      with:
+        documentation_path: "./"
+        requirements_path: "./requirements.txt"
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+
