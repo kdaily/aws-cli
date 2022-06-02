@@ -1,13 +1,4 @@
-permissions:
-  contents: read
-  pages: write
-  # Required per the following GH issue:
-  # https://github.com/actions/deploy-pages/issues/9#issuecomment-1009157118
-  # More details at:
-  # https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings
-  id-token: write
-
-name: Sphinx build
+name: Sphinx check
 
 on:
   pull_request:
@@ -15,7 +6,7 @@ on:
     - gh-pages
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v3
