@@ -1,4 +1,4 @@
-name: Sphinx check
+name: Test Sphinx doc build
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
     - gh-pages
 
 jobs:
-  check:
+  run-checks:
     strategy:
       matrix:
         target: [html, check, linkcheck]
