@@ -7,6 +7,9 @@ on:
 
 jobs:
   check:
+    strategy:
+      matrix:
+        target: [html, check, linkcheck]
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v3
@@ -17,6 +20,4 @@ jobs:
     - name: Install dependencies
       run: make install
     - name: Run checks
-      run: make check
-    - name: Run link check
-      run: make linkcheck
+      run: make ${{ matrix.target }}
