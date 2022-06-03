@@ -1,4 +1,4 @@
-name: Test Sphinx doc build
+name: Test Sphinx build
 
 on:
   pull_request:
