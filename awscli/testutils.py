@@ -165,6 +165,7 @@ def create_bucket(session, name=None, region=None):
         params['CreateBucketConfiguration'] = {'LocationConstraint': region}
     try:
         client.create_bucket(**params)
+        client.delete_public_access_block(Bucket=bucket_name)
     except ClientError as e:
         if e.response['Error'].get('Code') == 'BucketAlreadyOwnedByYou':
             # This can happen in the retried request, when the first one

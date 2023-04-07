@@ -35,6 +35,7 @@ class TestBasicCommandFunctionality(unittest.TestCase):
         session = botocore.session.get_session()
         client = session.create_client('s3', 'us-east-1')
         client.create_bucket(Bucket=bucket)
+        client.delete_public_access_block(Bucket=bucket)
         time.sleep(5)
         self.addCleanup(client.delete_bucket, Bucket=bucket)
         call_args = {
