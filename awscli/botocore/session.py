@@ -484,13 +484,15 @@ class Session(object):
         it can be done for security reasons
 
         """
+        platform_lookup = {'darwin': 'macos'}
         if truncate:
             return '%s/%s' % (self.user_agent_name, self.user_agent_version)
-        base = '%s/%s Python/%s %s/%s' % (self.user_agent_name,
-                                          self.user_agent_version,
-                                          platform.python_version(),
-                                          platform.system(),
-                                          platform.release())
+        base = '%s/%s ua/2.0 lang/Python#%s os/%s#%s' % (
+            self.user_agent_name,
+            self.user_agent_version,
+            platform.python_version(),
+            platform_lookup.get(platform.system().lower(), platform.system()),
+            platform.release())
         if os.environ.get('AWS_EXECUTION_ENV') is not None:
             base += ' exec-env/%s' % os.environ.get('AWS_EXECUTION_ENV')
         if self.user_agent_extra:

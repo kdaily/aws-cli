@@ -139,13 +139,13 @@ def _set_user_agent_for_session(session):
     session.user_agent_version = __version__
     # user_agent_extra on linux will look like "rpm/x86_64.Ubuntu.18"
     # on mac and windows like "sources/x86_64"
-    session.user_agent_extra = '%s/%s' % (
+    session.user_agent_extra = 'md/installer#%s md/arch#%s' % (
         _get_distribution_source(),
         platform.machine()
     )
     linux_distribution = _get_distribution()
     if linux_distribution:
-        session.user_agent_extra += ".%s" % linux_distribution
+        session.user_agent_extra += " md/distro#%s" % linux_distribution
 
 
 def no_pager_handler(session, parsed_args, **kwargs):
@@ -176,7 +176,7 @@ class AWSCLIEntryPoint:
         return rc
 
     def _run_driver(self, driver, args, prompt_mode):
-        driver.session.user_agent_extra += " prompt/%s" % prompt_mode
+        driver.session.user_agent_extra += " cfg/prompt#%s" % prompt_mode
         return driver.main(args)
 
     def _do_main(self, args):
@@ -882,10 +882,10 @@ class ServiceOperation(object):
         return parser
 
     def _add_customization_to_user_agent(self):
-        if ' command/' in self._session.user_agent_extra:
+        if ' md/command#' in self._session.user_agent_extra:
             self._session.user_agent_extra += '.%s' % self.lineage_names[-1]
         else:
-            self._session.user_agent_extra += ' command/%s' % '.'.join(
+            self._session.user_agent_extra += ' md/command#%s' % '.'.join(
                 self.lineage_names
             )
 
