@@ -324,10 +324,10 @@ class BasicCommand(CLICommand):
         raise ParamValidationError(error_msg)
 
     def _add_customization_to_user_agent(self):
-        if ' command/' in self._session.user_agent_extra:
+        if ' md/command#' in self._session.user_agent_extra:
             self._session.user_agent_extra += '.%s' % self.lineage_names[-1]
         else:
-            self._session.user_agent_extra += ' command/%s' % '.'.join(
+            self._session.user_agent_extra += ' md/command#%s' % '.'.join(
                 self.lineage_names
             )
 
