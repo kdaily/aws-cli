@@ -139,7 +139,7 @@ def _set_user_agent_for_session(session):
     session.user_agent_version = __version__
     # user_agent_extra on linux will look like "rpm/x86_64.Ubuntu.18"
     # on mac and windows like "sources/x86_64"
-    session.user_agent_extra = 'md/installer#%s' % (
+    session.user_agent_extra = 'lib/awscli md/installer#%s' % (
         _get_distribution_source(),
     )
     linux_distribution = _get_distribution()
@@ -175,7 +175,7 @@ class AWSCLIEntryPoint:
         return rc
 
     def _run_driver(self, driver, args, prompt_mode):
-        driver.session.user_agent_extra += " cfg/prompt#%s" % prompt_mode
+        driver.session.user_agent_extra += " md/prompt#%s" % prompt_mode
         return driver.main(args)
 
     def _do_main(self, args):
