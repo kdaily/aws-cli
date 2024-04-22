@@ -5,6 +5,7 @@ import os
 from botocore import model
 from botocore.compat import OrderedDict
 from botocore.validate import validate_parameters
+from botocore.useragent import UserAgentComponent, RawStringUserAgentComponent
 
 import awscli
 from awscli.argparser import ArgTableArgParser, SubCommandArgParser
@@ -15,6 +16,7 @@ from awscli.commands import CLICommand
 from awscli.bcdoc import docevents
 from awscli.help import HelpCommand
 from awscli.schema import SchemaTransformer
+from awscli.utils import add_component_to_user_agent_extra
 from awscli.customizations.exceptions import ParamValidationError
 
 LOG = logging.getLogger(__name__)
@@ -325,10 +327,18 @@ class BasicCommand(CLICommand):
 
     def _add_customization_to_user_agent(self):
         if ' md/command#' in self._session.user_agent_extra:
-            self._session.user_agent_extra += '.%s' % self.lineage_names[-1]
+            add_component_to_user_agent_extra(
+                self._session,
+                RawStringUserAgentComponent(f".{self.lineage_names[-1]}")
+            )
         else:
-            self._session.user_agent_extra += ' md/command#%s' % '.'.join(
-                self.lineage_names
+            add_component_to_user_agent_extra(
+                self._session,
+                UserAgentComponent(
+                    "md",
+                    "command",
+                    '.'.join(self.lineage_names)
+                )
             )
 
 

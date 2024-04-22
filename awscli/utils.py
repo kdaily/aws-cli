@@ -539,3 +539,10 @@ class ShapeRecordingVisitor(BaseShapeVisitor):
 
     def visit_shape(self, shape):
         self.visited.append(shape)
+
+
+def add_component_to_user_agent_extra(session, component):
+    if session.user_agent_extra:
+        if not session.user_agent_extra.endswith(" "):
+            session.user_agent_extra += " "
+        session.user_agent_extra += f"{component.to_string()}"

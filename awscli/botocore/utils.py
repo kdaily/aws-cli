@@ -20,6 +20,7 @@ import hashlib
 import io
 import logging
 import os
+import platform
 import random
 import re
 import socket
@@ -34,6 +35,7 @@ import botocore
 import botocore.awsrequest
 import botocore.httpsession
 import dateutil.parser
+import distro
 from botocore.compat import (
     MD5_AVAILABLE,
     get_md5,

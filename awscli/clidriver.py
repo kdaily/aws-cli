@@ -27,6 +27,7 @@ from botocore.configprovider import EnvironmentProvider
 from botocore.configprovider import ScopedConfigProvider
 from botocore.configprovider import ConstantProvider
 from botocore.configprovider import ChainProvider
+from botocore.useragent import UserAgentComponent, RawStringUserAgentComponent
 
 from awscli import __version__
 from awscli.compat import (
@@ -55,6 +56,7 @@ from awscli.logger import (
     set_stream_logger, remove_stream_logger, enable_crt_logging,
     disable_crt_logging,
 )
+from awscli.utils import add_component_to_user_agent_extra
 from awscli.utils import emit_top_level_args_parsed_event
 from awscli.utils import OutputStreamFactory
 from awscli.utils import IMDSRegionProvider
@@ -134,17 +136,29 @@ def _get_linux_distribution():
     return linux_distribution
 
 
+def _add_distribution_source_to_user_agent(session):
+    add_component_to_user_agent_extra(
+        session,
+        UserAgentComponent(
+            'md',
+            'installer',
+            _get_distribution_source())
+    )
+
+
+def _add_linux_distribution_to_user_agent(session):
+    if linux_distribution := _get_distribution():
+        add_component_to_user_agent_extra(
+            session,
+            UserAgentComponent('md', 'distrib', linux_distribution)
+        )
+
+
 def _set_user_agent_for_session(session):
     session.user_agent_name = 'aws-cli'
     session.user_agent_version = __version__
-    # user_agent_extra on linux will look like "rpm/x86_64.Ubuntu.18"
-    # on mac and windows like "sources/x86_64"
-    session.user_agent_extra = 'lib/awscli md/installer#%s' % (
-        _get_distribution_source(),
-    )
-    linux_distribution = _get_distribution()
-    if linux_distribution:
-        session.user_agent_extra += " md/distrib#%s" % linux_distribution
+    _add_distribution_source_to_user_agent(session)
+    _add_linux_distribution_to_user_agent(session)
 
 
 def no_pager_handler(session, parsed_args, **kwargs):
@@ -174,8 +188,14 @@ class AWSCLIEntryPoint:
         HISTORY_RECORDER.record('CLI_RC', rc, 'CLI')
         return rc
 
+    def _add_autoprompt_to_user_agent(self, driver, prompt_mode):
+        add_component_to_user_agent_extra(
+            driver.session,
+            UserAgentComponent("md", "prompt", prompt_mode)
+        )
+
     def _run_driver(self, driver, args, prompt_mode):
-        driver.session.user_agent_extra += " md/prompt#%s" % prompt_mode
+        self._add_autoprompt_to_user_agent(driver, prompt_mode)
         return driver.main(args)
 
     def _do_main(self, args):
@@ -882,10 +902,18 @@ class ServiceOperation(object):
 
     def _add_customization_to_user_agent(self):
         if ' md/command#' in self._session.user_agent_extra:
-            self._session.user_agent_extra += '.%s' % self.lineage_names[-1]
+            add_component_to_user_agent_extra(
+                self._session,
+                RawStringUserAgentComponent(f".{self.lineage_names[-1]}")
+            )
         else:
-            self._session.user_agent_extra += ' md/command#%s' % '.'.join(
-                self.lineage_names
+            add_component_to_user_agent_extra(
+                self._session,
+                UserAgentComponent(
+                    "md",
+                    "command",
+                    '.'.join(self.lineage_names)
+                )
             )
 
 
