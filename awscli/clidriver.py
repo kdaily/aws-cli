@@ -441,12 +441,29 @@ class CLIDriver(object):
                                    cli_data.get('synopsis', None),
                                    cli_data.get('help_usage', None))
 
+    def _legacy_user_agent(self):
+        # user_agent_extra on linux will look like "rpm/x86_64.Ubuntu.18"
+        # on mac and windows like "sources/x86_64"
+        session_copy = copy.copy(self.session)
+        user_agent = self.session.user_agent()
+        
+        user_agent_extra = '%s/%s' % (
+            _get_distribution_source(),
+            platform.machine()
+        )
+        linux_distribution = _get_distribution()
+        if linux_distribution:
+            user_agent_extra += ".%s" % linux_distribution
+        session_copy.user_agent_extra = user_agent_extra
+
+        return session_copy.user_agent()
+
     def create_parser(self, command_table):
         # Also add a 'help' command.
         command_table['help'] = self.create_help_command()
         cli_data = self._get_cli_data()
         parser = MainArgParser(
-            command_table, self.session.user_agent(),
+            command_table, self._legacy_user_agent(),
             cli_data.get('description', None),
             self._get_argument_table(),
             prog="aws")
@@ -474,7 +491,7 @@ class CLIDriver(object):
             self._handle_top_level_args(parsed_args)
             self._emit_session_event(parsed_args)
             HISTORY_RECORDER.record(
-                'CLI_VERSION', self.session.user_agent(), 'CLI')
+                'CLI_VERSION', self._legacy_user_agent(), 'CLI')
             HISTORY_RECORDER.record('CLI_ARGUMENTS', args, 'CLI')
             return command_table[parsed_args.command](remaining, parsed_args)
         except BaseException as e:
@@ -519,7 +536,7 @@ class CLIDriver(object):
                 set_stream_logger(logger_name, logging.DEBUG,
                                   format_string=LOG_FORMAT)
             enable_crt_logging()
-            LOG.debug("CLI version: %s", self.session.user_agent())
+            LOG.debug("CLI version: %s", self._legacy_user_agent())
             LOG.debug("Arguments entered to CLI: %s", sys.argv[1:])
         else:
             # In case user set --debug before entering prompt mode and removed
