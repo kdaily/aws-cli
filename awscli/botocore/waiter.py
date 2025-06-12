@@ -305,8 +305,18 @@ class AcceptorConfig:
         return acceptor_matches
 
 
+class NoOutput:
+    def write(self, result):
+        pass
+
+
+class BasicOutput:
+    def write(self, result):
+        print(result)
+
+
 class Waiter:
-    def __init__(self, name, config, operation_method):
+    def __init__(self, name, config, operation_method, outputter=None):
         """
 
         :type name: string
@@ -326,6 +336,10 @@ class Waiter:
         # and documentation.
         self.name = name
         self.config = config
+
+        if outputter is not None:
+            self._outputter = outputter
+        self._outputter = BasicOutput()
 
     @with_current_context(partial(register_feature_id, 'WAITER'))
     def wait(self, **kwargs):
@@ -362,8 +376,11 @@ class Waiter:
                         last_response=response,
                     )
             if current_state == 'success':
+                self._outputter.write(
+                    "Waiting complete, waiter matched the success state."
+                )
                 logger.debug(
-                    "Waiting complete, waiter matched the " "success state."
+                    "Waiting complete, waiter matched the success state."
                 )
                 return
             if current_state == 'failure':
@@ -383,4 +400,8 @@ class Waiter:
                     reason=reason,
                     last_response=response,
                 )
+            self._outputter.write(
+                f"Still waiting, attempt {num_attempts} of {max_attempts}."
+            )
+
             time.sleep(sleep_amount)
