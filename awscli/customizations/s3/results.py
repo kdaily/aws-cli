@@ -23,7 +23,10 @@ from awscli.compat import ensure_text_type, queue
 from awscli.customizations.s3.subscribers import OnDoneFilteredSubscriber
 from awscli.customizations.s3.utils import (
     WarningResult,
+    SkipResult,
     human_readable_size,
+    create_warning,
+
 )
 from awscli.customizations.utils import uni_print
 
@@ -132,6 +135,20 @@ class DoneResultSubscriber(BaseResultSubscriber, OnDoneFilteredSubscriber):
                 self._src,
                 self._dest,
             )
+            warning = create_warning(
+                self._src, "Blah blah blah", skip_file=True, warning=False, warn_cls=SkipResult
+            )
+            self._result_queue.put(warning)
+
+            self._result_queue.put(
+                SkipResult(
+                    transfer_type=self._transfer_type,
+                    src=self._src,
+                    dest=self._dest,
+                    exception=e,
+                )
+            )
+
         else:
             self._result_queue.put(
                 FailureResult(
@@ -359,6 +376,7 @@ class ResultPrinter(BaseResultHandler):
             SuccessResult: self._print_success,
             FailureResult: self._print_failure,
             WarningResult: self._print_warning,
+            SkipResult: self._print_noop,
             ErrorResult: self._print_error,
             CtrlCResult: self._print_ctrl_c,
             DryRunResult: self._print_dry_run,

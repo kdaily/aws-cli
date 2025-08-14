@@ -55,6 +55,8 @@ from awscli.customizations.s3.utils import (
     find_bucket_key,
     human_readable_size,
     relative_path,
+    SkipResult,
+
 )
 
 LOGGER = logging.getLogger(__name__)
@@ -466,6 +468,11 @@ class DownloadRequestSubmitter(BaseTransferRequestSubmitter):
             LOGGER.debug(
                 f"warning: skipping {fileinfo.src} -> {fileinfo.dest}, file exists at destination"
             )
+            warning = create_warning(
+                fileinfo.src, "Blah blah blah", skip_file=True, warning=False, warn_cls=SkipResult
+            )
+            self._result_queue.put(warning)
+
             return True
         return False
 
@@ -543,6 +550,7 @@ class CopyRequestSubmitter(BaseTransferRequestSubmitter):
             LOGGER.debug(
                 f"warning: skipping {fileinfo.src} -> {fileinfo.dest}, file exists at destination"
             )
+            self._result_queue.put(SuccessResult(**result_kwargs))
             return True
         except ClientError as e:
             if e.response['Error']['Code'] == '404':

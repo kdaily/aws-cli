@@ -24,7 +24,6 @@ from dateutil.tz import tzlocal, tzutc
 
 from awscli.compat import bytes_print, queue
 from awscli.customizations.exceptions import ParamValidationError
-
 LOGGER = logging.getLogger(__name__)
 HUMANIZE_SUFFIXES = ('KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB')
 EPOCH_TIME = datetime(1970, 1, 1, tzinfo=tzutc())
@@ -301,16 +300,18 @@ def find_dest_path_comp_key(files, src_path=None):
     return dest_path, compare_key
 
 
-def create_warning(path, error_message, skip_file=True):
+def create_warning(path, error_message, skip_file=True, warning=True, warn_cls=None):
     """
     This creates a ``PrintTask`` for whenever a warning is to be thrown.
     """
+    if warn_cls is None:
+        warn_cls = WarningResult
     print_string = "warning: "
     if skip_file:
         print_string = print_string + "Skipping file " + path + ". "
     print_string = print_string + error_message
-    warning_message = WarningResult(
-        message=print_string, error=False, warning=True
+    warning_message = warn_cls(
+        message=print_string, error=False, warning=warning
     )
     return warning_message
 
@@ -449,6 +450,7 @@ class PrintTask(
 
 
 WarningResult = PrintTask
+SkipResult = PrintTask
 
 
 class RequestParamsMapper:
