@@ -1,0 +1,19 @@
+name: PRs against develop are not accepted, please target v2 branch
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  cleanup:
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Comment on PRs against develop
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "Pull requests against the develop branch are not accepted."
