@@ -12,6 +12,8 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Comment on PRs against develop
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Pull requests against the develop branch are not accepted."
