@@ -1,0 +1,20 @@
+name: PRs against develop are not prioritized, target v2 branch instead
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  comment:
+    if: github.event.repository.fork == false
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Comment on PRs against develop
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body 'We [announced](https://aws.amazon.com/blogs/developer/cli-v1-maintenance-mode-announcement/) the upcoming end-of-support for the AWS CLI v1. Pull requests against the develop branch are not prioritized. Please review the [contribution guide for AWS CLI v2](https://github.com/aws/aws-cli/blob/v2/CONTRIBUTING.rst) to open a pull request.'
